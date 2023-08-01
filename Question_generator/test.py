@@ -1,8 +1,10 @@
 import torch
 from transformers import T5Tokenizer, T5ForConditionalGeneration
+import json
 
 # Load the trained model and tokenizer
-model_directory = r"C:\Users\Rojus\Desktop\Test_creator\trained_t5_model"
+model_directory = r"outputs/1/trained_t5_model"
+
 model = T5ForConditionalGeneration.from_pretrained(model_directory)
 tokenizer = T5Tokenizer.from_pretrained(model_directory)
 
@@ -30,6 +32,22 @@ def generate_question(model, tokenizer, statement, device):
 
 # Test the function
 if __name__ == '__main__':
-    statement = input("Enter a statement to generate a question: ")
-    generated_question = generate_question(model, tokenizer, statement, device)
-    print(f"Generated Question: {generated_question}")
+    #statement = input("Enter a statement to generate a question: ")
+    
+    # 1. Load the JSON dataset
+    with open(r"datasets/ParaphraseRC_dev.json", "r") as file:
+        statements = json.load(file)
+
+    statements = statements[:10]
+	
+    # 2. Extract plot-question pairs
+    plots = []
+
+    for entry in statements:
+        plots.append(entry['plot'])
+
+    for plot in plots:
+        generated_question = generate_question(model, tokenizer, plot, device)
+        print("-----------------------------------------------------------")
+        print(plot)
+        print(f"Generated Question: {generated_question}")
