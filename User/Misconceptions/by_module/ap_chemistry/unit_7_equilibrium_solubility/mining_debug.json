@@ -1,0 +1,674 @@
+{
+  "generated_at": "2026-03-08T17:36:58.909395-07:00",
+  "prompt_version": "v7",
+  "search_queries": [
+    "AP Chemistry equilibrium misconceptions",
+    "AP Chemistry solubility misconceptions",
+    "chemical equilibrium common student errors",
+    "Le Chatelier's Principle common student errors",
+    "Ksp common student errors",
+    "AP Chemistry equilibrium concept inventory",
+    "AP Chemistry solubility concept inventory",
+    "AP Chemistry equilibrium distractor misconceptions"
+  ],
+  "citation_source_mode": "search_quotes",
+  "warning": "",
+  "grounded_evidence_pool": [
+    {
+      "evidence_id": 1,
+      "quote_text": "The concentrations of the aqueous species will still end up being the same. (Common misconception: Students usually think that if you add more solid, the equilibrium concentrations of the aqueous species will go up.",
+      "source_title": "Chemical Equilibrium Misconceptions",
+      "source_url": "https://serc.carleton.edu/sp/library/mathstatmodels/examples/35770.html",
+      "search_query": "chemical equilibrium common student errors",
+      "grounding_chunk_indices": []
+    },
+    {
+      "evidence_id": 2,
+      "quote_text": "Feeling the heat When the temperature is raised in a reaction at equilibrium, students might be excused for thinking that the reaction should proceed in the exothermic direction to oppose the applied increase in heat energy.",
+      "source_title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+      "source_url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article",
+      "search_query": "Le Chatelier's Principle common student errors",
+      "grounding_chunk_indices": []
+    },
+    {
+      "evidence_id": 3,
+      "quote_text": "Under pressure To predict what happens when the pressure of a system is increased, a student might imagine a balloon filled with gas whose pressure is being increased by squeezing the balloon down to a smaller volume.",
+      "source_title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+      "source_url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article",
+      "search_query": "Le Chatelier's Principle common student errors",
+      "grounding_chunk_indices": []
+    },
+    {
+      "evidence_id": 4,
+      "quote_text": "Equal Concentrations of Reactants and Products: Another common misunderstanding is the belief that at equilibrium, the concentrations of reactants and products must be equal.",
+      "source_title": "Student Question : What are some common misconceptions about chemical equilibrium? | Chemistry | QuickTakes",
+      "source_url": "https://quicktakes.io/learn/chemistry/questions/what-are-some-common-misconceptions-about-chemical-equilibrium",
+      "search_query": "chemical equilibrium common student errors",
+      "grounding_chunk_indices": []
+    }
+  ],
+  "raw_records": [
+    {
+      "domain": "science",
+      "topic": "Chemical Equilibrium",
+      "misconception_label": "believe that at equilibrium, the concentrations of reactants and products must be equal",
+      "misconception": "Students believe that at equilibrium, the concentrations of reactants and products must be equal.",
+      "correct_idea": "Equilibrium is reached when the rates of the forward and reverse reactions are equal, not necessarily when the concentrations of reactants and products are equal. The specific concentrations at equilibrium depend on the reaction and its equilibrium constant.",
+      "tags": [
+        "chemical equilibrium",
+        "concentration",
+        "products",
+        "reactants"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Student Question : What are some common misconceptions about chemical equilibrium? | Chemistry | QuickTakes",
+          "url": "https://quicktakes.io/learn/chemistry/questions/what-are-some-common-misconceptions-about-chemical-equilibrium"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Equal Concentrations of Reactants and Products: Another common misunderstanding is the belief that at equilibrium, the concentrations of reactants and products must be equal.",
+          "source_title": "Student Question : What are some common misconceptions about chemical equilibrium? | Chemistry | QuickTakes",
+          "source_url": "https://quicktakes.io/learn/chemistry/questions/what-are-some-common-misconceptions-about-chemical-equilibrium",
+          "search_query": "chemical equilibrium common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 1.9,
+      "created_at": "2026-03-08T17:36:56.325801-07:00"
+    },
+    {
+      "domain": "science",
+      "topic": "Solubility Equilibrium",
+      "misconception_label": "think that adding more solid to a solid-solution equilibrium will increase the equilibrium concentrations of the aque...",
+      "misconception": "Students think that adding more solid to a solid-solution equilibrium will increase the equilibrium concentrations of the aqueous species.",
+      "correct_idea": "The amount of solid present in a solid-solution equilibrium does not affect the equilibrium concentrations of the aqueous species, as solids are not included in the equilibrium expression.",
+      "tags": [
+        "concentration",
+        "le chatelier's principle",
+        "solid",
+        "solubility equilibrium"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Chemical Equilibrium Misconceptions",
+          "url": "https://serc.carleton.edu/sp/library/mathstatmodels/examples/35770.html"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "The concentrations of the aqueous species will still end up being the same. (Common misconception: Students usually think that if you add more solid, the equilibrium concentrations of the aqueous species will go up.",
+          "source_title": "Chemical Equilibrium Misconceptions",
+          "source_url": "https://serc.carleton.edu/sp/library/mathstatmodels/examples/35770.html",
+          "search_query": "chemical equilibrium common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 5.9,
+      "created_at": "2026-03-08T17:36:56.898681-07:00"
+    },
+    {
+      "domain": "science",
+      "topic": "Le Chatelier's Principle",
+      "misconception_label": "incorrectly believe that increasing the temperature of a system at equilibrium will cause the reaction to shift in th...",
+      "misconception": "Students incorrectly believe that increasing the temperature of a system at equilibrium will cause the reaction to shift in the exothermic direction.",
+      "correct_idea": "According to Le Chatelier's Principle, increasing temperature favors the endothermic direction, and decreasing temperature favors the exothermic direction.",
+      "tags": [
+        "endothermic",
+        "equilibrium shift",
+        "exothermic",
+        "le chatelier's principle",
+        "temperature"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Feeling the heat When the temperature is raised in a reaction at equilibrium, students might be excused for thinking that the reaction should proceed in the exothermic direction to oppose the applied increase in heat energy.",
+          "source_title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "source_url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article",
+          "search_query": "Le Chatelier's Principle common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-08T17:36:58.238258-07:00"
+    },
+    {
+      "domain": "science",
+      "topic": "Le Chatelier's Principle",
+      "misconception_label": "struggle to correctly predict the shift in equilibrium when the pressure of a gaseous system is changed, often misapp...",
+      "misconception": "Students struggle to correctly predict the shift in equilibrium when the pressure of a gaseous system is changed, often misapplying Le Chatelier's Principle.",
+      "correct_idea": "According to Le Chatelier's Principle, increasing pressure (decreasing volume) shifts equilibrium toward the side with fewer moles of gas, and decreasing pressure (increasing volume) shifts it toward the side with more moles of gas.",
+      "tags": [
+        "equilibrium shift",
+        "gases",
+        "le chatelier's principle",
+        "pressure",
+        "volume"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Under pressure To predict what happens when the pressure of a system is increased, a student might imagine a balloon filled with gas whose pressure is being increased by squeezing the balloon down to a smaller volume.",
+          "source_title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "source_url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article",
+          "search_query": "Le Chatelier's Principle common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-08T17:36:58.239011-07:00"
+    },
+    {
+      "domain": "science",
+      "topic": "Le Chatelier's Principle",
+      "misconception_label": "have a general misunderstanding of how to apply Le Chatelier's Principle to predict the direction of equilibrium shif...",
+      "misconception": "Students have a general misunderstanding of how to apply Le Chatelier's Principle to predict the direction of equilibrium shifts in response to various stresses.",
+      "correct_idea": "Le Chatelier's Principle states that a system at equilibrium will shift to counteract a stress, which requires understanding how different stresses (like changes in temperature, pressure, or concentration) affect the equilibrium.",
+      "tags": [
+        "equilibrium shift",
+        "general",
+        "le chatelier's principle"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Feeling the heat When the temperature is raised in a reaction at equilibrium, students might be excused for thinking that the reaction should proceed in the exothermic direction to oppose the applied increase in heat energy.",
+          "source_title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "source_url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article",
+          "search_query": "Le Chatelier's Principle common student errors",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Under pressure To predict what happens when the pressure of a system is increased, a student might imagine a balloon filled with gas whose pressure is being increased by squeezing the balloon down to a smaller volume.",
+          "source_title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "source_url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article",
+          "search_query": "Le Chatelier's Principle common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-08T17:36:58.240695-07:00"
+    },
+    {
+      "domain": "science",
+      "topic": "Chemical Equilibrium",
+      "misconception_label": "believe that when a system reaches equilibrium, all chemical changes stop, viewing equilibrium as a static state",
+      "misconception": "Students believe that when a system reaches equilibrium, all chemical changes stop, viewing equilibrium as a static state.",
+      "correct_idea": "Equilibrium is a dynamic process where the rates of the forward and reverse reactions are equal, meaning reactants are continuously converting to products and vice versa, but the net concentrations remain constant.",
+      "tags": [
+        "chemical equilibrium",
+        "dynamic equilibrium",
+        "reaction rates",
+        "static equilibrium"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Student Question : What are some common misconceptions about chemical equilibrium? | Chemistry | QuickTakes",
+          "url": "https://quicktakes.io/learn/chemistry/questions/what-are-some-common-misconceptions-about-chemical-equilibrium"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Equal Concentrations of Reactants and Products: Another common misunderstanding is the belief that at equilibrium, the concentrations of reactants and products must be equal.",
+          "source_title": "Student Question : What are some common misconceptions about chemical equilibrium? | Chemistry | QuickTakes",
+          "source_url": "https://quicktakes.io/learn/chemistry/questions/what-are-some-common-misconceptions-about-chemical-equilibrium",
+          "search_query": "chemical equilibrium common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 1.9,
+      "created_at": "2026-03-08T17:36:58.241225-07:00"
+    }
+  ],
+  "canonical_records": [
+    {
+      "domain": "science",
+      "topic": "Solubility Equilibrium",
+      "misconception_label": "think that adding more solid to a solid-solution equilibrium will increase the equilibrium concentrations of the aque...",
+      "misconception": "Students think that adding more solid to a solid-solution equilibrium will increase the equilibrium concentrations of the aqueous species.",
+      "correct_idea": "The amount of solid present in a solid-solution equilibrium does not affect the equilibrium concentrations of the aqueous species, as solids are not included in the equilibrium expression.",
+      "tags": [
+        "concentration",
+        "le chatelier's principle",
+        "solid",
+        "solubility equilibrium"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Chemical Equilibrium Misconceptions",
+          "url": "https://serc.carleton.edu/sp/library/mathstatmodels/examples/35770.html"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "The concentrations of the aqueous species will still end up being the same. (Common misconception: Students usually think that if you add more solid, the equilibrium concentrations of the aqueous species will go up.",
+          "source_title": "Chemical Equilibrium Misconceptions",
+          "source_url": "https://serc.carleton.edu/sp/library/mathstatmodels/examples/35770.html",
+          "search_query": "chemical equilibrium common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 5.9,
+      "created_at": "2026-03-08T17:36:56.898681-07:00",
+      "misconception_id": "m_e6b7f6d517205099",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "science",
+      "topic": "Chemical Equilibrium",
+      "misconception_label": "believe that when a system reaches equilibrium, all chemical changes stop, viewing equilibrium as a static state",
+      "misconception": "Students believe that when a system reaches equilibrium, all chemical changes stop, viewing equilibrium as a static state.",
+      "correct_idea": "Equilibrium is a dynamic process where the rates of the forward and reverse reactions are equal, meaning reactants are continuously converting to products and vice versa, but the net concentrations remain constant.",
+      "tags": [
+        "chemical equilibrium",
+        "concentration",
+        "dynamic equilibrium",
+        "products",
+        "reactants",
+        "reaction rates",
+        "static equilibrium"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Student Question : What are some common misconceptions about chemical equilibrium? | Chemistry | QuickTakes",
+          "url": "https://quicktakes.io/learn/chemistry/questions/what-are-some-common-misconceptions-about-chemical-equilibrium"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Equal Concentrations of Reactants and Products: Another common misunderstanding is the belief that at equilibrium, the concentrations of reactants and products must be equal.",
+          "source_title": "Student Question : What are some common misconceptions about chemical equilibrium? | Chemistry | QuickTakes",
+          "source_url": "https://quicktakes.io/learn/chemistry/questions/what-are-some-common-misconceptions-about-chemical-equilibrium",
+          "search_query": "chemical equilibrium common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 1.9,
+      "created_at": "2026-03-08T17:36:58.241225-07:00",
+      "misconception_id": "m_3e65384b1968c4c9",
+      "cluster_size": 2,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "science",
+      "topic": "Chemical Equilibrium",
+      "misconception_label": "believe that at equilibrium, the concentrations of reactants and products must be equal",
+      "misconception": "Students believe that at equilibrium, the concentrations of reactants and products must be equal.",
+      "correct_idea": "Equilibrium is reached when the rates of the forward and reverse reactions are equal, not necessarily when the concentrations of reactants and products are equal. The specific concentrations at equilibrium depend on the reaction and its equilibrium constant.",
+      "tags": [
+        "chemical equilibrium",
+        "concentration",
+        "products",
+        "reactants"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Student Question : What are some common misconceptions about chemical equilibrium? | Chemistry | QuickTakes",
+          "url": "https://quicktakes.io/learn/chemistry/questions/what-are-some-common-misconceptions-about-chemical-equilibrium"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Equal Concentrations of Reactants and Products: Another common misunderstanding is the belief that at equilibrium, the concentrations of reactants and products must be equal.",
+          "source_title": "Student Question : What are some common misconceptions about chemical equilibrium? | Chemistry | QuickTakes",
+          "source_url": "https://quicktakes.io/learn/chemistry/questions/what-are-some-common-misconceptions-about-chemical-equilibrium",
+          "search_query": "chemical equilibrium common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 1.9,
+      "created_at": "2026-03-08T17:36:56.325801-07:00",
+      "misconception_id": "m_f6e1d2648b31f8c7",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "science",
+      "topic": "Le Chatelier's Principle",
+      "misconception_label": "have a general misunderstanding of how to apply Le Chatelier's Principle to predict the direction of equilibrium shif...",
+      "misconception": "Students have a general misunderstanding of how to apply Le Chatelier's Principle to predict the direction of equilibrium shifts in response to various stresses.",
+      "correct_idea": "Le Chatelier's Principle states that a system at equilibrium will shift to counteract a stress, which requires understanding how different stresses (like changes in temperature, pressure, or concentration) affect the equilibrium.",
+      "tags": [
+        "endothermic",
+        "equilibrium shift",
+        "exothermic",
+        "gases",
+        "general",
+        "le chatelier's principle",
+        "pressure",
+        "temperature",
+        "volume"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Feeling the heat When the temperature is raised in a reaction at equilibrium, students might be excused for thinking that the reaction should proceed in the exothermic direction to oppose the applied increase in heat energy.",
+          "source_title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "source_url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article",
+          "search_query": "Le Chatelier's Principle common student errors",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Under pressure To predict what happens when the pressure of a system is increased, a student might imagine a balloon filled with gas whose pressure is being increased by squeezing the balloon down to a smaller volume.",
+          "source_title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "source_url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article",
+          "search_query": "Le Chatelier's Principle common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-08T17:36:58.240695-07:00",
+      "misconception_id": "m_7038efcebbe38d26",
+      "cluster_size": 3,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "science",
+      "topic": "Le Chatelier's Principle",
+      "misconception_label": "struggle to correctly predict the shift in equilibrium when the pressure of a gaseous system is changed, often misapp...",
+      "misconception": "Students struggle to correctly predict the shift in equilibrium when the pressure of a gaseous system is changed, often misapplying Le Chatelier's Principle.",
+      "correct_idea": "According to Le Chatelier's Principle, increasing pressure (decreasing volume) shifts equilibrium toward the side with fewer moles of gas, and decreasing pressure (increasing volume) shifts it toward the side with more moles of gas.",
+      "tags": [
+        "equilibrium shift",
+        "gases",
+        "le chatelier's principle",
+        "pressure",
+        "volume"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Under pressure To predict what happens when the pressure of a system is increased, a student might imagine a balloon filled with gas whose pressure is being increased by squeezing the balloon down to a smaller volume.",
+          "source_title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "source_url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article",
+          "search_query": "Le Chatelier's Principle common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-08T17:36:58.239011-07:00",
+      "misconception_id": "m_9e7a78d2ff22f729",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "science",
+      "topic": "Le Chatelier's Principle",
+      "misconception_label": "incorrectly believe that increasing the temperature of a system at equilibrium will cause the reaction to shift in th...",
+      "misconception": "Students incorrectly believe that increasing the temperature of a system at equilibrium will cause the reaction to shift in the exothermic direction.",
+      "correct_idea": "According to Le Chatelier's Principle, increasing temperature favors the endothermic direction, and decreasing temperature favors the exothermic direction.",
+      "tags": [
+        "endothermic",
+        "equilibrium shift",
+        "exothermic",
+        "le chatelier's principle",
+        "temperature"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Feeling the heat When the temperature is raised in a reaction at equilibrium, students might be excused for thinking that the reaction should proceed in the exothermic direction to oppose the applied increase in heat energy.",
+          "source_title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "source_url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article",
+          "search_query": "Le Chatelier's Principle common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-08T17:36:58.238258-07:00",
+      "misconception_id": "m_a84f56e1bb5d4036",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    }
+  ],
+  "selected_misconceptions": [
+    {
+      "domain": "science",
+      "topic": "Solubility Equilibrium",
+      "misconception_label": "think that adding more solid to a solid-solution equilibrium will increase the equilibrium concentrations of the aque...",
+      "misconception": "Students think that adding more solid to a solid-solution equilibrium will increase the equilibrium concentrations of the aqueous species.",
+      "correct_idea": "The amount of solid present in a solid-solution equilibrium does not affect the equilibrium concentrations of the aqueous species, as solids are not included in the equilibrium expression.",
+      "tags": [
+        "concentration",
+        "le chatelier's principle",
+        "solid",
+        "solubility equilibrium"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Chemical Equilibrium Misconceptions",
+          "url": "https://serc.carleton.edu/sp/library/mathstatmodels/examples/35770.html"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "The concentrations of the aqueous species will still end up being the same. (Common misconception: Students usually think that if you add more solid, the equilibrium concentrations of the aqueous species will go up.",
+          "source_title": "Chemical Equilibrium Misconceptions",
+          "source_url": "https://serc.carleton.edu/sp/library/mathstatmodels/examples/35770.html",
+          "search_query": "chemical equilibrium common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 5.9,
+      "created_at": "2026-03-08T17:36:56.898681-07:00",
+      "misconception_id": "m_e6b7f6d517205099",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "science",
+      "topic": "Chemical Equilibrium",
+      "misconception_label": "believe that when a system reaches equilibrium, all chemical changes stop, viewing equilibrium as a static state",
+      "misconception": "Students believe that when a system reaches equilibrium, all chemical changes stop, viewing equilibrium as a static state.",
+      "correct_idea": "Equilibrium is a dynamic process where the rates of the forward and reverse reactions are equal, meaning reactants are continuously converting to products and vice versa, but the net concentrations remain constant.",
+      "tags": [
+        "chemical equilibrium",
+        "concentration",
+        "dynamic equilibrium",
+        "products",
+        "reactants",
+        "reaction rates",
+        "static equilibrium"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Student Question : What are some common misconceptions about chemical equilibrium? | Chemistry | QuickTakes",
+          "url": "https://quicktakes.io/learn/chemistry/questions/what-are-some-common-misconceptions-about-chemical-equilibrium"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Equal Concentrations of Reactants and Products: Another common misunderstanding is the belief that at equilibrium, the concentrations of reactants and products must be equal.",
+          "source_title": "Student Question : What are some common misconceptions about chemical equilibrium? | Chemistry | QuickTakes",
+          "source_url": "https://quicktakes.io/learn/chemistry/questions/what-are-some-common-misconceptions-about-chemical-equilibrium",
+          "search_query": "chemical equilibrium common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 1.9,
+      "created_at": "2026-03-08T17:36:58.241225-07:00",
+      "misconception_id": "m_3e65384b1968c4c9",
+      "cluster_size": 2,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "science",
+      "topic": "Chemical Equilibrium",
+      "misconception_label": "believe that at equilibrium, the concentrations of reactants and products must be equal",
+      "misconception": "Students believe that at equilibrium, the concentrations of reactants and products must be equal.",
+      "correct_idea": "Equilibrium is reached when the rates of the forward and reverse reactions are equal, not necessarily when the concentrations of reactants and products are equal. The specific concentrations at equilibrium depend on the reaction and its equilibrium constant.",
+      "tags": [
+        "chemical equilibrium",
+        "concentration",
+        "products",
+        "reactants"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Student Question : What are some common misconceptions about chemical equilibrium? | Chemistry | QuickTakes",
+          "url": "https://quicktakes.io/learn/chemistry/questions/what-are-some-common-misconceptions-about-chemical-equilibrium"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Equal Concentrations of Reactants and Products: Another common misunderstanding is the belief that at equilibrium, the concentrations of reactants and products must be equal.",
+          "source_title": "Student Question : What are some common misconceptions about chemical equilibrium? | Chemistry | QuickTakes",
+          "source_url": "https://quicktakes.io/learn/chemistry/questions/what-are-some-common-misconceptions-about-chemical-equilibrium",
+          "search_query": "chemical equilibrium common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 1.9,
+      "created_at": "2026-03-08T17:36:56.325801-07:00",
+      "misconception_id": "m_f6e1d2648b31f8c7",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "science",
+      "topic": "Le Chatelier's Principle",
+      "misconception_label": "have a general misunderstanding of how to apply Le Chatelier's Principle to predict the direction of equilibrium shif...",
+      "misconception": "Students have a general misunderstanding of how to apply Le Chatelier's Principle to predict the direction of equilibrium shifts in response to various stresses.",
+      "correct_idea": "Le Chatelier's Principle states that a system at equilibrium will shift to counteract a stress, which requires understanding how different stresses (like changes in temperature, pressure, or concentration) affect the equilibrium.",
+      "tags": [
+        "endothermic",
+        "equilibrium shift",
+        "exothermic",
+        "gases",
+        "general",
+        "le chatelier's principle",
+        "pressure",
+        "temperature",
+        "volume"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Feeling the heat When the temperature is raised in a reaction at equilibrium, students might be excused for thinking that the reaction should proceed in the exothermic direction to oppose the applied increase in heat energy.",
+          "source_title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "source_url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article",
+          "search_query": "Le Chatelier's Principle common student errors",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Under pressure To predict what happens when the pressure of a system is increased, a student might imagine a balloon filled with gas whose pressure is being increased by squeezing the balloon down to a smaller volume.",
+          "source_title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "source_url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article",
+          "search_query": "Le Chatelier's Principle common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-08T17:36:58.240695-07:00",
+      "misconception_id": "m_7038efcebbe38d26",
+      "cluster_size": 3,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "science",
+      "topic": "Le Chatelier's Principle",
+      "misconception_label": "incorrectly believe that increasing the temperature of a system at equilibrium will cause the reaction to shift in th...",
+      "misconception": "Students incorrectly believe that increasing the temperature of a system at equilibrium will cause the reaction to shift in the exothermic direction.",
+      "correct_idea": "According to Le Chatelier's Principle, increasing temperature favors the endothermic direction, and decreasing temperature favors the exothermic direction.",
+      "tags": [
+        "endothermic",
+        "equilibrium shift",
+        "exothermic",
+        "le chatelier's principle",
+        "temperature"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Feeling the heat When the temperature is raised in a reaction at equilibrium, students might be excused for thinking that the reaction should proceed in the exothermic direction to oppose the applied increase in heat energy.",
+          "source_title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "source_url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article",
+          "search_query": "Le Chatelier's Principle common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-08T17:36:58.238258-07:00",
+      "misconception_id": "m_a84f56e1bb5d4036",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "science",
+      "topic": "Le Chatelier's Principle",
+      "misconception_label": "struggle to correctly predict the shift in equilibrium when the pressure of a gaseous system is changed, often misapp...",
+      "misconception": "Students struggle to correctly predict the shift in equilibrium when the pressure of a gaseous system is changed, often misapplying Le Chatelier's Principle.",
+      "correct_idea": "According to Le Chatelier's Principle, increasing pressure (decreasing volume) shifts equilibrium toward the side with fewer moles of gas, and decreasing pressure (increasing volume) shifts it toward the side with more moles of gas.",
+      "tags": [
+        "equilibrium shift",
+        "gases",
+        "le chatelier's principle",
+        "pressure",
+        "volume"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Under pressure To predict what happens when the pressure of a system is increased, a student might imagine a balloon filled with gas whose pressure is being increased by squeezing the balloon down to a smaller volume.",
+          "source_title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "source_url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article",
+          "search_query": "Le Chatelier's Principle common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-08T17:36:58.239011-07:00",
+      "misconception_id": "m_9e7a78d2ff22f729",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    }
+  ]
+}

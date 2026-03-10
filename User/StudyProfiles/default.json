@@ -1,0 +1,363 @@
+{
+  "user_id": "default",
+  "updated_at": "2026-03-09T07:04:09.107015+00:00",
+  "concepts": {
+    "determinants_of_labor_supply": {
+      "concept_key": "determinants_of_labor_supply",
+      "concept_label": "Determinants of Labor Supply",
+      "mastery_score": 0.875,
+      "last_seen": "2026-03-09T07:04:09.106865+00:00",
+      "correct_count": 6,
+      "incorrect_count": 0,
+      "error_type_counts": {},
+      "misconception_counts": {},
+      "intervention_history": []
+    },
+    "determinants_of_labor_supply_and_demand": {
+      "concept_key": "determinants_of_labor_supply_and_demand",
+      "concept_label": "Determinants of Labor Supply and Demand",
+      "mastery_score": 0.875,
+      "last_seen": "2026-03-09T07:04:09.106917+00:00",
+      "correct_count": 6,
+      "incorrect_count": 0,
+      "error_type_counts": {},
+      "misconception_counts": {},
+      "intervention_history": []
+    },
+    "dynamic_equilibrium": {
+      "concept_key": "dynamic_equilibrium",
+      "concept_label": "Dynamic Equilibrium",
+      "mastery_score": 0.6667,
+      "last_seen": "2026-03-09T01:01:55.176752+00:00",
+      "correct_count": 1,
+      "incorrect_count": 0,
+      "error_type_counts": {},
+      "misconception_counts": {},
+      "intervention_history": []
+    },
+    "equilibrium_constant_kc_kp": {
+      "concept_key": "equilibrium_constant_kc_kp",
+      "concept_label": "Equilibrium Constant (Kc, Kp)",
+      "mastery_score": 0.5,
+      "last_seen": "2026-03-09T01:01:55.541660+00:00",
+      "correct_count": 1,
+      "incorrect_count": 1,
+      "error_type_counts": {
+        "formula_or_calculation_error": 1
+      },
+      "misconception_counts": {
+        "m_7038efcebbe38d26": 1
+      },
+      "intervention_history": []
+    },
+    "intro_to_factor_markets": {
+      "concept_key": "intro_to_factor_markets",
+      "concept_label": "Intro to Factor Markets",
+      "mastery_score": 0.1,
+      "last_seen": "2026-03-09T07:04:04.427485+00:00",
+      "correct_count": 0,
+      "incorrect_count": 8,
+      "error_type_counts": {
+        "definition_confusion": 8
+      },
+      "misconception_counts": {
+        "m_e84d3786b913b1b9": 8
+      },
+      "intervention_history": []
+    },
+    "le_chatelier_s_principle": {
+      "concept_key": "le_chatelier_s_principle",
+      "concept_label": "Le Chatelier's Principle",
+      "mastery_score": 0.6667,
+      "last_seen": "2026-03-09T01:01:55.177336+00:00",
+      "correct_count": 1,
+      "incorrect_count": 0,
+      "error_type_counts": {},
+      "misconception_counts": {},
+      "intervention_history": []
+    },
+    "monopolist_s_demand_for_labor": {
+      "concept_key": "monopolist_s_demand_for_labor",
+      "concept_label": "Monopolist's Demand for Labor",
+      "mastery_score": 0.1,
+      "last_seen": "2026-03-09T07:04:08.293496+00:00",
+      "correct_count": 0,
+      "incorrect_count": 8,
+      "error_type_counts": {
+        "formula_or_calculation_error": 8
+      },
+      "misconception_counts": {
+        "m_2a3f141fdc8da27c": 8
+      },
+      "intervention_history": []
+    },
+    "optimal_combination_of_resources": {
+      "concept_key": "optimal_combination_of_resources",
+      "concept_label": "Optimal Combination of Resources",
+      "mastery_score": 0.125,
+      "last_seen": "2026-03-09T07:04:08.685689+00:00",
+      "correct_count": 0,
+      "incorrect_count": 6,
+      "error_type_counts": {
+        "general_misconception": 6
+      },
+      "misconception_counts": {
+        "m_f017a9df64bb5559": 6
+      },
+      "intervention_history": []
+    },
+    "profit_maximizing_behavior_in_perfectly_competitive_labor_markets": {
+      "concept_key": "profit_maximizing_behavior_in_perfectly_competitive_labor_markets",
+      "concept_label": "Profit Maximizing Behavior in Perfectly Competitive Labor Markets",
+      "mastery_score": 0.4667,
+      "last_seen": "2026-03-09T07:04:09.107015+00:00",
+      "correct_count": 6,
+      "incorrect_count": 7,
+      "error_type_counts": {
+        "general_misconception": 7
+      },
+      "misconception_counts": {
+        "m_f017a9df64bb5559": 7
+      },
+      "intervention_history": []
+    },
+    "question_1": {
+      "concept_key": "question_1",
+      "concept_label": "Question 1",
+      "mastery_score": 0.1111,
+      "last_seen": "2026-03-08T19:40:22.489852+00:00",
+      "correct_count": 0,
+      "incorrect_count": 7,
+      "error_type_counts": {
+        "general_misconception": 5,
+        "cause_effect_confusion": 2
+      },
+      "misconception_counts": {
+        "m_721df0b38e7a7f39": 2
+      },
+      "intervention_history": [
+        {
+          "started_at": "2026-03-08T19:01:58.302843+00:00",
+          "trigger_question_id": "q_75bc0951f17a22d2",
+          "trigger_selected_option": "B",
+          "trigger_misconception_id": "",
+          "repair_question_ids": [
+            "q_b936ce66d43da02c"
+          ],
+          "repair_correct_count": 0,
+          "repair_total": 1,
+          "retest_question_ids": [],
+          "retest_correct_count": 0,
+          "retest_total": 0,
+          "intervention_success": false
+        },
+        {
+          "started_at": "2026-03-08T19:09:43.932326+00:00",
+          "trigger_question_id": "q_75bc0951f17a22d2",
+          "trigger_selected_option": "B",
+          "trigger_misconception_id": "",
+          "repair_question_ids": [
+            "q_b936ce66d43da02c"
+          ],
+          "repair_correct_count": 0,
+          "repair_total": 1,
+          "retest_question_ids": [],
+          "retest_correct_count": 0,
+          "retest_total": 0,
+          "intervention_success": false
+        }
+      ]
+    },
+    "question_2": {
+      "concept_key": "question_2",
+      "concept_label": "Question 2",
+      "mastery_score": 0.8571,
+      "last_seen": "2026-03-08T19:40:25.044092+00:00",
+      "correct_count": 5,
+      "incorrect_count": 0,
+      "error_type_counts": {},
+      "misconception_counts": {},
+      "intervention_history": []
+    },
+    "question_3": {
+      "concept_key": "question_3",
+      "concept_label": "Question 3",
+      "mastery_score": 0.1111,
+      "last_seen": "2026-03-08T19:40:22.929264+00:00",
+      "correct_count": 0,
+      "incorrect_count": 7,
+      "error_type_counts": {
+        "general_misconception": 5,
+        "cause_effect_confusion": 2
+      },
+      "misconception_counts": {
+        "m_721df0b38e7a7f39": 2
+      },
+      "intervention_history": [
+        {
+          "started_at": "2026-03-08T19:01:58.302869+00:00",
+          "trigger_question_id": "q_1810fba696ceea50",
+          "trigger_selected_option": "B",
+          "trigger_misconception_id": "",
+          "repair_question_ids": [
+            "q_6d41f87f31a55967"
+          ],
+          "repair_correct_count": 0,
+          "repair_total": 1,
+          "retest_question_ids": [],
+          "retest_correct_count": 0,
+          "retest_total": 0,
+          "intervention_success": false
+        },
+        {
+          "started_at": "2026-03-08T19:09:43.932349+00:00",
+          "trigger_question_id": "q_1810fba696ceea50",
+          "trigger_selected_option": "B",
+          "trigger_misconception_id": "",
+          "repair_question_ids": [
+            "q_6d41f87f31a55967"
+          ],
+          "repair_correct_count": 0,
+          "repair_total": 1,
+          "retest_question_ids": [],
+          "retest_correct_count": 0,
+          "retest_total": 0,
+          "intervention_success": false
+        }
+      ]
+    },
+    "question_4": {
+      "concept_key": "question_4",
+      "concept_label": "Question 4",
+      "mastery_score": 0.8571,
+      "last_seen": "2026-03-08T19:40:25.044162+00:00",
+      "correct_count": 5,
+      "incorrect_count": 0,
+      "error_type_counts": {},
+      "misconception_counts": {},
+      "intervention_history": []
+    },
+    "question_5": {
+      "concept_key": "question_5",
+      "concept_label": "Question 5",
+      "mastery_score": 0.1111,
+      "last_seen": "2026-03-08T19:40:24.932292+00:00",
+      "correct_count": 0,
+      "incorrect_count": 7,
+      "error_type_counts": {
+        "general_misconception": 5,
+        "formula_or_calculation_error": 2
+      },
+      "misconception_counts": {
+        "m_5be63c250042ef4e": 2
+      },
+      "intervention_history": [
+        {
+          "started_at": "2026-03-08T19:01:58.302874+00:00",
+          "trigger_question_id": "q_a7c6169ad2559978",
+          "trigger_selected_option": "B",
+          "trigger_misconception_id": "",
+          "repair_question_ids": [
+            "q_9d278e1021813e04"
+          ],
+          "repair_correct_count": 0,
+          "repair_total": 1,
+          "retest_question_ids": [],
+          "retest_correct_count": 0,
+          "retest_total": 0,
+          "intervention_success": false
+        },
+        {
+          "started_at": "2026-03-08T19:09:43.932352+00:00",
+          "trigger_question_id": "q_a7c6169ad2559978",
+          "trigger_selected_option": "B",
+          "trigger_misconception_id": "",
+          "repair_question_ids": [
+            "q_9d278e1021813e04"
+          ],
+          "repair_correct_count": 0,
+          "repair_total": 1,
+          "retest_question_ids": [],
+          "retest_correct_count": 0,
+          "retest_total": 0,
+          "intervention_success": false
+        }
+      ]
+    },
+    "question_6": {
+      "concept_key": "question_6",
+      "concept_label": "Question 6",
+      "mastery_score": 0.8571,
+      "last_seen": "2026-03-08T19:40:25.044217+00:00",
+      "correct_count": 5,
+      "incorrect_count": 0,
+      "error_type_counts": {},
+      "misconception_counts": {},
+      "intervention_history": []
+    },
+    "question_7": {
+      "concept_key": "question_7",
+      "concept_label": "Question 7",
+      "mastery_score": 0.2222,
+      "last_seen": "2026-03-08T19:40:24.989913+00:00",
+      "correct_count": 1,
+      "incorrect_count": 6,
+      "error_type_counts": {
+        "general_misconception": 5,
+        "cause_effect_confusion": 1
+      },
+      "misconception_counts": {
+        "m_d197bc6d0389f7c1": 1
+      },
+      "intervention_history": [
+        {
+          "started_at": "2026-03-08T19:01:58.302877+00:00",
+          "trigger_question_id": "q_f505ad0342da910e",
+          "trigger_selected_option": "B",
+          "trigger_misconception_id": "",
+          "repair_question_ids": [
+            "q_9b47f3f799e4cbc8"
+          ],
+          "repair_correct_count": 0,
+          "repair_total": 1,
+          "retest_question_ids": [],
+          "retest_correct_count": 0,
+          "retest_total": 0,
+          "intervention_success": false
+        },
+        {
+          "started_at": "2026-03-08T19:09:43.932354+00:00",
+          "trigger_question_id": "q_f505ad0342da910e",
+          "trigger_selected_option": "B",
+          "trigger_misconception_id": "",
+          "repair_question_ids": [
+            "q_9b47f3f799e4cbc8"
+          ],
+          "repair_correct_count": 1,
+          "repair_total": 1,
+          "retest_question_ids": [],
+          "retest_correct_count": 0,
+          "retest_total": 0,
+          "intervention_success": false
+        }
+      ]
+    },
+    "solubility_equilibrium_ksp": {
+      "concept_key": "solubility_equilibrium_ksp",
+      "concept_label": "Solubility Equilibrium (Ksp)",
+      "mastery_score": 0.4,
+      "last_seen": "2026-03-09T01:01:59.484635+00:00",
+      "correct_count": 1,
+      "incorrect_count": 2,
+      "error_type_counts": {
+        "definition_confusion": 1,
+        "cause_effect_confusion": 1
+      },
+      "misconception_counts": {
+        "m_f6e1d2648b31f8c7": 1,
+        "m_3e65384b1968c4c9": 1
+      },
+      "intervention_history": []
+    }
+  }
+}

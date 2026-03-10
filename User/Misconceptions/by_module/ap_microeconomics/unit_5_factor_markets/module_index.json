@@ -1,0 +1,50 @@
+{
+  "version": 2,
+  "generated_at": "2026-03-06T13:54:31.253651-08:00",
+  "fingerprint": "b1fca35931dcd040e6bf3c67ff77e7f396b63c0e5ca3f8fa86063b89d027769a",
+  "prompt_version": "v7",
+  "course": {
+    "id": 2647,
+    "name": "AP Microeconomics"
+  },
+  "module": {
+    "id": 19303,
+    "name": "Unit 5: Factor Markets"
+  },
+  "domain_guess": "economics",
+  "topic_terms": [
+    "unit",
+    "factor",
+    "markets"
+  ],
+  "search_model": "gemini-2.5-flash",
+  "embedding_model": "gemini-embedding-001",
+  "cache_ttl_hours": 168,
+  "raw_count": 6,
+  "canonical_count": 6,
+  "selected_count": 6,
+  "selected_misconception_ids": [
+    "m_32db7bd9e0e46b05",
+    "m_f017a9df64bb5559",
+    "m_e84d3786b913b1b9",
+    "m_ca82e475f34719ac",
+    "m_2a3f141fdc8da27c",
+    "m_c6e85ae66ee43acd"
+  ],
+  "sources_used": [
+    "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+    "https://fiveable.me/ap-micro/unit-5",
+    "https://fiveable.me/lists/key-concepts-in-factor-markets"
+  ],
+  "search_queries": [
+    "AP Microeconomics Unit 5 Factor Markets misconception",
+    "AP Microeconomics Factor Markets common student errors",
+    "AP Microeconomics Factor Markets concept inventory",
+    "AP Microeconomics common mistakes factor markets",
+    "AP Microeconomics Factor Markets distractor misconceptions",
+    "AP Microeconomics derived demand misconception",
+    "AP Microeconomics marginal revenue product misconception",
+    "AP Microeconomics labor market equilibrium misconception"
+  ],
+  "citation_source_mode": "verified_sentence_cache"
+}

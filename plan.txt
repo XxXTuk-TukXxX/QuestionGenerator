@@ -1,0 +1,58 @@
+https://whimsical.com/ocr-processing-logic-ALxpVbdAYfmZwpffTmW9Ee
+
+2) The missing piece for Research Question A
+To answer A, you need a student model + scheduling policy that uses attempts (mistakes) to decide what to ask next, and a controlled comparison against a non-adaptive policy.
+Add these two modules:
+A) Student Model
+For each user and concept:
+mastery score (0–1)
+last_seen timestamp
+history: correct/incorrect counts
+“error type” counts (definition confusion, cause/effect, etc.) if you want
+B) Scheduler (the “adaptive” brain)
+Given the blueprint pool of questions, pick the next one by:
+prioritizing low mastery concepts
+spacing (don’t repeat too fast unless it was just missed)
+optionally triggering a “repair set” after a miss (2–3 targeted questions)
+Non-adaptive baseline: sample questions uniformly (or evenly across blueprint slots), no repair sets.
+
+
+
+*Benchmarks*
+
+4) Your experiment design (tight, judge-proof)
+You can do this with your friends and still make it rigorous.
+Main experiment: Adaptive vs Non-adaptive (RQ A)
+Pre-test (10–15 Q) from the same module
+Practice 15 minutes
+Post-test (10–15 Q), matched difficulty/coverage
+Optional: delayed test 5–7 days later
+Randomly assign participants to:
+Control: non-adaptive session
+Treatment: adaptive session
+Primary metrics (simple, strong)
+Learning gain = post − pre
+Repeat error rate on concepts missed at least once
+Time-to-mastery per concept (e.g., first time they hit 3 correct in a row)
+Why this works with your existing pipeline
+Your blueprint already ensures comparable content coverage, so the study is fair.
+
+
+
+
+
+
+5) Where “compare to other LLMs” fits now
+Given your current system, do model comparisons as a separate benchmark on question validity/quality, not mixed into the learning experiment.
+Benchmarks (offline)
+For the same module evidence + blueprint:
+Gemini flash
+your fine-tuned model
+another baseline model
+Score:
+faithfulness / citation correctness
+ambiguity rate
+distractor diagnostic pass rate
+blueprint alignment pass rate
+generation retries needed
+This shows your engineering and justifies your model choice, but your headline result remains: adaptive improves learning.

@@ -1,0 +1,851 @@
+{
+  "version": 2,
+  "updated_at": "2026-03-08T17:36:58.908020-07:00",
+  "records": [
+    {
+      "domain": "science",
+      "topic": "Solubility Equilibrium",
+      "misconception_label": "think that adding more solid to a solid-solution equilibrium will increase the equilibrium concentrations of the aque...",
+      "misconception": "Students think that adding more solid to a solid-solution equilibrium will increase the equilibrium concentrations of the aqueous species.",
+      "correct_idea": "The amount of solid present in a solid-solution equilibrium does not affect the equilibrium concentrations of the aqueous species, as solids are not included in the equilibrium expression.",
+      "tags": [
+        "concentration",
+        "le chatelier's principle",
+        "solid",
+        "solubility equilibrium"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Chemical Equilibrium Misconceptions",
+          "url": "https://serc.carleton.edu/sp/library/mathstatmodels/examples/35770.html"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "The concentrations of the aqueous species will still end up being the same. (Common misconception: Students usually think that if you add more solid, the equilibrium concentrations of the aqueous species will go up.",
+          "source_title": "Chemical Equilibrium Misconceptions",
+          "source_url": "https://serc.carleton.edu/sp/library/mathstatmodels/examples/35770.html",
+          "search_query": "chemical equilibrium common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 5.9,
+      "created_at": "2026-03-08T17:36:56.898681-07:00",
+      "misconception_id": "m_e6b7f6d517205099",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Perfectly Competitive Factor Markets",
+      "misconception_label": "confuse the relationship between the firm and the market in a competitive industry, especially regarding how market-w...",
+      "misconception": "Students may confuse the relationship between the firm and the market in a competitive industry, especially regarding how market-wide changes (e.g., in demand) affect an individual competitive firm's hiring decisions and factor prices.",
+      "correct_idea": "In a perfectly competitive factor market, individual firms are wage-takers, meaning they face a constant market wage determined by the overall market supply and demand for labor. Students often confuse this relationship, failing to understand how market-wide changes in supply or demand for labor affect the equilibrium wage, which then becomes the constant wage faced by individual competitive firms.",
+      "tags": [
+        "factor prices",
+        "firm vs market",
+        "labor market",
+        "labor supply",
+        "labor usage",
+        "marginal factor cost",
+        "marginal resource cost",
+        "marginal revenue product",
+        "market structure",
+        "monopsony",
+        "perfect competition",
+        "profit maximization",
+        "wage determination",
+        "wage taker"
+      ],
+      "evidence_sources": [
+        {
+          "title": "secure-media.collegeboard.org",
+          "url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Students were often unable to recognize that when a firm faces a constant price for different levels of its output, it operates in a perfectly competitive output market.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Similarly, students were often unable to recognize that when a firm faces a constant wage for different levels of labor usage, it operates in a perfectly competitive labor market.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "The two most common errors were the inability to find the profit-maximizing level of labor usage and to explain the condition that applies at the profit-maximizing level of labor usage.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 3.4,
+      "created_at": "2026-03-06T13:23:07.812464-08:00",
+      "misconception_id": "m_32db7bd9e0e46b05",
+      "cluster_size": 6,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Profit Maximization in Factor Markets",
+      "misconception_label": "are unable to find the profit-maximizing level of labor usage",
+      "misconception": "Students are unable to find the profit-maximizing level of labor usage.",
+      "correct_idea": "The profit-maximizing level of labor usage occurs where the Marginal Revenue Product (MRP) equals the Marginal Resource Cost (MRC).",
+      "tags": [
+        "labor usage",
+        "marginal resource cost",
+        "marginal revenue product",
+        "profit maximization"
+      ],
+      "evidence_sources": [
+        {
+          "title": "secure-media.collegeboard.org",
+          "url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "The two most common errors were the inability to find the profit-maximizing level of labor usage and to explain the condition that applies at the profit-maximizing level of labor usage.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 3.4,
+      "created_at": "2026-03-06T13:23:07.813838-08:00",
+      "misconception_id": "m_f017a9df64bb5559",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Perfectly Competitive Factor Markets",
+      "misconception_label": "were often unable to recognize that when a firm faces a constant wage for different levels of labor usage, it operate...",
+      "misconception": "Students were often unable to recognize that when a firm faces a constant wage for different levels of labor usage, it operates in a perfectly competitive labor market.",
+      "correct_idea": "In a perfectly competitive labor market, an individual firm is a wage-taker and faces a constant market wage for labor, regardless of the quantity of labor it hires.",
+      "tags": [
+        "labor market",
+        "market structure",
+        "perfect competition",
+        "wage taker"
+      ],
+      "evidence_sources": [
+        {
+          "title": "secure-media.collegeboard.org",
+          "url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Similarly, students were often unable to recognize that when a firm faces a constant wage for different levels of labor usage, it operates in a perfectly competitive labor market.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 3.4,
+      "created_at": "2026-03-06T13:23:07.813026-08:00",
+      "misconception_id": "m_e84d3786b913b1b9",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Profit Maximization in Factor Markets",
+      "misconception_label": "are unable to explain the condition that applies at the profit-maximizing level of labor usage",
+      "misconception": "Students are unable to explain the condition that applies at the profit-maximizing level of labor usage.",
+      "correct_idea": "The condition for profit-maximizing labor usage is that the Marginal Revenue Product (MRP) equals the Marginal Resource Cost (MRC).",
+      "tags": [
+        "labor usage",
+        "marginal resource cost",
+        "marginal revenue product",
+        "profit maximization"
+      ],
+      "evidence_sources": [
+        {
+          "title": "secure-media.collegeboard.org",
+          "url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "The two most common errors were the inability to find the profit-maximizing level of labor usage and to explain the condition that applies at the profit-maximizing level of labor usage.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 3.4,
+      "created_at": "2026-03-06T13:23:07.814537-08:00",
+      "misconception_id": "m_ca82e475f34719ac",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Perfectly Competitive Output Markets",
+      "misconception_label": "were often unable to recognize that when a firm faces a constant price for different levels of its output, it operate...",
+      "misconception": "Students were often unable to recognize that when a firm faces a constant price for different levels of its output, it operates in a perfectly competitive output market.",
+      "correct_idea": "In a perfectly competitive output market, an individual firm is a price-taker and faces a constant market price for its product, regardless of the quantity it produces.",
+      "tags": [
+        "market structure",
+        "output market",
+        "perfect competition",
+        "price taker"
+      ],
+      "evidence_sources": [
+        {
+          "title": "secure-media.collegeboard.org",
+          "url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Students were often unable to recognize that when a firm faces a constant price for different levels of its output, it operates in a perfectly competitive output market.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 3.4,
+      "created_at": "2026-03-06T13:23:07.812759-08:00",
+      "misconception_id": "m_2a3f141fdc8da27c",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "science",
+      "topic": "Chemical Equilibrium",
+      "misconception_label": "believe that when a system reaches equilibrium, all chemical changes stop, viewing equilibrium as a static state",
+      "misconception": "Students believe that when a system reaches equilibrium, all chemical changes stop, viewing equilibrium as a static state.",
+      "correct_idea": "Equilibrium is a dynamic process where the rates of the forward and reverse reactions are equal, meaning reactants are continuously converting to products and vice versa, but the net concentrations remain constant.",
+      "tags": [
+        "chemical equilibrium",
+        "concentration",
+        "dynamic equilibrium",
+        "products",
+        "reactants",
+        "reaction rates",
+        "static equilibrium"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Student Question : What are some common misconceptions about chemical equilibrium? | Chemistry | QuickTakes",
+          "url": "https://quicktakes.io/learn/chemistry/questions/what-are-some-common-misconceptions-about-chemical-equilibrium"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Equal Concentrations of Reactants and Products: Another common misunderstanding is the belief that at equilibrium, the concentrations of reactants and products must be equal.",
+          "source_title": "Student Question : What are some common misconceptions about chemical equilibrium? | Chemistry | QuickTakes",
+          "source_url": "https://quicktakes.io/learn/chemistry/questions/what-are-some-common-misconceptions-about-chemical-equilibrium",
+          "search_query": "chemical equilibrium common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 1.9,
+      "created_at": "2026-03-08T17:36:58.241225-07:00",
+      "misconception_id": "m_3e65384b1968c4c9",
+      "cluster_size": 2,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "science",
+      "topic": "Chemical Equilibrium",
+      "misconception_label": "believe that at equilibrium, the concentrations of reactants and products must be equal",
+      "misconception": "Students believe that at equilibrium, the concentrations of reactants and products must be equal.",
+      "correct_idea": "Equilibrium is reached when the rates of the forward and reverse reactions are equal, not necessarily when the concentrations of reactants and products are equal. The specific concentrations at equilibrium depend on the reaction and its equilibrium constant.",
+      "tags": [
+        "chemical equilibrium",
+        "concentration",
+        "products",
+        "reactants"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Student Question : What are some common misconceptions about chemical equilibrium? | Chemistry | QuickTakes",
+          "url": "https://quicktakes.io/learn/chemistry/questions/what-are-some-common-misconceptions-about-chemical-equilibrium"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Equal Concentrations of Reactants and Products: Another common misunderstanding is the belief that at equilibrium, the concentrations of reactants and products must be equal.",
+          "source_title": "Student Question : What are some common misconceptions about chemical equilibrium? | Chemistry | QuickTakes",
+          "source_url": "https://quicktakes.io/learn/chemistry/questions/what-are-some-common-misconceptions-about-chemical-equilibrium",
+          "search_query": "chemical equilibrium common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 1.9,
+      "created_at": "2026-03-08T17:36:56.325801-07:00",
+      "misconception_id": "m_f6e1d2648b31f8c7",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Marginal Revenue Product (MRP) Calculation",
+      "misconception_label": "incorrectly calculate Marginal Revenue Product (MRP) by universally applying the formula MRP = Marginal Product (MP)...",
+      "misconception": "Students incorrectly calculate Marginal Revenue Product (MRP) by universally applying the formula MRP = Marginal Product (MP) \u00d7 output price (P), failing to recognize that this formula (Value of Marginal Product, VMP) is only equivalent to MRP in perfectly competitive output markets.",
+      "correct_idea": "The general formula for Marginal Revenue Product (MRP) is Marginal Product (MP) \u00d7 Marginal Revenue (MR). In a perfectly competitive output market, MR = P, so MRP = MP \u00d7 P (VMP). However, in an imperfectly competitive output market, MR < P, so MRP = MP \u00d7 MR, and MRP < VMP.",
+      "tags": [
+        "calculation",
+        "firm vs market",
+        "imperfect competition",
+        "labor market",
+        "labor usage",
+        "mfc",
+        "mrp",
+        "perfect competition",
+        "profit maximization",
+        "vmp",
+        "wage",
+        "wage-taker"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "url": "https://fiveable.me/ap-micro/unit-5"
+        },
+        {
+          "title": "secure-media.collegeboard.org",
+          "url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf"
+        },
+        {
+          "title": "Key Concepts in Factor Markets to Know for AP Microeconomics",
+          "url": "https://fiveable.me/lists/key-concepts-in-factor-markets"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Common slipups include remembering MRP = MPP \u00d7 output price, equating MRP to the wage in a perfectly competitive factor market, and noting that in a monopsony the upward\u2010sloping supply means MFC > wage.",
+          "source_title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "source_url": "https://fiveable.me/ap-micro/unit-5",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets misconception",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "The two most common errors were the inability to find the profit-maximizing level of labor usage and to explain the condition that applies at the profit-maximizing level of labor usage.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Don't just memorize that -understand why that condition maximizes profit and how changes in output prices or productivity shift the entire labor demand curve.",
+          "source_title": "Key Concepts in Factor Markets to Know for AP Microeconomics",
+          "source_url": "https://fiveable.me/lists/key-concepts-in-factor-markets",
+          "search_query": "AP Microeconomics marginal revenue product misconception",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Similarly, students were often unable to recognize that when a firm faces a constant wage for different levels of labor usage, it operates in a perfectly competitive labor market.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "A common error was confusing the relationship between the firm and the market in a competitive industry, and what conditions are met in the long run.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-06T13:12:45.356518-08:00",
+      "misconception_id": "m_c6e85ae66ee43acd",
+      "cluster_size": 4,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Factor Markets",
+      "misconception_label": "confuse the calculation and application of Marginal Revenue Product (MRP) in perfectly competitive versus imperfectly...",
+      "misconception": "Students often confuse the calculation and application of Marginal Revenue Product (MRP) in perfectly competitive versus imperfectly competitive product markets. They may incorrectly equate MRP to the wage in a perfectly competitive factor market, or use output price (P) instead of marginal revenue (MR) when calculating MRP for a firm in an imperfectly competitive product market (MRP = MP x P vs. MRP = MP x MR).",
+      "correct_idea": "In a perfectly competitive output market, MRP = Marginal Physical Product (MPP) \u00d7 Product Price (P). In an imperfectly competitive output market, MRP = MPP \u00d7 Marginal Revenue (MR). In a perfectly competitive factor market, a firm hires labor until MRP = wage (which is also MFC).",
+      "tags": [
+        "calculation",
+        "factor markets",
+        "imperfect competition",
+        "labor market",
+        "labor usage",
+        "market structure",
+        "mfc",
+        "monopsony",
+        "mrc",
+        "mrp",
+        "output market",
+        "perfect competition",
+        "price taker",
+        "profit maximization",
+        "wage determination",
+        "wage taker"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "url": "https://fiveable.me/ap-micro/unit-5"
+        },
+        {
+          "title": "apcentral.collegeboard.org",
+          "url": "https://apcentral.collegeboard.org/media/pdf/ap25-cr-report-microeconomics-set-2.pdf"
+        },
+        {
+          "title": "secure-media.collegeboard.org",
+          "url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf"
+        },
+        {
+          "title": "Key Concepts in Factor Markets to Know for AP Microeconomics",
+          "url": "https://fiveable.me/lists/key-concepts-in-factor-markets"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Common slipups include remembering MRP = MPP \u00d7 output price, equating MRP to the wage in a perfectly competitive factor market, and noting that in a monopsony the upward\u2010sloping supply means MFC > wage.",
+          "source_title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "source_url": "https://fiveable.me/ap-micro/unit-5",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets misconception",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Many students find profit\u2010maximizing behavior and monopsony the trickiest parts-especially using marginal revenue product (MRP) and marginal factor cost (MFC) to decide hiring levels, then contrasting that with how a monopsony sets wages (Topics 5.3-5.4).",
+          "source_title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "source_url": "https://fiveable.me/ap-micro/unit-5",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets misconception",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "The first was not recognizing that the hiring firm had market power due to the presence of an MFC curve above the supply of labor curve, and the second was incorrectly determining the wage rate based on the MRP curve.",
+          "source_title": "apcentral.collegeboard.org",
+          "source_url": "https://apcentral.collegeboard.org/media/pdf/ap25-cr-report-microeconomics-set-2.pdf",
+          "search_query": "AP Microeconomics common mistakes factor markets",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Students were often unable to recognize that when a firm faces a constant price for different levels of its output, it operates in a perfectly competitive output market.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Similarly, students were often unable to recognize that when a firm faces a constant wage for different levels of labor usage, it operates in a perfectly competitive labor market.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "The two most common errors were the inability to find the profit-maximizing level of labor usage and to explain the condition that applies at the profit-maximizing level of labor usage.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Don't just memorize that -understand why that condition maximizes profit and how changes in output prices or productivity shift the entire labor demand curve.",
+          "source_title": "Key Concepts in Factor Markets to Know for AP Microeconomics",
+          "source_url": "https://fiveable.me/lists/key-concepts-in-factor-markets",
+          "search_query": "AP Microeconomics common mistakes factor markets",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-06T13:10:12.048775-08:00",
+      "misconception_id": "m_8df639ae7dcee0fc",
+      "cluster_size": 4,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Factor Markets",
+      "misconception_label": "not fully grasp the concept of derived demand, failing to connect the demand for a factor of production to the demand...",
+      "misconception": "Students may not fully grasp the concept of derived demand, failing to connect the demand for a factor of production to the demand for the final good or service it produces.",
+      "correct_idea": "Derived demand signifies that the demand for a factor of production (e.g., labor) is directly dependent on, or 'derived' from, the demand for the final good or service that the factor helps produce. Therefore, changes in the product market (e.g., consumer demand for the final good) directly influence the demand for factors in the factor market.",
+      "tags": [
+        "comparative statics",
+        "demand",
+        "demand shifts",
+        "derived demand",
+        "factor demand",
+        "factor markets",
+        "movements along curve",
+        "product markets",
+        "product price",
+        "quantity demanded",
+        "quantity supplied",
+        "shifts",
+        "supply",
+        "technology"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "url": "https://fiveable.me/ap-micro/unit-5"
+        },
+        {
+          "title": "Key Concepts in Factor Markets to Know for AP Microeconomics",
+          "url": "https://fiveable.me/lists/key-concepts-in-factor-markets"
+        },
+        {
+          "title": "secure-media.collegeboard.org",
+          "url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf"
+        },
+        {
+          "title": "apcentral.collegeboard.org",
+          "url": "https://apcentral.collegeboard.org/media/pdf/ap25-cr-report-microeconomics-set-2.pdf"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Comparative statics (how product price or tech changes shift factor demand) also throw people off.",
+          "source_title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "source_url": "https://fiveable.me/ap-micro/unit-5",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets misconception",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Don't just memorize that -understand why that condition maximizes profit and how changes in output prices or productivity shift the entire labor demand curve.",
+          "source_title": "Key Concepts in Factor Markets to Know for AP Microeconomics",
+          "source_url": "https://fiveable.me/lists/key-concepts-in-factor-markets",
+          "search_query": "AP Microeconomics common mistakes factor markets",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Equally confusing to students was how a change in market demand affects the price of a competitive firm.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Many responses incorrectly stated the supply would be greater than the demand or that the higher price causes the demand to decrease and the supply to increase.",
+          "source_title": "apcentral.collegeboard.org",
+          "source_url": "https://apcentral.collegeboard.org/media/pdf/ap25-cr-report-microeconomics-set-2.pdf",
+          "search_query": "AP Microeconomics common mistakes factor markets",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-06T13:10:12.050279-08:00",
+      "misconception_id": "m_98282498ee637129",
+      "cluster_size": 3,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "science",
+      "topic": "Le Chatelier's Principle",
+      "misconception_label": "have a general misunderstanding of how to apply Le Chatelier's Principle to predict the direction of equilibrium shif...",
+      "misconception": "Students have a general misunderstanding of how to apply Le Chatelier's Principle to predict the direction of equilibrium shifts in response to various stresses.",
+      "correct_idea": "Le Chatelier's Principle states that a system at equilibrium will shift to counteract a stress, which requires understanding how different stresses (like changes in temperature, pressure, or concentration) affect the equilibrium.",
+      "tags": [
+        "endothermic",
+        "equilibrium shift",
+        "exothermic",
+        "gases",
+        "general",
+        "le chatelier's principle",
+        "pressure",
+        "temperature",
+        "volume"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Feeling the heat When the temperature is raised in a reaction at equilibrium, students might be excused for thinking that the reaction should proceed in the exothermic direction to oppose the applied increase in heat energy.",
+          "source_title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "source_url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article",
+          "search_query": "Le Chatelier's Principle common student errors",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Under pressure To predict what happens when the pressure of a system is increased, a student might imagine a balloon filled with gas whose pressure is being increased by squeezing the balloon down to a smaller volume.",
+          "source_title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "source_url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article",
+          "search_query": "Le Chatelier's Principle common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-08T17:36:58.240695-07:00",
+      "misconception_id": "m_7038efcebbe38d26",
+      "cluster_size": 3,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Least-Cost Combination of Resources",
+      "misconception_label": "mistakenly believe that achieving the least-cost combination of resources always means using the cheapest inputs, or...",
+      "misconception": "Students mistakenly believe that achieving the least-cost combination of resources always means using the cheapest inputs, or conversely, only considering productivity without cost.",
+      "correct_idea": "The least-cost combination of resources requires considering both the price and the productivity of each input. The optimal mix is achieved when the marginal product per dollar spent is equal across all inputs (e.g., MPL/PL = MPK/PK).",
+      "tags": [
+        "cost",
+        "dynamic",
+        "least-cost combination",
+        "market conditions",
+        "price fluctuations",
+        "productivity",
+        "resource allocation",
+        "technology"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Achieving the Least Cost Combination of Factors \u2022 B.Com Institute",
+          "url": "https://bcom.institute/principles-of-micro-economics/achieving-least-cost-combination-factors/"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "This isn't necessarily true-sometimes more expensive inputs are worth their higher cost because of their superior productivity.",
+          "source_title": "Achieving the Least Cost Combination of Factors \u2022 B.Com Institute",
+          "source_url": "https://bcom.institute/principles-of-micro-economics/achieving-least-cost-combination-factors/",
+          "search_query": "AP Microeconomics least-cost combination of resources misconception",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "In reality, changing market conditions, technological advances, and price fluctuations require continuous adjustment of input combinations.",
+          "source_title": "Achieving the Least Cost Combination of Factors \u2022 B.Com Institute",
+          "source_url": "https://bcom.institute/principles-of-micro-economics/achieving-least-cost-combination-factors/",
+          "search_query": "AP Microeconomics least-cost combination of resources misconception",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-06T13:12:45.356666-08:00",
+      "misconception_id": "m_8f6c4fee7ec81467",
+      "cluster_size": 2,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Long-Run Equilibrium (Constant-Cost Industry)",
+      "misconception_label": "fail to recognize that in a constant-cost industry, the long-run equilibrium price remains constant, and the output o...",
+      "misconception": "Students fail to recognize that in a constant-cost industry, the long-run equilibrium price remains constant, and the output of a typical firm is unchanged from one long-run equilibrium to another.",
+      "correct_idea": "In a constant-cost industry, entry and exit of firms in the long run will restore the original long-run equilibrium price, and each typical firm will return to its original output level.",
+      "tags": [
+        "constant-cost industry",
+        "long-run equilibrium",
+        "output",
+        "price"
+      ],
+      "evidence_sources": [
+        {
+          "title": "secure-media.collegeboard.org",
+          "url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "2 not recognizing that in a constant-cost industry the long-run equilibrium price is constant, and that the output of a typical firm is unchanged from one long-run equilibrium to another.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics common mistakes factor markets",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-06T13:12:45.357067-08:00",
+      "misconception_id": "m_b1b03a84cd1cf2f2",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "science",
+      "topic": "Le Chatelier's Principle",
+      "misconception_label": "incorrectly believe that increasing the temperature of a system at equilibrium will cause the reaction to shift in th...",
+      "misconception": "Students incorrectly believe that increasing the temperature of a system at equilibrium will cause the reaction to shift in the exothermic direction.",
+      "correct_idea": "According to Le Chatelier's Principle, increasing temperature favors the endothermic direction, and decreasing temperature favors the exothermic direction.",
+      "tags": [
+        "endothermic",
+        "equilibrium shift",
+        "exothermic",
+        "le chatelier's principle",
+        "temperature"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Feeling the heat When the temperature is raised in a reaction at equilibrium, students might be excused for thinking that the reaction should proceed in the exothermic direction to oppose the applied increase in heat energy.",
+          "source_title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "source_url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article",
+          "search_query": "Le Chatelier's Principle common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-08T17:36:58.238258-07:00",
+      "misconception_id": "m_a84f56e1bb5d4036",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Market Structures (Output Market)",
+      "misconception_label": "are unable to recognize that a firm facing a constant price for different levels of its output operates in a perfectl...",
+      "misconception": "Students are unable to recognize that a firm facing a constant price for different levels of its output operates in a perfectly competitive output market.",
+      "correct_idea": "A firm that faces a constant price for its output, regardless of the quantity it sells, is operating in a perfectly competitive output market.",
+      "tags": [
+        "firm behavior",
+        "output market",
+        "perfect competition",
+        "price taker"
+      ],
+      "evidence_sources": [
+        {
+          "title": "secure-media.collegeboard.org",
+          "url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Students were often unable to recognize that when a firm faces a constant price for different levels of its output, it operates in a perfectly competitive output market.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-06T13:12:45.356902-08:00",
+      "misconception_id": "m_a6cbbdc827951354",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "science",
+      "topic": "Le Chatelier's Principle",
+      "misconception_label": "struggle to correctly predict the shift in equilibrium when the pressure of a gaseous system is changed, often misapp...",
+      "misconception": "Students struggle to correctly predict the shift in equilibrium when the pressure of a gaseous system is changed, often misapplying Le Chatelier's Principle.",
+      "correct_idea": "According to Le Chatelier's Principle, increasing pressure (decreasing volume) shifts equilibrium toward the side with fewer moles of gas, and decreasing pressure (increasing volume) shifts it toward the side with more moles of gas.",
+      "tags": [
+        "equilibrium shift",
+        "gases",
+        "le chatelier's principle",
+        "pressure",
+        "volume"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Under pressure To predict what happens when the pressure of a system is increased, a student might imagine a balloon filled with gas whose pressure is being increased by squeezing the balloon down to a smaller volume.",
+          "source_title": "Le Ch\u00e2telier\u2019s principle | 5 ideas in chemistry that must die | RSC Education",
+          "source_url": "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article",
+          "search_query": "Le Chatelier's Principle common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-08T17:36:58.239011-07:00",
+      "misconception_id": "m_9e7a78d2ff22f729",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Monopsony",
+      "misconception_label": "fail to recognize that in a monopsony, the Marginal Factor Cost (MFC) curve lies above the labor supply curve, meanin...",
+      "misconception": "Students fail to recognize that in a monopsony, the Marginal Factor Cost (MFC) curve lies above the labor supply curve, meaning MFC is greater than the wage (MFC > wage).",
+      "correct_idea": "In a monopsony, to hire an additional worker, the firm must increase the wage, not just for the new worker but often for all existing workers. This causes the Marginal Factor Cost (MFC) to be greater than the wage, and the MFC curve lies above the labor supply curve.",
+      "tags": [
+        "labor supply",
+        "market power",
+        "mfc",
+        "monopsony",
+        "wage"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "url": "https://fiveable.me/ap-micro/unit-5"
+        },
+        {
+          "title": "apcentral.collegeboard.org",
+          "url": "https://apcentral.collegeboard.org/media/pdf/ap25-cr-report-microeconomics-set-2.pdf"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Common slipups include remembering MRP = MPP \u00d7 output price, equating MRP to the wage in a perfectly competitive factor market, and noting that in a monopsony the upward\u2010sloping supply means MFC > wage.",
+          "source_title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "source_url": "https://fiveable.me/ap-micro/unit-5",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets misconception",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "The first was not recognizing that the hiring firm had market power due to the presence of an MFC curve above the supply of labor curve, and the second was incorrectly determining the wage rate based on the MRP curve.",
+          "source_title": "apcentral.collegeboard.org",
+          "source_url": "https://apcentral.collegeboard.org/media/pdf/ap25-cr-report-microeconomics-set-2.pdf",
+          "search_query": "AP Microeconomics Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-06T13:12:45.356401-08:00",
+      "misconception_id": "m_614cc8bd8e4930c5",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Factor Demand and Production",
+      "misconception_label": "fail to recognize that diminishing marginal returns cause the Marginal Product (MP) and thus the Marginal Revenue Pro...",
+      "misconception": "Students often fail to recognize that diminishing marginal returns cause the Marginal Product (MP) and thus the Marginal Revenue Product (MRP) to fall as more units of a factor are employed, leading to a downward-sloping factor demand curve.",
+      "correct_idea": "The law of diminishing marginal returns states that as more units of a variable factor (like labor) are added to fixed factors, the Marginal Product (MP) will eventually decrease. Since Marginal Revenue Product (MRP) is calculated as Price (P) multiplied by Marginal Product (MP), a falling MP will cause MRP to fall, resulting in a downward-sloping factor demand curve.",
+      "tags": [
+        "diminishing marginal returns",
+        "factor demand",
+        "marginal product",
+        "marginal revenue product",
+        "production function"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Introduction to Factor Markets - AP Micro Study Guide |... | Fiveable",
+          "url": "https://fiveable.me/ap-micro/unit-5/intro-factor-markets/study-guide/pwArfJpGkiQNHkjkRJe8"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "The law of diminishing marginal returns says that as variable resources are added to fixed resources, the additional output produced from each new input will eventually fall.",
+          "source_title": "Introduction to Factor Markets - AP Micro Study Guide |... | Fiveable",
+          "source_url": "https://fiveable.me/ap-micro/unit-5/intro-factor-markets/study-guide/pwArfJpGkiQNHkjkRJe8",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-06T13:23:06.828360-08:00",
+      "misconception_id": "m_2c6c3b7f8a20d550",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    }
+  ]
+}

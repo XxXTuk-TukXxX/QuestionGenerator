@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "generated_at": "2026-03-08T17:36:58.909116-07:00",
+  "fingerprint": "3493016278690b2a6fd89f30ae09204cdc901ecf41fbbaeaf395f9539b8d5939",
+  "prompt_version": "v7",
+  "course": {
+    "id": 2627,
+    "name": "AP Chemistry"
+  },
+  "module": {
+    "id": 18382,
+    "name": "Unit 7 - Equilibrium & Solubility"
+  },
+  "domain_guess": "science",
+  "topic_terms": [
+    "reaction",
+    "heat",
+    "equilibrium",
+    "reactants",
+    "products",
+    "product",
+    "side",
+    "shifts",
+    "toward",
+    "reactant",
+    "rate",
+    "favored",
+    "you",
+    "temperature"
+  ],
+  "search_model": "gemini-2.5-flash",
+  "embedding_model": "gemini-embedding-001",
+  "cache_ttl_hours": 168,
+  "raw_count": 6,
+  "canonical_count": 6,
+  "selected_count": 6,
+  "selected_misconception_ids": [
+    "m_e6b7f6d517205099",
+    "m_3e65384b1968c4c9",
+    "m_f6e1d2648b31f8c7",
+    "m_7038efcebbe38d26",
+    "m_a84f56e1bb5d4036",
+    "m_9e7a78d2ff22f729"
+  ],
+  "sources_used": [
+    "https://serc.carleton.edu/sp/library/mathstatmodels/examples/35770.html",
+    "https://quicktakes.io/learn/chemistry/questions/what-are-some-common-misconceptions-about-chemical-equilibrium",
+    "https://edu.rsc.org/opinion/five-ideas-in-chemical-education-that-must-die-le-chateliers-principle/2010035.article"
+  ],
+  "search_queries": [
+    "AP Chemistry equilibrium misconceptions",
+    "AP Chemistry solubility misconceptions",
+    "chemical equilibrium common student errors",
+    "Le Chatelier's Principle common student errors",
+    "Ksp common student errors",
+    "AP Chemistry equilibrium concept inventory",
+    "AP Chemistry solubility concept inventory",
+    "AP Chemistry equilibrium distractor misconceptions"
+  ],
+  "citation_source_mode": "search_quotes",
+  "warning": ""
+}

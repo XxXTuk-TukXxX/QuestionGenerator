@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "target_correct_rates": {
+    "foundation": 0.75,
+    "standard": 0.6,
+    "challenge": 0.4
+  },
+  "pilot_results": []
+}

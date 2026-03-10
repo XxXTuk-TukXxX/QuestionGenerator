@@ -1,0 +1,963 @@
+{
+  "generated_at": "2026-03-06T13:54:31.254569-08:00",
+  "prompt_version": "v7",
+  "search_queries": [
+    "AP Microeconomics Unit 5 Factor Markets misconception",
+    "AP Microeconomics Factor Markets common student errors",
+    "AP Microeconomics Factor Markets concept inventory",
+    "AP Microeconomics common mistakes factor markets",
+    "AP Microeconomics Factor Markets distractor misconceptions",
+    "AP Microeconomics derived demand misconception",
+    "AP Microeconomics marginal revenue product misconception",
+    "AP Microeconomics labor market equilibrium misconception"
+  ],
+  "citation_source_mode": "search_quotes",
+  "grounded_evidence_pool": [
+    {
+      "evidence_id": 1,
+      "quote_text": "Many students find profit\u2010maximizing behavior and monopsony the trickiest parts-especially using marginal revenue product (MRP) and marginal factor cost (MFC) to decide hiring levels, then contrasting that with how a monopsony sets wages (Topics 5.3-5.4).",
+      "source_title": "Factor Markets | AP Microeconomics Unit 5 Review",
+      "source_url": "https://fiveable.me/ap-micro/unit-5",
+      "search_query": "AP Microeconomics Unit 5 Factor Markets misconception",
+      "grounding_chunk_indices": []
+    },
+    {
+      "evidence_id": 2,
+      "quote_text": "Common slipups include remembering MRP = MPP \u00d7 output price, equating MRP to the wage in a perfectly competitive factor market, and noting that in a monopsony the upward\u2010sloping supply means MFC > wage.",
+      "source_title": "Factor Markets | AP Microeconomics Unit 5 Review",
+      "source_url": "https://fiveable.me/ap-micro/unit-5",
+      "search_query": "AP Microeconomics Unit 5 Factor Markets misconception",
+      "grounding_chunk_indices": []
+    },
+    {
+      "evidence_id": 3,
+      "quote_text": "Comparative statics (how product price or tech changes shift factor demand) also throw people off.",
+      "source_title": "Factor Markets | AP Microeconomics Unit 5 Review",
+      "source_url": "https://fiveable.me/ap-micro/unit-5",
+      "search_query": "AP Microeconomics Unit 5 Factor Markets misconception",
+      "grounding_chunk_indices": []
+    },
+    {
+      "evidence_id": 4,
+      "quote_text": "This orientation prevents the common mistake of interpreting a marginal cost curve as an average cost curve, or mixing up a firm's demand curve with the market demand curve.",
+      "source_title": "Multiple-Choice Questions (MCQ) - AP Microeconomics Study... | Fiveable",
+      "source_url": "https://fiveable.me/ap-micro/ap-microeconomics-exam/ap-micro-mcq/study-guide/ap-micro-mcq",
+      "search_query": "AP Microeconomics Factor Markets distractor misconceptions",
+      "grounding_chunk_indices": []
+    },
+    {
+      "evidence_id": 5,
+      "quote_text": "This distinction between MRP and VMP signals the market structure.",
+      "source_title": "Multiple-Choice Questions (MCQ) - AP Microeconomics Study... | Fiveable",
+      "source_url": "https://fiveable.me/ap-micro/ap-microeconomics-exam/ap-micro-mcq/study-guide/ap-micro-mcq",
+      "search_query": "AP Microeconomics Factor Markets distractor misconceptions",
+      "grounding_chunk_indices": []
+    },
+    {
+      "evidence_id": 6,
+      "quote_text": "The monopsonist faces an upward-sloping labor supply curve with a marginal factor cost (MFC) above it.",
+      "source_title": "Multiple-Choice Questions (MCQ) - AP Microeconomics Study... | Fiveable",
+      "source_url": "https://fiveable.me/ap-micro/ap-microeconomics-exam/ap-micro-mcq/study-guide/ap-micro-mcq",
+      "search_query": "AP Microeconomics Factor Markets distractor misconceptions",
+      "grounding_chunk_indices": []
+    },
+    {
+      "evidence_id": 7,
+      "quote_text": "Don't just memorize that -understand why that condition maximizes profit and how changes in output prices or productivity shift the entire labor demand curve.",
+      "source_title": "Key Concepts in Factor Markets to Know for AP Microeconomics",
+      "source_url": "https://fiveable.me/lists/key-concepts-in-factor-markets",
+      "search_query": "AP Microeconomics marginal revenue product misconception",
+      "grounding_chunk_indices": []
+    },
+    {
+      "evidence_id": 8,
+      "quote_text": "The first was not recognizing that the hiring firm had market power due to the presence of an MFC curve above the supply of labor curve, and the second was incorrectly determining the wage rate based on the MRP curve.",
+      "source_title": "apcentral.collegeboard.org",
+      "source_url": "https://apcentral.collegeboard.org/media/pdf/ap25-cr-report-microeconomics-set-2.pdf",
+      "search_query": "AP Microeconomics Factor Markets common student errors",
+      "grounding_chunk_indices": []
+    },
+    {
+      "evidence_id": 9,
+      "quote_text": "Many responses incorrectly stated the supply would be greater than the demand or that the higher price causes the demand to decrease and the supply to increase.",
+      "source_title": "apcentral.collegeboard.org",
+      "source_url": "https://apcentral.collegeboard.org/media/pdf/ap25-cr-report-microeconomics-set-2.pdf",
+      "search_query": "AP Microeconomics Factor Markets common student errors",
+      "grounding_chunk_indices": []
+    },
+    {
+      "evidence_id": 10,
+      "quote_text": "many students were unable to explain that a change in a fixed cost does not affect the marginal cost nor marginal revenue.",
+      "source_title": "apcentral.collegeboard.org",
+      "source_url": "https://apcentral.collegeboard.org/media/pdf/ap25-cr-report-microeconomics-set-2.pdf",
+      "search_query": "AP Microeconomics Factor Markets common student errors",
+      "grounding_chunk_indices": []
+    },
+    {
+      "evidence_id": 11,
+      "quote_text": "A change in Demand versus a change in the Quantity Demanded",
+      "source_title": "PPT - COMMON MISTAKES ON THE AP MICRO EXAM PowerPoint Presentation, free download - ID:873268",
+      "source_url": "https://www.slideserve.com/kermit/common-mistakes-on-the-ap-micro-exam-powerpoint-ppt-presentation",
+      "search_query": "AP Microeconomics common mistakes factor markets",
+      "grounding_chunk_indices": []
+    },
+    {
+      "evidence_id": 12,
+      "quote_text": "DIMINISHING RETURNS \u2022 Explanation: As additional units of a variable input (labor) are added to a fixed input (capital), at some point the additional output resulting from the addition of one more unit of variable input declines.",
+      "source_title": "PPT - COMMON MISTAKES ON THE AP MICRO EXAM PowerPoint Presentation, free download - ID:873268",
+      "source_url": "https://www.slideserve.com/kermit/common-mistakes-on-the-ap-micro-exam-powerpoint-ppt-presentation",
+      "search_query": "AP Microeconomics common mistakes factor markets",
+      "grounding_chunk_indices": []
+    }
+  ],
+  "raw_records": [
+    {
+      "domain": "economics",
+      "topic": "Profit-Maximizing Hiring Rule (MRP=MFC/MRC)",
+      "misconception_label": "struggle to correctly apply the profit-maximizing rule of hiring where Marginal Revenue Product (MRP) equals Marginal...",
+      "misconception": "Students often struggle to correctly apply the profit-maximizing rule of hiring where Marginal Revenue Product (MRP) equals Marginal Factor Cost (MFC) or Marginal Resource Cost (MRC), especially in different market structures. They may incorrectly equate MRP to the wage in a perfectly competitive factor market, or fail to recognize that MFC > wage in a monopsony.",
+      "correct_idea": "The profit-maximizing rule for hiring is to hire where Marginal Revenue Product (MRP) equals Marginal Factor Cost (MFC). In a perfectly competitive factor market, MRP equals the wage. In a monopsony, MFC is greater than the wage, and the wage is determined by the supply curve at the profit-maximizing quantity of labor.",
+      "tags": [
+        "factor markets",
+        "mfc",
+        "monopsony",
+        "mrp",
+        "perfect competition",
+        "profit maximization"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "url": "https://fiveable.me/ap-micro/unit-5"
+        },
+        {
+          "title": "Key Concepts in Factor Markets to Know for AP Microeconomics",
+          "url": "https://fiveable.me/lists/key-concepts-in-factor-markets"
+        },
+        {
+          "title": "apcentral.collegeboard.org",
+          "url": "https://apcentral.collegeboard.org/media/pdf/ap25-cr-report-microeconomics-set-2.pdf"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Many students find profit\u2010maximizing behavior and monopsony the trickiest parts-especially using marginal revenue product (MRP) and marginal factor cost (MFC) to decide hiring levels, then contrasting that with how a monopsony sets wages (Topics 5.3-5.4).",
+          "source_title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "source_url": "https://fiveable.me/ap-micro/unit-5",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets misconception",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Common slipups include remembering MRP = MPP \u00d7 output price, equating MRP to the wage in a perfectly competitive factor market, and noting that in a monopsony the upward\u2010sloping supply means MFC > wage.",
+          "source_title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "source_url": "https://fiveable.me/ap-micro/unit-5",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets misconception",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Don't just memorize that -understand why that condition maximizes profit and how changes in output prices or productivity shift the entire labor demand curve.",
+          "source_title": "Key Concepts in Factor Markets to Know for AP Microeconomics",
+          "source_url": "https://fiveable.me/lists/key-concepts-in-factor-markets",
+          "search_query": "AP Microeconomics marginal revenue product misconception",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "The first was not recognizing that the hiring firm had market power due to the presence of an MFC curve above the supply of labor curve, and the second was incorrectly determining the wage rate based on the MRP curve.",
+          "source_title": "apcentral.collegeboard.org",
+          "source_url": "https://apcentral.collegeboard.org/media/pdf/ap25-cr-report-microeconomics-set-2.pdf",
+          "search_query": "AP Microeconomics Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 3.4,
+      "created_at": "2026-03-06T13:26:47.304141-08:00"
+    },
+    {
+      "domain": "economics",
+      "topic": "Monopsony Market Characteristics and Outcomes",
+      "misconception_label": "A common misconception is failing to understand that in a monopsony, the Marginal Factor Cost (MFC) curve lies above...",
+      "misconception": "A common misconception is failing to understand that in a monopsony, the Marginal Factor Cost (MFC) curve lies above the labor supply curve (MFC > wage). This leads to errors in determining the profit-maximizing quantity of labor hired (where MRP=MFC) and the wage paid (read from the supply curve at that quantity), often resulting in students incorrectly paying the MFC or the competitive wage.",
+      "correct_idea": "In a monopsony, the Marginal Factor Cost (MFC) curve lies above the upward-sloping labor supply curve (MFC > wage). The profit-maximizing quantity of labor is hired where MRP = MFC, and the wage paid is determined by the labor supply curve at that quantity.",
+      "tags": [
+        "factor markets",
+        "labor supply",
+        "market power",
+        "mfc",
+        "monopsony",
+        "wage determination"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "url": "https://fiveable.me/ap-micro/unit-5"
+        },
+        {
+          "title": "Multiple-Choice Questions (MCQ) - AP Microeconomics Study... | Fiveable",
+          "url": "https://fiveable.me/ap-micro/ap-microeconomics-exam/ap-micro-mcq/study-guide/ap-micro-mcq"
+        },
+        {
+          "title": "apcentral.collegeboard.org",
+          "url": "https://apcentral.collegeboard.org/media/pdf/ap25-cr-report-microeconomics-set-2.pdf"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Many students find profit\u2010maximizing behavior and monopsony the trickiest parts-especially using marginal revenue product (MRP) and marginal factor cost (MFC) to decide hiring levels, then contrasting that with how a monopsony sets wages (Topics 5.3-5.4).",
+          "source_title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "source_url": "https://fiveable.me/ap-micro/unit-5",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets misconception",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Common slipups include remembering MRP = MPP \u00d7 output price, equating MRP to the wage in a perfectly competitive factor market, and noting that in a monopsony the upward\u2010sloping supply means MFC > wage.",
+          "source_title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "source_url": "https://fiveable.me/ap-micro/unit-5",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets misconception",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "The monopsonist faces an upward-sloping labor supply curve with a marginal factor cost (MFC) above it.",
+          "source_title": "Multiple-Choice Questions (MCQ) - AP Microeconomics Study... | Fiveable",
+          "source_url": "https://fiveable.me/ap-micro/ap-microeconomics-exam/ap-micro-mcq/study-guide/ap-micro-mcq",
+          "search_query": "AP Microeconomics Factor Markets distractor misconceptions",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "The first was not recognizing that the hiring firm had market power due to the presence of an MFC curve above the supply of labor curve, and the second was incorrectly determining the wage rate based on the MRP curve.",
+          "source_title": "apcentral.collegeboard.org",
+          "source_url": "https://apcentral.collegeboard.org/media/pdf/ap25-cr-report-microeconomics-set-2.pdf",
+          "search_query": "AP Microeconomics Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 3.4,
+      "created_at": "2026-03-06T13:26:47.722238-08:00"
+    },
+    {
+      "domain": "economics",
+      "topic": "Derived Demand",
+      "misconception_label": "understand the definition of derived demand but struggle to consistently trace changes in factor markets back to the...",
+      "misconception": "Students may understand the definition of derived demand but struggle to consistently trace changes in factor markets back to the underlying product market. They might not fully grasp how shifts in product demand, product price, or productivity directly impact the demand for factors of production.",
+      "correct_idea": "The demand for a factor of production is derived from the demand for the product it helps produce. Changes in product demand, product price, or productivity directly cause shifts in the demand for factors of production.",
+      "tags": [
+        "comparative statics",
+        "derived demand",
+        "factor demand",
+        "product market",
+        "productivity",
+        "shifts"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "url": "https://fiveable.me/ap-micro/unit-5"
+        },
+        {
+          "title": "Key Concepts in Factor Markets to Know for AP Microeconomics",
+          "url": "https://fiveable.me/lists/key-concepts-in-factor-markets"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Comparative statics (how product price or tech changes shift factor demand) also throw people off.",
+          "source_title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "source_url": "https://fiveable.me/ap-micro/unit-5",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets misconception",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Don't just memorize that -understand why that condition maximizes profit and how changes in output prices or productivity shift the entire labor demand curve.",
+          "source_title": "Key Concepts in Factor Markets to Know for AP Microeconomics",
+          "source_url": "https://fiveable.me/lists/key-concepts-in-factor-markets",
+          "search_query": "AP Microeconomics marginal revenue product misconception",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-06T13:26:47.722624-08:00"
+    },
+    {
+      "domain": "economics",
+      "topic": "Distinction between Perfectly Competitive Product and Factor Markets",
+      "misconception_label": "confuse the characteristics and implications of a firm operating in a perfectly competitive *output* market with one...",
+      "misconception": "Students often confuse the characteristics and implications of a firm operating in a perfectly competitive *output* market with one operating in a perfectly competitive *factor* market. This can lead to errors in assuming constant marginal revenue product (MRP) or incorrectly applying product market rules to factor markets.",
+      "correct_idea": "A firm can operate in a perfectly competitive product market (where P=MR) and/or a perfectly competitive factor market (where the firm is a wage-taker, and wage=MFC). The rules for profit maximization and factor hiring differ based on the specific market structure of both the product and factor markets.",
+      "tags": [
+        "factor market",
+        "market structures",
+        "mfc",
+        "mrp",
+        "perfect competition",
+        "product market"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "url": "https://fiveable.me/ap-micro/unit-5"
+        },
+        {
+          "title": "Multiple-Choice Questions (MCQ) - AP Microeconomics Study... | Fiveable",
+          "url": "https://fiveable.me/ap-micro/ap-microeconomics-exam/ap-micro-mcq/study-guide/ap-micro-mcq"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Many students find profit\u2010maximizing behavior and monopsony the trickiest parts-especially using marginal revenue product (MRP) and marginal factor cost (MFC) to decide hiring levels, then contrasting that with how a monopsony sets wages (Topics 5.3-5.4).",
+          "source_title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "source_url": "https://fiveable.me/ap-micro/unit-5",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets misconception",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Common slipups include remembering MRP = MPP \u00d7 output price, equating MRP to the wage in a perfectly competitive factor market, and noting that in a monopsony the upward\u2010sloping supply means MFC > wage.",
+          "source_title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "source_url": "https://fiveable.me/ap-micro/unit-5",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets misconception",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "This distinction between MRP and VMP signals the market structure.",
+          "source_title": "Multiple-Choice Questions (MCQ) - AP Microeconomics Study... | Fiveable",
+          "source_url": "https://fiveable.me/ap-micro/ap-microeconomics-exam/ap-micro-mcq/study-guide/ap-micro-mcq",
+          "search_query": "AP Microeconomics Factor Markets distractor misconceptions",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-06T13:26:47.723217-08:00"
+    },
+    {
+      "domain": "economics",
+      "topic": "Marginal Revenue Product (MRP) vs. Value of Marginal Product (VMP)",
+      "misconception_label": "sometimes use MRP and VMP interchangeably, failing to recognize that VMP (Marginal Product x Product Price) is only e...",
+      "misconception": "Students sometimes use MRP and VMP interchangeably, failing to recognize that VMP (Marginal Product x Product Price) is only equal to MRP (Marginal Product x Marginal Revenue) when the firm sells its output in a perfectly competitive product market (where P=MR). In imperfectly competitive output markets, P > MR, so VMP > MRP.",
+      "correct_idea": "Marginal Revenue Product (MRP) is Marginal Product (MP) multiplied by Marginal Revenue (MR). Value of Marginal Product (VMP) is Marginal Product (MP) multiplied by Product Price (P). MRP = VMP only in perfectly competitive product markets where P = MR. In imperfectly competitive product markets, P > MR, so VMP > MRP. MRP is the correct measure for hiring decisions.",
+      "tags": [
+        "imperfect competition",
+        "marginal product",
+        "market structures",
+        "mrp",
+        "perfect competition",
+        "vmp"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Multiple-Choice Questions (MCQ) - AP Microeconomics Study... | Fiveable",
+          "url": "https://fiveable.me/ap-micro/ap-microeconomics-exam/ap-micro-mcq/study-guide/ap-micro-mcq"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "This distinction between MRP and VMP signals the market structure.",
+          "source_title": "Multiple-Choice Questions (MCQ) - AP Microeconomics Study... | Fiveable",
+          "source_url": "https://fiveable.me/ap-micro/ap-microeconomics-exam/ap-micro-mcq/study-guide/ap-micro-mcq",
+          "search_query": "AP Microeconomics Factor Markets distractor misconceptions",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-06T13:26:47.723520-08:00"
+    },
+    {
+      "domain": "economics",
+      "topic": "Graphical Analysis and Shifts in Factor Markets",
+      "misconception_label": "make errors in drawing and labeling factor market graphs, particularly the MRP, MFC, and supply curves",
+      "misconception": "Students make errors in drawing and labeling factor market graphs, particularly the MRP, MFC, and supply curves. They also struggle with correctly illustrating and explaining the impact of various shifters (e.g., changes in product price, technology, population) on labor demand and supply and the resulting equilibrium wage and quantity.",
+      "correct_idea": "Students should be able to accurately draw and label factor market graphs (MRP, MFC, supply curves) and correctly illustrate and explain how changes in determinants like product price, technology, or population shift the labor demand and supply curves, leading to new equilibrium wages and quantities.",
+      "tags": [
+        "comparative statics",
+        "equilibrium",
+        "factor demand",
+        "graphical analysis",
+        "labor supply",
+        "shifts"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "url": "https://fiveable.me/ap-micro/unit-5"
+        },
+        {
+          "title": "Key Concepts in Factor Markets to Know for AP Microeconomics",
+          "url": "https://fiveable.me/lists/key-concepts-in-factor-markets"
+        },
+        {
+          "title": "apcentral.collegeboard.org",
+          "url": "https://apcentral.collegeboard.org/media/pdf/ap25-cr-report-microeconomics-set-2.pdf"
+        },
+        {
+          "title": "PPT - COMMON MISTAKES ON THE AP MICRO EXAM PowerPoint Presentation, free download - ID:873268",
+          "url": "https://www.slideserve.com/kermit/common-mistakes-on-the-ap-micro-exam-powerpoint-ppt-presentation"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Comparative statics (how product price or tech changes shift factor demand) also throw people off.",
+          "source_title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "source_url": "https://fiveable.me/ap-micro/unit-5",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets misconception",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Don't just memorize that -understand why that condition maximizes profit and how changes in output prices or productivity shift the entire labor demand curve.",
+          "source_title": "Key Concepts in Factor Markets to Know for AP Microeconomics",
+          "source_url": "https://fiveable.me/lists/key-concepts-in-factor-markets",
+          "search_query": "AP Microeconomics marginal revenue product misconception",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Many responses incorrectly stated the supply would be greater than the demand or that the higher price causes the demand to decrease and the supply to increase.",
+          "source_title": "apcentral.collegeboard.org",
+          "source_url": "https://apcentral.collegeboard.org/media/pdf/ap25-cr-report-microeconomics-set-2.pdf",
+          "search_query": "AP Microeconomics Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "A change in Demand versus a change in the Quantity Demanded",
+          "source_title": "PPT - COMMON MISTAKES ON THE AP MICRO EXAM PowerPoint Presentation, free download - ID:873268",
+          "source_url": "https://www.slideserve.com/kermit/common-mistakes-on-the-ap-micro-exam-powerpoint-ppt-presentation",
+          "search_query": "AP Microeconomics common mistakes factor markets",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 3.4,
+      "created_at": "2026-03-06T13:26:48.038967-08:00"
+    }
+  ],
+  "canonical_records": [
+    {
+      "domain": "economics",
+      "topic": "Perfectly Competitive Factor Markets",
+      "misconception_label": "confuse the relationship between the firm and the market in a competitive industry, especially regarding how market-w...",
+      "misconception": "Students may confuse the relationship between the firm and the market in a competitive industry, especially regarding how market-wide changes (e.g., in demand) affect an individual competitive firm's hiring decisions and factor prices.",
+      "correct_idea": "In a perfectly competitive factor market, individual firms are wage-takers, meaning they face a constant market wage determined by the overall market supply and demand for labor. Students often confuse this relationship, failing to understand how market-wide changes in supply or demand for labor affect the equilibrium wage, which then becomes the constant wage faced by individual competitive firms.",
+      "tags": [
+        "factor prices",
+        "firm vs market",
+        "labor market",
+        "labor supply",
+        "labor usage",
+        "marginal factor cost",
+        "marginal resource cost",
+        "marginal revenue product",
+        "market structure",
+        "monopsony",
+        "perfect competition",
+        "profit maximization",
+        "wage determination",
+        "wage taker"
+      ],
+      "evidence_sources": [
+        {
+          "title": "secure-media.collegeboard.org",
+          "url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Students were often unable to recognize that when a firm faces a constant price for different levels of its output, it operates in a perfectly competitive output market.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Similarly, students were often unable to recognize that when a firm faces a constant wage for different levels of labor usage, it operates in a perfectly competitive labor market.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "The two most common errors were the inability to find the profit-maximizing level of labor usage and to explain the condition that applies at the profit-maximizing level of labor usage.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 3.4,
+      "created_at": "2026-03-06T13:23:07.812464-08:00",
+      "misconception_id": "m_32db7bd9e0e46b05",
+      "cluster_size": 6,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Profit Maximization in Factor Markets",
+      "misconception_label": "are unable to find the profit-maximizing level of labor usage",
+      "misconception": "Students are unable to find the profit-maximizing level of labor usage.",
+      "correct_idea": "The profit-maximizing level of labor usage occurs where the Marginal Revenue Product (MRP) equals the Marginal Resource Cost (MRC).",
+      "tags": [
+        "labor usage",
+        "marginal resource cost",
+        "marginal revenue product",
+        "profit maximization"
+      ],
+      "evidence_sources": [
+        {
+          "title": "secure-media.collegeboard.org",
+          "url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "The two most common errors were the inability to find the profit-maximizing level of labor usage and to explain the condition that applies at the profit-maximizing level of labor usage.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 3.4,
+      "created_at": "2026-03-06T13:23:07.813838-08:00",
+      "misconception_id": "m_f017a9df64bb5559",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Perfectly Competitive Factor Markets",
+      "misconception_label": "were often unable to recognize that when a firm faces a constant wage for different levels of labor usage, it operate...",
+      "misconception": "Students were often unable to recognize that when a firm faces a constant wage for different levels of labor usage, it operates in a perfectly competitive labor market.",
+      "correct_idea": "In a perfectly competitive labor market, an individual firm is a wage-taker and faces a constant market wage for labor, regardless of the quantity of labor it hires.",
+      "tags": [
+        "labor market",
+        "market structure",
+        "perfect competition",
+        "wage taker"
+      ],
+      "evidence_sources": [
+        {
+          "title": "secure-media.collegeboard.org",
+          "url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Similarly, students were often unable to recognize that when a firm faces a constant wage for different levels of labor usage, it operates in a perfectly competitive labor market.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 3.4,
+      "created_at": "2026-03-06T13:23:07.813026-08:00",
+      "misconception_id": "m_e84d3786b913b1b9",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Profit Maximization in Factor Markets",
+      "misconception_label": "are unable to explain the condition that applies at the profit-maximizing level of labor usage",
+      "misconception": "Students are unable to explain the condition that applies at the profit-maximizing level of labor usage.",
+      "correct_idea": "The condition for profit-maximizing labor usage is that the Marginal Revenue Product (MRP) equals the Marginal Resource Cost (MRC).",
+      "tags": [
+        "labor usage",
+        "marginal resource cost",
+        "marginal revenue product",
+        "profit maximization"
+      ],
+      "evidence_sources": [
+        {
+          "title": "secure-media.collegeboard.org",
+          "url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "The two most common errors were the inability to find the profit-maximizing level of labor usage and to explain the condition that applies at the profit-maximizing level of labor usage.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 3.4,
+      "created_at": "2026-03-06T13:23:07.814537-08:00",
+      "misconception_id": "m_ca82e475f34719ac",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Perfectly Competitive Output Markets",
+      "misconception_label": "were often unable to recognize that when a firm faces a constant price for different levels of its output, it operate...",
+      "misconception": "Students were often unable to recognize that when a firm faces a constant price for different levels of its output, it operates in a perfectly competitive output market.",
+      "correct_idea": "In a perfectly competitive output market, an individual firm is a price-taker and faces a constant market price for its product, regardless of the quantity it produces.",
+      "tags": [
+        "market structure",
+        "output market",
+        "perfect competition",
+        "price taker"
+      ],
+      "evidence_sources": [
+        {
+          "title": "secure-media.collegeboard.org",
+          "url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Students were often unable to recognize that when a firm faces a constant price for different levels of its output, it operates in a perfectly competitive output market.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 3.4,
+      "created_at": "2026-03-06T13:23:07.812759-08:00",
+      "misconception_id": "m_2a3f141fdc8da27c",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Marginal Revenue Product (MRP) Calculation",
+      "misconception_label": "incorrectly calculate Marginal Revenue Product (MRP) by universally applying the formula MRP = Marginal Product (MP)...",
+      "misconception": "Students incorrectly calculate Marginal Revenue Product (MRP) by universally applying the formula MRP = Marginal Product (MP) \u00d7 output price (P), failing to recognize that this formula (Value of Marginal Product, VMP) is only equivalent to MRP in perfectly competitive output markets.",
+      "correct_idea": "The general formula for Marginal Revenue Product (MRP) is Marginal Product (MP) \u00d7 Marginal Revenue (MR). In a perfectly competitive output market, MR = P, so MRP = MP \u00d7 P (VMP). However, in an imperfectly competitive output market, MR < P, so MRP = MP \u00d7 MR, and MRP < VMP.",
+      "tags": [
+        "calculation",
+        "firm vs market",
+        "imperfect competition",
+        "labor market",
+        "labor usage",
+        "mfc",
+        "mrp",
+        "perfect competition",
+        "profit maximization",
+        "vmp",
+        "wage",
+        "wage-taker"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "url": "https://fiveable.me/ap-micro/unit-5"
+        },
+        {
+          "title": "secure-media.collegeboard.org",
+          "url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf"
+        },
+        {
+          "title": "Key Concepts in Factor Markets to Know for AP Microeconomics",
+          "url": "https://fiveable.me/lists/key-concepts-in-factor-markets"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Common slipups include remembering MRP = MPP \u00d7 output price, equating MRP to the wage in a perfectly competitive factor market, and noting that in a monopsony the upward\u2010sloping supply means MFC > wage.",
+          "source_title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "source_url": "https://fiveable.me/ap-micro/unit-5",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets misconception",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "The two most common errors were the inability to find the profit-maximizing level of labor usage and to explain the condition that applies at the profit-maximizing level of labor usage.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Don't just memorize that -understand why that condition maximizes profit and how changes in output prices or productivity shift the entire labor demand curve.",
+          "source_title": "Key Concepts in Factor Markets to Know for AP Microeconomics",
+          "source_url": "https://fiveable.me/lists/key-concepts-in-factor-markets",
+          "search_query": "AP Microeconomics marginal revenue product misconception",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Similarly, students were often unable to recognize that when a firm faces a constant wage for different levels of labor usage, it operates in a perfectly competitive labor market.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "A common error was confusing the relationship between the firm and the market in a competitive industry, and what conditions are met in the long run.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-06T13:12:45.356518-08:00",
+      "misconception_id": "m_c6e85ae66ee43acd",
+      "cluster_size": 4,
+      "embedding_model": "gemini-embedding-001"
+    }
+  ],
+  "selected_misconceptions": [
+    {
+      "domain": "economics",
+      "topic": "Perfectly Competitive Factor Markets",
+      "misconception_label": "confuse the relationship between the firm and the market in a competitive industry, especially regarding how market-w...",
+      "misconception": "Students may confuse the relationship between the firm and the market in a competitive industry, especially regarding how market-wide changes (e.g., in demand) affect an individual competitive firm's hiring decisions and factor prices.",
+      "correct_idea": "In a perfectly competitive factor market, individual firms are wage-takers, meaning they face a constant market wage determined by the overall market supply and demand for labor. Students often confuse this relationship, failing to understand how market-wide changes in supply or demand for labor affect the equilibrium wage, which then becomes the constant wage faced by individual competitive firms.",
+      "tags": [
+        "factor prices",
+        "firm vs market",
+        "labor market",
+        "labor supply",
+        "labor usage",
+        "marginal factor cost",
+        "marginal resource cost",
+        "marginal revenue product",
+        "market structure",
+        "monopsony",
+        "perfect competition",
+        "profit maximization",
+        "wage determination",
+        "wage taker"
+      ],
+      "evidence_sources": [
+        {
+          "title": "secure-media.collegeboard.org",
+          "url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Students were often unable to recognize that when a firm faces a constant price for different levels of its output, it operates in a perfectly competitive output market.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Similarly, students were often unable to recognize that when a firm faces a constant wage for different levels of labor usage, it operates in a perfectly competitive labor market.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "The two most common errors were the inability to find the profit-maximizing level of labor usage and to explain the condition that applies at the profit-maximizing level of labor usage.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 3.4,
+      "created_at": "2026-03-06T13:23:07.812464-08:00",
+      "misconception_id": "m_32db7bd9e0e46b05",
+      "cluster_size": 6,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Profit Maximization in Factor Markets",
+      "misconception_label": "are unable to find the profit-maximizing level of labor usage",
+      "misconception": "Students are unable to find the profit-maximizing level of labor usage.",
+      "correct_idea": "The profit-maximizing level of labor usage occurs where the Marginal Revenue Product (MRP) equals the Marginal Resource Cost (MRC).",
+      "tags": [
+        "labor usage",
+        "marginal resource cost",
+        "marginal revenue product",
+        "profit maximization"
+      ],
+      "evidence_sources": [
+        {
+          "title": "secure-media.collegeboard.org",
+          "url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "The two most common errors were the inability to find the profit-maximizing level of labor usage and to explain the condition that applies at the profit-maximizing level of labor usage.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 3.4,
+      "created_at": "2026-03-06T13:23:07.813838-08:00",
+      "misconception_id": "m_f017a9df64bb5559",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Perfectly Competitive Factor Markets",
+      "misconception_label": "were often unable to recognize that when a firm faces a constant wage for different levels of labor usage, it operate...",
+      "misconception": "Students were often unable to recognize that when a firm faces a constant wage for different levels of labor usage, it operates in a perfectly competitive labor market.",
+      "correct_idea": "In a perfectly competitive labor market, an individual firm is a wage-taker and faces a constant market wage for labor, regardless of the quantity of labor it hires.",
+      "tags": [
+        "labor market",
+        "market structure",
+        "perfect competition",
+        "wage taker"
+      ],
+      "evidence_sources": [
+        {
+          "title": "secure-media.collegeboard.org",
+          "url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Similarly, students were often unable to recognize that when a firm faces a constant wage for different levels of labor usage, it operates in a perfectly competitive labor market.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 3.4,
+      "created_at": "2026-03-06T13:23:07.813026-08:00",
+      "misconception_id": "m_e84d3786b913b1b9",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Profit Maximization in Factor Markets",
+      "misconception_label": "are unable to explain the condition that applies at the profit-maximizing level of labor usage",
+      "misconception": "Students are unable to explain the condition that applies at the profit-maximizing level of labor usage.",
+      "correct_idea": "The condition for profit-maximizing labor usage is that the Marginal Revenue Product (MRP) equals the Marginal Resource Cost (MRC).",
+      "tags": [
+        "labor usage",
+        "marginal resource cost",
+        "marginal revenue product",
+        "profit maximization"
+      ],
+      "evidence_sources": [
+        {
+          "title": "secure-media.collegeboard.org",
+          "url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "The two most common errors were the inability to find the profit-maximizing level of labor usage and to explain the condition that applies at the profit-maximizing level of labor usage.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 3.4,
+      "created_at": "2026-03-06T13:23:07.814537-08:00",
+      "misconception_id": "m_ca82e475f34719ac",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Perfectly Competitive Output Markets",
+      "misconception_label": "were often unable to recognize that when a firm faces a constant price for different levels of its output, it operate...",
+      "misconception": "Students were often unable to recognize that when a firm faces a constant price for different levels of its output, it operates in a perfectly competitive output market.",
+      "correct_idea": "In a perfectly competitive output market, an individual firm is a price-taker and faces a constant market price for its product, regardless of the quantity it produces.",
+      "tags": [
+        "market structure",
+        "output market",
+        "perfect competition",
+        "price taker"
+      ],
+      "evidence_sources": [
+        {
+          "title": "secure-media.collegeboard.org",
+          "url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Students were often unable to recognize that when a firm faces a constant price for different levels of its output, it operates in a perfectly competitive output market.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 3.4,
+      "created_at": "2026-03-06T13:23:07.812759-08:00",
+      "misconception_id": "m_2a3f141fdc8da27c",
+      "cluster_size": 1,
+      "embedding_model": "gemini-embedding-001"
+    },
+    {
+      "domain": "economics",
+      "topic": "Marginal Revenue Product (MRP) Calculation",
+      "misconception_label": "incorrectly calculate Marginal Revenue Product (MRP) by universally applying the formula MRP = Marginal Product (MP)...",
+      "misconception": "Students incorrectly calculate Marginal Revenue Product (MRP) by universally applying the formula MRP = Marginal Product (MP) \u00d7 output price (P), failing to recognize that this formula (Value of Marginal Product, VMP) is only equivalent to MRP in perfectly competitive output markets.",
+      "correct_idea": "The general formula for Marginal Revenue Product (MRP) is Marginal Product (MP) \u00d7 Marginal Revenue (MR). In a perfectly competitive output market, MR = P, so MRP = MP \u00d7 P (VMP). However, in an imperfectly competitive output market, MR < P, so MRP = MP \u00d7 MR, and MRP < VMP.",
+      "tags": [
+        "calculation",
+        "firm vs market",
+        "imperfect competition",
+        "labor market",
+        "labor usage",
+        "mfc",
+        "mrp",
+        "perfect competition",
+        "profit maximization",
+        "vmp",
+        "wage",
+        "wage-taker"
+      ],
+      "evidence_sources": [
+        {
+          "title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "url": "https://fiveable.me/ap-micro/unit-5"
+        },
+        {
+          "title": "secure-media.collegeboard.org",
+          "url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf"
+        },
+        {
+          "title": "Key Concepts in Factor Markets to Know for AP Microeconomics",
+          "url": "https://fiveable.me/lists/key-concepts-in-factor-markets"
+        }
+      ],
+      "evidence_citations": [
+        {
+          "quote_text": "Common slipups include remembering MRP = MPP \u00d7 output price, equating MRP to the wage in a perfectly competitive factor market, and noting that in a monopsony the upward\u2010sloping supply means MFC > wage.",
+          "source_title": "Factor Markets | AP Microeconomics Unit 5 Review",
+          "source_url": "https://fiveable.me/ap-micro/unit-5",
+          "search_query": "AP Microeconomics Unit 5 Factor Markets misconception",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "The two most common errors were the inability to find the profit-maximizing level of labor usage and to explain the condition that applies at the profit-maximizing level of labor usage.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Don't just memorize that -understand why that condition maximizes profit and how changes in output prices or productivity shift the entire labor demand curve.",
+          "source_title": "Key Concepts in Factor Markets to Know for AP Microeconomics",
+          "source_url": "https://fiveable.me/lists/key-concepts-in-factor-markets",
+          "search_query": "AP Microeconomics marginal revenue product misconception",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "Similarly, students were often unable to recognize that when a firm faces a constant wage for different levels of labor usage, it operates in a perfectly competitive labor market.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        },
+        {
+          "quote_text": "A common error was confusing the relationship between the firm and the market in a competitive industry, and what conditions are met in the long run.",
+          "source_title": "secure-media.collegeboard.org",
+          "source_url": "https://secure-media.collegeboard.org/apc/_ap_qa05_micro_47372.pdf",
+          "search_query": "AP Microeconomics Factor Markets common student errors",
+          "grounding_chunk_indices": []
+        }
+      ],
+      "quality_score": 0.4,
+      "created_at": "2026-03-06T13:12:45.356518-08:00",
+      "misconception_id": "m_c6e85ae66ee43acd",
+      "cluster_size": 4,
+      "embedding_model": "gemini-embedding-001"
+    }
+  ]
+}
