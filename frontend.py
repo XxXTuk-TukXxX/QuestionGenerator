@@ -13,11 +13,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 from tkinter import filedialog, messagebox, ttk
 
-import gemini
+import gemma
 from study_engine import (
     StudentProfile,
     build_concise_why,
-    build_local_mini_retest,
     build_local_repair_plan,
     concept_mastery,
     extract_source_evidence,
@@ -111,13 +110,6 @@ class QuestionCardState:
     busy: bool = False
     selected_option: str = ""
     intervention_started_at: str = ""
-    repair_questions: list[QuizQuestion] = field(default_factory=list)
-    repair_correct_count: int = 0
-    repair_index: int = 0
-    retest_questions: list[QuizQuestion] = field(default_factory=list)
-    retest_correct_count: int = 0
-    retest_index: int = 0
-    intervention_complete: bool = False
 
 
 def discover_markdown_files(root: Path) -> list[Path]:
@@ -298,6 +290,8 @@ def load_quiz_document(path: Path) -> QuizDocument:
     question_start: int | None = None
     answer_key_start: int | None = None
 
+    # Parse the markdown header once, then slice the file into the question
+    # section and answer-key section so the block parser can stay simple.
     for index, line in enumerate(lines):
         stripped = line.strip()
         if stripped.startswith("- Course:"):
@@ -326,36 +320,31 @@ def load_quiz_document(path: Path) -> QuizDocument:
             for question_number, answer in ANSWER_KEY_PAIR_RE.findall(line):
                 answer_key[int(question_number)] = answer
 
+    def append_question(block: list[str]) -> None:
+        question = _parse_question_block(block)
+        if question is None:
+            return
+        question.correct_answer = answer_key.get(question.number, "")
+        question.question_id = _stable_question_id(
+            question.text,
+            question.correct_answer,
+            question.source_file,
+            question.source_page,
+        )
+        document.questions.append(question)
+
     block_lines: list[str] = []
     question_lines = lines[question_start:answer_key_start - 1 if answer_key_start is not None else len(lines)]
     for raw_line in question_lines:
         if QUESTION_HEADER_RE.match(raw_line):
             if block_lines:
-                question = _parse_question_block(block_lines)
-                if question is not None:
-                    question.correct_answer = answer_key.get(question.number, "")
-                    question.question_id = _stable_question_id(
-                        question.text,
-                        question.correct_answer,
-                        question.source_file,
-                        question.source_page,
-                    )
-                    document.questions.append(question)
+                append_question(block_lines)
                 block_lines = []
         if block_lines or raw_line.strip():
             block_lines.append(raw_line)
 
     if block_lines:
-        question = _parse_question_block(block_lines)
-        if question is not None:
-            question.correct_answer = answer_key.get(question.number, "")
-            question.question_id = _stable_question_id(
-                question.text,
-                question.correct_answer,
-                question.source_file,
-                question.source_page,
-            )
-            document.questions.append(question)
+        append_question(block_lines)
 
     return document
 
@@ -402,6 +391,32 @@ def _clone_for_remediation(question: QuizQuestion, *, question_kind: str, remedi
         remediation_tier=remediation_tier,
         generation_origin=origin,
     )
+
+
+def _select_local_repair_question(
+    local_plan: list[dict[str, object]],
+    *,
+    used_ids: set[str],
+    used_texts: set[str],
+) -> QuizQuestion | None:
+    for tier_name in ("practice", "easier", "transfer"):
+        for item in local_plan:
+            candidate = item.get("question")
+            if not isinstance(item, dict) or not isinstance(candidate, QuizQuestion):
+                continue
+            if str(item.get("tier") or "") != tier_name:
+                continue
+            candidate_id = candidate.question_id or question_identity(candidate)
+            candidate_text = candidate.text.strip().lower()
+            if candidate_id in used_ids or candidate_text in used_texts:
+                continue
+            return _clone_for_remediation(
+                candidate,
+                question_kind="repair_test",
+                remediation_tier=str(item.get("tier") or ""),
+                origin="local_pool",
+            )
+    return None
 
 
 class QuizApp(tk.Tk):
@@ -1310,33 +1325,19 @@ end run
                 continue
             selected_option = str(spec.get("selected_option") or "").strip().upper()
             evidence = extract_source_evidence(module_root, question)
+            # Prefer a vetted question from the local pool before falling back
+            # to Gemini so repair tests stay anchored in existing material.
             local_plan = build_local_repair_plan(
                 question_pool,
                 question,
                 selected_option=selected_option,
                 exclude_question_ids=used_ids,
             )
-            chosen_local: QuizQuestion | None = None
-            for tier_name in ("practice", "easier", "transfer"):
-                for item in local_plan:
-                    candidate = item.get("question")
-                    if not isinstance(item, dict) or not isinstance(candidate, QuizQuestion):
-                        continue
-                    if str(item.get("tier") or "") != tier_name:
-                        continue
-                    candidate_id = candidate.question_id or question_identity(candidate)
-                    candidate_text = candidate.text.strip().lower()
-                    if candidate_id in used_ids or candidate_text in used_texts:
-                        continue
-                    chosen_local = _clone_for_remediation(
-                        candidate,
-                        question_kind="repair_test",
-                        remediation_tier=str(item.get("tier") or ""),
-                        origin="local_pool",
-                    )
-                    break
-                if chosen_local is not None:
-                    break
+            chosen_local = _select_local_repair_question(
+                local_plan,
+                used_ids=used_ids,
+                used_texts=used_texts,
+            )
 
             if chosen_local is not None:
                 selected_questions.append(chosen_local)
@@ -1381,7 +1382,7 @@ end run
 
         if generation_specs:
             try:
-                generated_rows = gemini.generate_batch_remediation_questions(
+                generated_rows = gemma.generate_batch_remediation_questions(
                     course_name=self.current_document.course if self.current_document is not None else "Unknown course",
                     module_name=self.current_document.module if self.current_document is not None else "Unknown module",
                     remediation_specs=generation_specs,

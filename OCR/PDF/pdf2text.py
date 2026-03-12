@@ -15,19 +15,16 @@ logging.basicConfig(
 
 
 import os
-import pprint as pp
 import re
 import shutil
 import time
 from datetime import date, datetime
 from os.path import basename, dirname, join
-from pathlib import Path
 
 from cleantext import clean
 from doctr.io import DocumentFile
 from doctr.models import ocr_predictor
 from libretranslatepy import LibreTranslateAPI
-from natsort import natsorted
 from spellchecker import SpellChecker
 from tqdm.auto import tqdm
 

@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Quiz Review - AI Study Gen</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+        rel="stylesheet" />
+    <script src="/quiz-store.js"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+    <div class="flex h-screen overflow-hidden">
+        <aside class="w-80 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col">
+            <div class="p-6 border-b border-slate-200 dark:border-slate-800 flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary text-3xl">auto_stories</span>
+                <h1 class="text-xl font-bold tracking-tight">AI Study Gen</h1>
+            </div>
+            <div class="flex-1 overflow-y-auto p-4">
+                <div class="mb-6">
+                    <div class="mb-4 px-2 flex items-center justify-between gap-3">
+                        <h2 class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Generated Quizzes</h2>
+                        <span class="px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 text-[11px] font-semibold uppercase tracking-wide"
+                            id="generated-quizzes-count">...</span>
+                    </div>
+                    <a class="mb-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-3 text-sm font-bold text-white shadow-md shadow-primary/20 transition-colors hover:bg-primary/90"
+                        href="/home.html">
+                        <span class="material-symbols-outlined text-lg">add_circle</span>
+                        Start New Quiz
+                    </a>
+                    <nav class="space-y-1" id="generated-quizzes-list">
+                        <div
+                            class="px-3 py-3 rounded-lg bg-slate-50 dark:bg-slate-800/60 text-sm text-slate-500 dark:text-slate-400">
+                            Loading markdown files from Cache...
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="p-4 border-t border-slate-200 dark:border-slate-800">
+                <a
+                    class="w-full flex items-center justify-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg text-sm font-medium transition-colors"
+                    href="/settings.html">
+                    <span class="material-symbols-outlined text-lg">settings</span>
+                    Settings
+                </a>
+            </div>
+        </aside>
+
+        <main class="flex-1 flex flex-col overflow-hidden">
+            <header
+                class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8">
+                <div class="flex items-center gap-6">
+                    <div class="flex border-b border-transparent">
+                        <button
+                            class="px-4 py-5 text-sm font-bold border-b-2 border-primary text-primary transition-all">Test Maker</button>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="relative">
+                        <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">search</span>
+                        <input
+                            class="pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm w-64 focus:ring-2 focus:ring-primary"
+                            placeholder="Search materials..." type="text" />
+                    </div>
+                    <button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </button>
+                    <div
+                        class="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border border-primary/30">
+                        <img alt="User Profile" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQU1-H5imxshnf17aAO7eEUZNVFXKp2h2JEjTZJs6usiUf_oP8mNxzL4pQiiggF7i5U_4J7EJJadbPtvIiD6T5lkfi_oiwytrm6m09xklSA9nboMdnr-B5tmBsOfXM7TGJoG4EJQGOUoknt4cOahWhSrKrXUyEYR2uOj9QT3zh04jDqfeusRhFUnXsR4XLhXXji9ESNb9sQLpdHQcEyX4dEoe6fsPYVRkI0l1BPspC3_NZHKQ-Ea4eW2it5MiPd-LtFgZzHniP3R8" />
+                    </div>
+                </div>
+            </header>
+
+            <div class="flex-1 overflow-y-auto p-8">
+                <div class="max-w-5xl mx-auto flex flex-col gap-6">
+                    <div
+                        class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-6">
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center justify-between gap-4">
+                                <div>
+                                    <p class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase tracking-wider">
+                                        Review Mode</p>
+                                    <p class="text-slate-900 dark:text-white text-lg font-bold leading-normal"
+                                        id="selected-quiz-title">Quiz Review</p>
+                                    <p class="mt-1 text-sm text-slate-500 dark:text-slate-400" id="selected-quiz-path">
+                                        Open a generated quiz from the left sidebar.</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-primary text-2xl font-bold" id="score-value">0%</p>
+                                    <p class="text-slate-500 dark:text-slate-400 text-xs">Score</p>
+                                </div>
+                            </div>
+                            <div
+                                class="relative h-3 w-full rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
+                                <div class="absolute top-0 left-0 h-full bg-primary rounded-full" id="score-bar" style="width: 0%;"></div>
+                            </div>
+                            <div class="flex flex-wrap items-center justify-between gap-3">
+                                <p class="text-sm text-slate-500 dark:text-slate-400" id="review-summary-text">Choose a quiz to load review data.</p>
+                                <span
+                                    class="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary"
+                                    id="review-position-pill">Review</span>
+                            </div>
+                            <div class="flex flex-wrap gap-3" id="review-actions">
+                                <a class="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-bold text-white shadow-md shadow-primary/20 hover:bg-primary/90"
+                                    href="#" id="start-quiz-button">Start Quiz</a>
+                                <button
+                                    class="hidden rounded-lg border border-slate-300 px-4 py-2 text-sm font-bold text-slate-700 transition-colors hover:bg-slate-50 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
+                                    id="retake-quiz-button" type="button">Retake Quiz</button>
+                                <button
+                                    class="hidden rounded-lg border border-slate-300 px-4 py-2 text-sm font-bold text-slate-700 transition-colors hover:bg-slate-50 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
+                                    id="toggle-review-scope-button" type="button">Show All Questions</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden rounded-xl border p-4 text-sm" id="review-notice"></div>
+
+                    <div
+                        class="rounded-xl bg-white shadow-sm border border-slate-200 dark:bg-slate-900 dark:border-slate-800 overflow-hidden hidden"
+                        id="review-card">
+                        <div class="p-6 md:p-8">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="px-2 py-1 text-xs font-bold rounded uppercase" id="review-status-badge">Review</span>
+                                <span class="text-slate-500 text-xs font-medium" id="review-question-label">Question</span>
+                            </div>
+                            <h2 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight mb-3">Question Review</h2>
+                            <p class="text-slate-800 dark:text-slate-200 text-lg leading-relaxed mb-4" id="review-question-text">
+                                Select a reviewed question.
+                            </p>
+                            <div class="flex flex-wrap items-center gap-3 text-primary text-sm font-medium" id="review-source-row">
+                                <a class="inline-flex items-center gap-2 underline hover:text-primary/80"
+                                    href="#" id="review-source-link" target="_blank" rel="noopener noreferrer">
+                                    <span class="material-symbols-outlined text-[16px]">description</span>
+                                    <span id="review-source-label">Source</span>
+                                </a>
+                            </div>
+                            <div class="hidden mt-5" id="review-figure-panel">
+                                <a class="block overflow-hidden rounded-xl border border-slate-200 bg-slate-50 dark:border-slate-700 dark:bg-slate-950/40"
+                                    href="#" id="review-figure-link" target="_blank" rel="noopener noreferrer">
+                                    <img alt="" class="max-h-[420px] w-full object-contain" id="review-figure-image" loading="lazy" />
+                                </a>
+                                <p class="mt-2 text-xs text-slate-500 dark:text-slate-400" id="review-figure-caption">Figure</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-3 px-6 pb-8" id="review-choices-container"></div>
+
+                        <div class="px-6 pb-6">
+                            <div class="p-6 rounded-xl bg-primary/5 border border-primary/20 flex flex-col gap-6">
+                                <div>
+                                    <div class="flex items-center gap-2 mb-4 text-primary">
+                                        <span class="material-symbols-outlined">psychology</span>
+                                        <h4 class="text-lg font-bold">Review Notes</h4>
+                                    </div>
+                                    <div class="grid md:grid-cols-2 gap-6">
+                                        <div class="flex flex-col gap-2">
+                                            <span class="text-xs font-bold text-slate-500 uppercase tracking-wider">Why this answer was tempting</span>
+                                            <p class="text-slate-700 dark:text-slate-300 text-sm leading-relaxed"
+                                                id="diagnostic-why-chosen">Review the quiz to see answer diagnostics.</p>
+                                        </div>
+                                        <div class="flex flex-col gap-2">
+                                            <span class="text-xs font-bold text-red-500 uppercase tracking-wider">Why it was wrong</span>
+                                            <p class="text-slate-700 dark:text-slate-300 text-sm leading-relaxed"
+                                                id="diagnostic-why-wrong">Answer the quiz to unlock this explanation.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="h-px bg-primary/10 w-full"></div>
+
+                                <div>
+                                    <div class="flex items-center gap-2 mb-3 text-primary">
+                                        <span class="material-symbols-outlined">track_changes</span>
+                                        <h4 class="text-lg font-bold">Mastery Impact</h4>
+                                    </div>
+                                    <div class="bg-white dark:bg-slate-900 p-4 rounded-lg border border-primary/10">
+                                        <p class="text-sm font-semibold text-slate-500 mb-1">Learning Objective:</p>
+                                        <p class="text-slate-900 dark:text-slate-100 font-medium" id="mastery-objective">
+                                            Objective data will appear here.</p>
+                                        <p class="mt-4 text-sm text-slate-500 dark:text-slate-400" id="mastery-feedback">
+                                            Difficulty review feedback will appear here after you finish the quiz.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-slate-50 dark:bg-slate-800/50 px-6 py-4 flex items-center justify-between border-t border-slate-200 dark:border-slate-800">
+                            <button
+                                class="flex items-center gap-2 text-slate-600 dark:text-slate-400 font-bold hover:text-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                                id="review-previous-button" type="button">
+                                <span class="material-symbols-outlined">arrow_back</span>
+                                Previous
+                            </button>
+                            <button
+                                class="flex items-center justify-center rounded-xl h-12 bg-primary text-white font-bold px-8 shadow-lg shadow-primary/20 hover:brightness-110 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                                id="review-next-button" type="button">
+                                Next Question
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const generatedQuizzesList = document.getElementById("generated-quizzes-list");
+        const generatedQuizzesCount = document.getElementById("generated-quizzes-count");
+        const selectedQuizTitle = document.getElementById("selected-quiz-title");
+        const selectedQuizPath = document.getElementById("selected-quiz-path");
+        const scoreValue = document.getElementById("score-value");
+        const scoreBar = document.getElementById("score-bar");
+        const reviewSummaryText = document.getElementById("review-summary-text");
+        const reviewPositionPill = document.getElementById("review-position-pill");
+        const startQuizButton = document.getElementById("start-quiz-button");
+        const retakeQuizButton = document.getElementById("retake-quiz-button");
+        const toggleReviewScopeButton = document.getElementById("toggle-review-scope-button");
+        const reviewNotice = document.getElementById("review-notice");
+        const reviewCard = document.getElementById("review-card");
+        const reviewStatusBadge = document.getElementById("review-status-badge");
+        const reviewQuestionLabel = document.getElementById("review-question-label");
+        const reviewQuestionText = document.getElementById("review-question-text");
+        const reviewSourceLink = document.getElementById("review-source-link");
+        const reviewSourceLabel = document.getElementById("review-source-label");
+        const reviewFigurePanel = document.getElementById("review-figure-panel");
+        const reviewFigureLink = document.getElementById("review-figure-link");
+        const reviewFigureImage = document.getElementById("review-figure-image");
+        const reviewFigureCaption = document.getElementById("review-figure-caption");
+        const reviewChoicesContainer = document.getElementById("review-choices-container");
+        const diagnosticWhyChosen = document.getElementById("diagnostic-why-chosen");
+        const diagnosticWhyWrong = document.getElementById("diagnostic-why-wrong");
+        const masteryObjective = document.getElementById("mastery-objective");
+        const masteryFeedback = document.getElementById("mastery-feedback");
+        const reviewPreviousButton = document.getElementById("review-previous-button");
+        const reviewNextButton = document.getElementById("review-next-button");
+
+        const selectedQuizParam = new URLSearchParams(window.location.search).get("quiz") || "";
+        const state = {
+            attempt: null,
+            generatingAdaptive: false,
+            quiz: null,
+            reviewCursor: 0,
+            reviewScope: "mistakes",
+        };
+
+        function questionsUrlForQuiz(relativePath) {
+            return `/questions.html?quiz=${encodeURIComponent(relativePath)}`;
+        }
+
+        function reviewUrlForQuiz(relativePath) {
+            return `/review.html?quiz=${encodeURIComponent(relativePath)}`;
+        }
+
+        function formatDirectoryLabel(relativePath) {
+            const parts = String(relativePath || "").split("/").filter(Boolean);
+            parts.pop();
+            return parts.length ? parts.join(" / ") : "Cache";
+        }
+
+        function formatModifiedAt(timestamp) {
+            if (typeof timestamp !== "number" || Number.isNaN(timestamp)) {
+                return "";
+            }
+
+            try {
+                return new Intl.DateTimeFormat(undefined, {
+                    month: "short",
+                    day: "numeric",
+                    hour: "numeric",
+                    minute: "2-digit",
+                }).format(new Date(timestamp * 1000));
+            } catch (error) {
+                console.error("Failed to format timestamp", error);
+                return "";
+            }
+        }
+
+        function renderSidebarMessage(message, detail = "") {
+            generatedQuizzesList.replaceChildren();
+
+            const container = document.createElement("div");
+            container.className =
+                "px-3 py-3 rounded-lg bg-slate-50 dark:bg-slate-800/60 text-sm text-slate-500 dark:text-slate-400";
+
+            const text = document.createElement("p");
+            text.textContent = message;
+            container.appendChild(text);
+
+            if (detail) {
+                const secondary = document.createElement("p");
+                secondary.className = "mt-2 text-xs text-slate-400 dark:text-slate-500";
+                secondary.textContent = detail;
+                container.appendChild(secondary);
+            }
+
+            generatedQuizzesList.appendChild(container);
+        }
+
+        function setReviewNotice(message = "", tone = "info") {
+            if (!message) {
+                reviewNotice.classList.add("hidden");
+                reviewNotice.textContent = "";
+                return;
+            }
+
+            reviewNotice.className = "rounded-xl border p-4 text-sm";
+            if (tone === "error") {
+                reviewNotice.classList.add("border-red-200", "bg-red-50", "text-red-700");
+            } else if (tone === "success") {
+                reviewNotice.classList.add("border-emerald-200", "bg-emerald-50", "text-emerald-700");
+            } else {
+                reviewNotice.classList.add("border-amber-200", "bg-amber-50", "text-amber-800");
+            }
+            reviewNotice.textContent = message;
+            reviewNotice.classList.remove("hidden");
+        }
+
+        function setPrimaryActionDisabled(disabled) {
+            startQuizButton.classList.toggle("pointer-events-none", disabled);
+            startQuizButton.classList.toggle("opacity-60", disabled);
+            startQuizButton.setAttribute("aria-disabled", disabled ? "true" : "false");
+        }
+
+        function buildQuizItem(file) {
+            const isSelected = file.relative_path === selectedQuizParam;
+            const button = document.createElement("a");
+            button.href = reviewUrlForQuiz(file.relative_path);
+            button.className = isSelected
+                ? "flex min-w-0 flex-1 items-start gap-3 rounded-lg bg-primary/10 px-3 py-3 text-left text-primary font-medium transition-colors"
+                : "flex min-w-0 flex-1 items-start gap-3 rounded-lg px-3 py-3 text-left text-slate-600 dark:text-slate-400 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800";
+
+            const icon = document.createElement("span");
+            icon.className = isSelected
+                ? "material-symbols-outlined filled-icon mt-0.5 text-primary"
+                : "material-symbols-outlined mt-0.5 text-slate-400";
+            icon.textContent = "description";
+
+            const body = document.createElement("span");
+            body.className = "min-w-0 flex-1";
+
+            const name = document.createElement("span");
+            name.className = "block truncate text-sm font-semibold";
+            name.textContent = file.name;
+
+            const directory = document.createElement("span");
+            directory.className = isSelected
+                ? "mt-0.5 block truncate text-xs text-primary/80"
+                : "mt-0.5 block truncate text-xs text-slate-500 dark:text-slate-500";
+            directory.textContent = formatDirectoryLabel(file.relative_path);
+
+            const updated = document.createElement("span");
+            updated.className = isSelected
+                ? "mt-1 block text-[11px] text-primary/70"
+                : "mt-1 block text-[11px] text-slate-400 dark:text-slate-500";
+            updated.textContent = formatModifiedAt(file.modified_at);
+
+            body.append(name, directory, updated);
+            button.append(icon, body);
+            return button;
+        }
+
+        function currentReviewIndices() {
+            if (!state.quiz || !state.attempt) {
+                return [];
+            }
+
+            const allIndices = state.quiz.questions.map((_, index) => index);
+            const mistakeIndices = allIndices.filter((index) => state.attempt.answers[index] !== state.quiz.questions[index].answer);
+
+            if (state.reviewScope === "all" || !mistakeIndices.length) {
+                return allIndices;
+            }
+            return mistakeIndices;
+        }
+
+        function currentReviewQuestionIndex() {
+            const indices = currentReviewIndices();
+            return indices[state.reviewCursor] ?? 0;
+        }
+
+        function setReviewScope(scope) {
+            state.reviewScope = scope === "all" ? "all" : "mistakes";
+            state.reviewCursor = 0;
+            renderReview();
+        }
+
+        function clearReviewCard() {
+            reviewCard.classList.add("hidden");
+            reviewChoicesContainer.replaceChildren();
+            reviewFigurePanel.classList.add("hidden");
+            reviewFigureImage.removeAttribute("src");
+            reviewFigureImage.alt = "";
+        }
+
+        function setSummaryForNoAttempt(message, detail, buttonLabel) {
+            scoreValue.textContent = "0%";
+            scoreBar.style.width = "0%";
+            reviewSummaryText.textContent = detail;
+            reviewPositionPill.textContent = "Review";
+            state.generatingAdaptive = false;
+            startQuizButton.textContent = buttonLabel;
+            startQuizButton.href = selectedQuizParam ? questionsUrlForQuiz(selectedQuizParam) : "/home.html";
+            startQuizButton.classList.remove("hidden");
+            setPrimaryActionDisabled(false);
+            retakeQuizButton.classList.add("hidden");
+            toggleReviewScopeButton.classList.add("hidden");
+            selectedQuizTitle.textContent = message;
+        }
+
+        function renderChoiceRow(label, text, userAnswer, correctAnswer) {
+            const row = document.createElement("div");
+            const isCorrect = label === correctAnswer;
+            const isUserAnswer = label === userAnswer;
+
+            let className =
+                "flex items-center gap-4 p-4 rounded-xl border bg-white dark:bg-slate-900 dark:border-slate-800";
+            if (isCorrect) {
+                className =
+                    "flex items-center justify-between p-4 rounded-xl border-2 border-green-200 bg-green-50 dark:bg-green-900/10 dark:border-green-900/30";
+            } else if (isUserAnswer) {
+                className =
+                    "flex items-center justify-between p-4 rounded-xl border-2 border-red-200 bg-red-50 dark:bg-red-900/10 dark:border-red-900/30";
+            }
+            row.className = className;
+
+            const left = document.createElement("div");
+            left.className = "flex items-center gap-4";
+
+            const bubble = document.createElement("div");
+            bubble.className = isCorrect
+                ? "flex h-8 w-8 items-center justify-center rounded-full bg-green-500 text-white font-bold text-sm"
+                : isUserAnswer
+                    ? "flex h-8 w-8 items-center justify-center rounded-full bg-red-500 text-white font-bold text-sm"
+                    : "flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 font-bold text-sm";
+            bubble.textContent = label;
+
+            const choiceText = document.createElement("span");
+            choiceText.className = isCorrect
+                ? "text-slate-900 dark:text-slate-100 font-bold"
+                : "text-slate-900 dark:text-slate-100 font-medium";
+            choiceText.textContent = text;
+
+            left.append(bubble, choiceText);
+            row.appendChild(left);
+
+            if (isCorrect || isUserAnswer) {
+                const right = document.createElement("div");
+                right.className = isCorrect
+                    ? "flex items-center gap-2 text-green-600"
+                    : "flex items-center gap-2 text-red-600";
+
+                const labelNode = document.createElement("span");
+                labelNode.className = "text-xs font-bold uppercase";
+                labelNode.textContent = isCorrect && isUserAnswer
+                    ? "Your Answer"
+                    : isCorrect
+                        ? "Correct Answer"
+                        : "Your Answer";
+
+                const icon = document.createElement("span");
+                icon.className = "material-symbols-outlined";
+                icon.textContent = isCorrect ? "check_circle" : "cancel";
+
+                right.append(labelNode, icon);
+                row.appendChild(right);
+            }
+
+            return row;
+        }
+
+        function renderReview() {
+            if (!state.quiz || !state.attempt || !state.attempt.completed) {
+                clearReviewCard();
+                return;
+            }
+
+            const total = state.quiz.question_count;
+            const score = typeof state.attempt.score === "number"
+                ? state.attempt.score
+                : state.quiz.questions.reduce((count, question, index) => {
+                    return count + (state.attempt.answers[index] === question.answer ? 1 : 0);
+                }, 0);
+            const scorePercent = total > 0 ? Math.round((score / total) * 100) : 0;
+            const reviewIndices = currentReviewIndices();
+            const reviewQuestionIndex = currentReviewQuestionIndex();
+            const reviewQuestion = state.quiz.questions[reviewQuestionIndex];
+            const userAnswer = state.attempt.answers[reviewQuestionIndex];
+            const correctAnswer = reviewQuestion.answer;
+            const isCorrect = userAnswer === correctAnswer;
+            const isSkipped = !userAnswer;
+            const mistakeCount = state.quiz.questions.reduce((count, question, index) => {
+                return count + (state.attempt.answers[index] !== question.answer ? 1 : 0);
+            }, 0);
+
+            scoreValue.textContent = `${scorePercent}%`;
+            scoreBar.style.width = `${scorePercent}%`;
+            reviewSummaryText.textContent = reviewIndices.length === total
+                ? `Reviewing all ${total} questions from this completed attempt.`
+                : `Reviewing ${reviewIndices.length} question${reviewIndices.length === 1 ? "" : "s"} you missed.`;
+            reviewPositionPill.textContent = state.reviewScope === "all" || reviewIndices.length === total
+                ? `Question ${reviewQuestion.number} of ${total}`
+                : `Mistake ${state.reviewCursor + 1} of ${reviewIndices.length}`;
+            startQuizButton.textContent = state.generatingAdaptive ? "Generating Adaptive Quiz..." : "Generate Adaptive Quiz";
+            startQuizButton.href = "#";
+            startQuizButton.classList.remove("hidden");
+            setPrimaryActionDisabled(state.generatingAdaptive || mistakeCount === 0);
+            retakeQuizButton.classList.remove("hidden");
+            toggleReviewScopeButton.classList.toggle("hidden", reviewIndices.length === total && state.reviewScope !== "all");
+            toggleReviewScopeButton.textContent = state.reviewScope === "all" ? "Show Only Mistakes" : "Show All Questions";
+
+            reviewCard.classList.remove("hidden");
+
+            if (isCorrect) {
+                reviewStatusBadge.className = "px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded uppercase";
+                reviewStatusBadge.textContent = "Correct";
+            } else if (isSkipped) {
+                reviewStatusBadge.className = "px-2 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded uppercase";
+                reviewStatusBadge.textContent = "Skipped";
+            } else {
+                reviewStatusBadge.className = "px-2 py-1 bg-red-100 text-red-700 text-xs font-bold rounded uppercase";
+                reviewStatusBadge.textContent = "Incorrect";
+            }
+
+            reviewQuestionLabel.textContent = `Question ${reviewQuestion.number} of ${total}`;
+            reviewQuestionText.textContent = reviewQuestion.question;
+            reviewSourceLabel.textContent = reviewQuestion.source_label || "Source unavailable";
+            reviewSourceLink.href = reviewQuestion.source_url || "#";
+            reviewSourceLink.classList.toggle("hidden", !reviewQuestion.source_url && !reviewQuestion.source_label);
+
+            if (reviewQuestion.figure_url) {
+                reviewFigureLink.href = reviewQuestion.figure_url;
+                reviewFigureImage.src = reviewQuestion.figure_url;
+                reviewFigureImage.alt = reviewQuestion.figure_label || `Figure for question ${reviewQuestion.number}`;
+                reviewFigureCaption.textContent = reviewQuestion.figure_label || "Figure";
+                reviewFigurePanel.classList.remove("hidden");
+            } else {
+                reviewFigurePanel.classList.add("hidden");
+                reviewFigureImage.removeAttribute("src");
+                reviewFigureImage.alt = "";
+            }
+
+            reviewChoicesContainer.replaceChildren();
+            reviewQuestion.choices.forEach((choiceText, index) => {
+                const label = String.fromCharCode(65 + index);
+                reviewChoicesContainer.appendChild(renderChoiceRow(label, choiceText, userAnswer, correctAnswer));
+            });
+
+            const diagnostics = reviewQuestion.distractor_diagnostics && typeof reviewQuestion.distractor_diagnostics === "object"
+                ? reviewQuestion.distractor_diagnostics
+                : {};
+            const selectedDiagnostic = userAnswer && diagnostics[userAnswer] && typeof diagnostics[userAnswer] === "object"
+                ? diagnostics[userAnswer]
+                : null;
+
+            if (selectedDiagnostic) {
+                diagnosticWhyChosen.textContent = selectedDiagnostic.why_student_might_pick || "This distractor appealed to a common misconception.";
+                diagnosticWhyWrong.textContent = selectedDiagnostic.why_wrong || "This answer did not match the source evidence.";
+            } else if (isCorrect) {
+                diagnosticWhyChosen.textContent = "You selected the correct answer, so there is no distractor misconception to repair on this question.";
+                diagnosticWhyWrong.textContent = "Use this item as confirmation that your reasoning matched the source evidence.";
+            } else if (isSkipped) {
+                diagnosticWhyChosen.textContent = "No answer was selected on this question.";
+                diagnosticWhyWrong.textContent = `The correct answer was ${correctAnswer}. Review the source evidence and objective before retaking this quiz.`;
+            } else {
+                diagnosticWhyChosen.textContent = "This answer did not include saved distractor diagnostics.";
+                diagnosticWhyWrong.textContent = `The correct answer was ${correctAnswer}. Revisit the objective and source before your next attempt.`;
+            }
+
+            masteryObjective.textContent = reviewQuestion.objective || "Objective unavailable for this question.";
+            masteryFeedback.textContent = reviewQuestion.difficulty_feedback
+                || reviewQuestion.difficulty_review
+                || (isCorrect ? "You answered this question correctly." : "Review this concept before retaking the quiz.");
+
+            reviewPreviousButton.disabled = state.reviewCursor <= 0;
+            reviewNextButton.disabled = state.reviewCursor >= reviewIndices.length - 1;
+            reviewNextButton.textContent = state.reviewCursor >= reviewIndices.length - 1 ? "End Review" : "Next Question";
+        }
+
+        async function loadGeneratedQuizzes() {
+            try {
+                const response = await fetch("/api/cache/markdown-files", {
+                    headers: { "Accept": "application/json" },
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Request failed with ${response.status}`);
+                }
+
+                const payload = await response.json();
+                const files = Array.isArray(payload.files) ? payload.files : [];
+                generatedQuizzesCount.textContent = String(files.length);
+                generatedQuizzesList.replaceChildren();
+
+                if (!files.length) {
+                    renderSidebarMessage(
+                        "No generated quiz markdown files were found in Cache.",
+                        "Generate a quiz first, then reload this page."
+                    );
+                    return;
+                }
+
+                files.forEach((file) => {
+                    generatedQuizzesList.appendChild(buildQuizItem(file));
+                });
+
+                const selectedQuiz = files.find((file) => file.relative_path === selectedQuizParam);
+                if (selectedQuiz) {
+                    selectedQuizTitle.textContent = selectedQuiz.name;
+                    selectedQuizPath.textContent = formatDirectoryLabel(selectedQuiz.relative_path);
+                }
+            } catch (error) {
+                console.error("Failed to load cache markdown files", error);
+                generatedQuizzesCount.textContent = "!";
+
+                const detail = window.location.protocol === "file:"
+                    ? "Open this page through the local server: python3 Frontend/server.py"
+                    : "Start the local frontend server so /api/cache/markdown-files is available.";
+
+                renderSidebarMessage("Couldn't load markdown files from Cache.", detail);
+            }
+        }
+
+        async function loadReviewQuiz() {
+            if (!selectedQuizParam) {
+                setSummaryForNoAttempt("Quiz Review", "Choose a generated quiz from the sidebar to open review mode.", "Start Quiz");
+                setReviewNotice("Choose a generated quiz from the left sidebar.", "info");
+                clearReviewCard();
+                return;
+            }
+
+            startQuizButton.href = questionsUrlForQuiz(selectedQuizParam);
+
+            try {
+                const response = await fetch(`/api/quiz?path=${encodeURIComponent(selectedQuizParam)}`, {
+                    headers: { "Accept": "application/json" },
+                });
+                const payload = await response.json();
+                if (!response.ok) {
+                    throw new Error(payload && payload.error ? payload.error : `Request failed with ${response.status}`);
+                }
+
+                state.quiz = payload;
+                state.attempt = window.SQGQuizStore.loadAttempt(selectedQuizParam, payload.question_count);
+                selectedQuizTitle.textContent = payload.quiz.name;
+                selectedQuizPath.textContent = payload.metadata.module
+                    ? `${payload.metadata.course || "Course"} / ${payload.metadata.module}`
+                    : formatDirectoryLabel(payload.quiz.relative_path);
+
+                if (!state.attempt.completed) {
+                    const hasSavedAnswers = state.attempt.answers.some((answer) => typeof answer === "string" && answer);
+                    setSummaryForNoAttempt(
+                        payload.quiz.name,
+                        hasSavedAnswers
+                            ? "You have an unfinished attempt saved in this browser."
+                            : "This quiz has not been completed in this browser yet.",
+                        hasSavedAnswers ? "Resume Quiz" : "Start Quiz"
+                    );
+                    setReviewNotice(
+                        hasSavedAnswers
+                            ? "Resume the quiz to finish your attempt, then return here for mistake review."
+                            : "Finish the quiz first to unlock review mode and mistake-by-mistake explanations.",
+                        "info"
+                    );
+                    clearReviewCard();
+                    return;
+                }
+
+                const mistakeCount = payload.questions.reduce((count, question, index) => {
+                    return count + (state.attempt.answers[index] !== question.answer ? 1 : 0);
+                }, 0);
+                setReviewNotice(
+                    mistakeCount > 0
+                        ? "Completed attempt loaded. Review mode defaults to missed questions; generate an adaptive quiz to target those misconceptions."
+                        : "Completed attempt loaded. You answered every question correctly, so there is no misconception-targeted adaptive quiz to generate.",
+                    "success"
+                );
+                renderReview();
+            } catch (error) {
+                console.error("Failed to load quiz review data", error);
+                setSummaryForNoAttempt("Couldn't Load Quiz", error instanceof Error ? error.message : "Quiz data could not be loaded.", "Start Quiz");
+                setReviewNotice(error instanceof Error ? error.message : "Quiz data could not be loaded.", "error");
+                clearReviewCard();
+            }
+        }
+
+        async function generateAdaptiveQuiz() {
+            if (!selectedQuizParam || !state.quiz || !state.attempt || !state.attempt.completed || state.generatingAdaptive) {
+                return;
+            }
+
+            const mistakeCount = state.quiz.questions.reduce((count, question, index) => {
+                return count + (state.attempt.answers[index] !== question.answer ? 1 : 0);
+            }, 0);
+            if (mistakeCount < 1) {
+                setReviewNotice(
+                    "You answered every question correctly, so there are no saved misconceptions to target with an adaptive quiz.",
+                    "info"
+                );
+                renderReview();
+                return;
+            }
+
+            state.generatingAdaptive = true;
+            renderReview();
+            setReviewNotice(
+                `Generating an adaptive quiz from ${mistakeCount} missed question${mistakeCount === 1 ? "" : "s"}...`,
+                "info"
+            );
+
+            try {
+                const response = await fetch("/api/generation/adaptive", {
+                    method: "POST",
+                    headers: {
+                        "Accept": "application/json",
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        quiz_path: selectedQuizParam,
+                        answers: state.attempt.answers,
+                    }),
+                });
+
+                const payload = await response.json().catch(() => ({}));
+                if (!response.ok) {
+                    throw new Error(payload && payload.error ? payload.error : `Request failed with ${response.status}`);
+                }
+
+                if (!payload.relative_markdown_path) {
+                    throw new Error("Adaptive quiz generation completed without a saved quiz path.");
+                }
+
+                window.location.href = questionsUrlForQuiz(payload.relative_markdown_path);
+            } catch (error) {
+                console.error("Failed to generate adaptive quiz", error);
+                state.generatingAdaptive = false;
+                setReviewNotice(
+                    error instanceof Error ? error.message : "Adaptive quiz generation failed.",
+                    "error"
+                );
+                renderReview();
+            }
+        }
+
+        startQuizButton.addEventListener("click", (event) => {
+            if (!selectedQuizParam) {
+                event.preventDefault();
+                return;
+            }
+            if (state.attempt && state.attempt.completed) {
+                event.preventDefault();
+                generateAdaptiveQuiz();
+            }
+        });
+
+        retakeQuizButton.addEventListener("click", () => {
+            if (!selectedQuizParam || !state.quiz) {
+                return;
+            }
+            window.SQGQuizStore.clearAttempt(selectedQuizParam);
+            window.location.href = questionsUrlForQuiz(selectedQuizParam);
+        });
+
+        toggleReviewScopeButton.addEventListener("click", () => {
+            setReviewScope(state.reviewScope === "all" ? "mistakes" : "all");
+        });
+
+        reviewPreviousButton.addEventListener("click", () => {
+            state.reviewCursor = Math.max(state.reviewCursor - 1, 0);
+            renderReview();
+        });
+
+        reviewNextButton.addEventListener("click", () => {
+            const indices = currentReviewIndices();
+            if (state.reviewCursor >= indices.length - 1) {
+                return;
+            }
+            state.reviewCursor += 1;
+            renderReview();
+        });
+
+        reviewFigureImage.addEventListener("error", () => {
+            reviewFigurePanel.classList.add("hidden");
+            reviewFigureImage.removeAttribute("src");
+        });
+
+        loadGeneratedQuizzes();
+        loadReviewQuiz();
+    </script>
+</body>
+
+</html>

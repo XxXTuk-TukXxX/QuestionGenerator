@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <title>StudyGen AI Settings</title>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <div class="relative flex h-auto min-h-screen w-full bg-background-light dark:bg-background-dark">
+        <!-- Main Content -->
+        <main class="flex-1 overflow-y-auto">
+            <div class="max-w-4xl mx-auto px-6 py-10">
+                <!-- Header -->
+                <div class="mb-10">
+                    <h2 class="text-3xl font-black tracking-tight text-slate-900 dark:text-slate-100">Settings</h2>
+                    <p class="text-slate-500 dark:text-slate-400 mt-2">Manage your account preferences and AI study
+                        parameters</p>
+                </div>
+                <div class="hidden mb-6 rounded-xl border p-4 text-sm" id="settings-status"></div>
+                <div class="space-y-12">
+                    <!-- Account Settings -->
+                    <section>
+                        <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">person</span>
+                            Account Settings
+                        </h3>
+                        <div
+                            class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 flex flex-col md:flex-row items-center gap-6">
+                            <div class="relative group">
+                                <div class="size-24 rounded-full border-4 border-primary/20 overflow-hidden">
+                                    <img class="w-full h-full object-cover" data-alt="Large user profile photo"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAvVsJTmK0Jip9PR0inuMf9Cq2vB7zRAt26LgdAFqeTyPwEPI3UFEEI-heJHF5-Qs6rFzMlba5wIkiBiJwCkzxLeB-zSJ7De3nHrtMV1p0xxMGhRUMHJaBRELBFw4MEkYpP6nqS4r1uCcCB_mTxgpTvqoS4Te0obAY5LEPy5V2adtIIEB7kEupFoBGqScgobRQ4rTykyOnDY82M0IG5MtPnN4cecnRNcNLk6ZM1u5NyHFekMnBFyTdOZBJDBIPcGBnqQyVCkmyPWI" />
+                                </div>
+                                <button
+                                    class="absolute bottom-0 right-0 bg-primary text-white p-1.5 rounded-full shadow-lg border-2 border-white dark:border-slate-900">
+                                    <span class="material-symbols-outlined text-sm">photo_camera</span>
+                                </button>
+                            </div>
+                            <div class="flex-1 text-center md:text-left">
+                                <h4 class="text-lg font-bold">Alex Johnson</h4>
+                                <p class="text-slate-500 dark:text-slate-400">alex.johnson@example.com</p>
+                                <p
+                                    class="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 inline-block px-2 py-1 rounded mt-2">
+                                    Member since Sept 2023</p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- AI Configuration -->
+                    <section>
+                        <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">psychology</span>
+                            AI Configuration
+                        </h3>
+                        <div
+                            class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 divide-y divide-slate-100 dark:divide-slate-800">
+                            <div class="p-6 flex items-center justify-between">
+                                <div>
+                                    <p class="font-bold">Detailed Diagnostics</p>
+                                    <p class="text-sm text-slate-500">Enable verbose explanations for incorrect answers
+                                    </p>
+                                </div>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input checked="" class="sr-only peer" id="settings-detailed-diagnostics"
+                                        type="checkbox" />
+                                    <div
+                                        class="w-11 h-6 bg-slate-200 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary">
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="p-6 flex items-center justify-between">
+                                <div>
+                                    <p class="font-bold">Automatic Figure Extraction</p>
+                                    <p class="text-sm text-slate-500">Identify and capture diagrams from uploaded PDFs
+                                    </p>
+                                </div>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input class="sr-only peer" id="settings-automatic-figure-extraction"
+                                        type="checkbox" />
+                                    <div
+                                        class="w-11 h-6 bg-slate-200 dark:bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary">
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Integrations -->
+                    <section>
+                        <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">hub</span>
+                            Integrations
+                        </h3>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div
+                                class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 flex flex-col items-center text-center">
+                                <div class="size-12 bg-[#E13939]/10 rounded-xl flex items-center justify-center mb-4">
+                                    <span class="material-symbols-outlined text-[#E13939] text-3xl">school</span>
+                                </div>
+                                <p class="font-bold">Canvas LMS</p>
+                                <p class="text-xs text-slate-500 mb-4">Sync assignments and grades</p>
+                                <button
+                                    class="w-full py-2 bg-primary text-white text-xs font-bold rounded-lg">Connect</button>
+                            </div>
+                            <div
+                                class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 flex flex-col items-center text-center">
+                                <div class="size-12 bg-[#4285F4]/10 rounded-xl flex items-center justify-center mb-4">
+                                    <span class="material-symbols-outlined text-[#4285F4] text-3xl">add_to_drive</span>
+                                </div>
+                                <p class="font-bold">Google Drive</p>
+                                <p class="text-xs text-slate-500 mb-4">Import files and export notes</p>
+                                <button
+                                    class="w-full py-2 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 text-xs font-bold rounded-lg flex items-center justify-center gap-2">
+                                    <span class="material-symbols-outlined text-sm">check_circle</span> Linked
+                                </button>
+                            </div>
+                            <div
+                                class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 flex flex-col items-center text-center">
+                                <div class="size-12 bg-[#0061FF]/10 rounded-xl flex items-center justify-center mb-4">
+                                    <span class="material-symbols-outlined text-[#0061FF] text-3xl">cloud_upload</span>
+                                </div>
+                                <p class="font-bold">Dropbox</p>
+                                <p class="text-xs text-slate-500 mb-4">Automatic study guide backup</p>
+                                <button
+                                    class="w-full py-2 bg-primary text-white text-xs font-bold rounded-lg">Connect</button>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Save Footer -->
+                    <div class="pt-10 border-t border-slate-200 dark:border-slate-800 flex justify-end gap-4">
+                        <button class="px-6 py-2.5 text-slate-600 dark:text-slate-400 font-bold text-sm"
+                            id="settings-cancel-button" type="button">Cancel</button>
+                        <button
+                            class="px-8 py-2.5 bg-primary text-white font-bold rounded-lg text-sm shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:scale-100"
+                            id="settings-save-button" type="button">Save
+                            Changes</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        const SETTINGS_STORAGE_KEY = "sqg.settings";
+        const DEFAULT_SETTINGS = {
+            detailedDiagnostics: true,
+            automaticFigureExtraction: false,
+        };
+
+        const settingsStatus = document.getElementById("settings-status");
+        const detailedDiagnosticsInput = document.getElementById("settings-detailed-diagnostics");
+        const automaticFigureExtractionInput = document.getElementById("settings-automatic-figure-extraction");
+        const cancelButton = document.getElementById("settings-cancel-button");
+        const saveButton = document.getElementById("settings-save-button");
+
+        let savedSettings = { ...DEFAULT_SETTINGS };
+
+        function setStatus(message = "", tone = "info") {
+            if (!message) {
+                settingsStatus.classList.add("hidden");
+                settingsStatus.textContent = "";
+                return;
+            }
+
+            settingsStatus.className = "mb-6 rounded-xl border p-4 text-sm";
+            if (tone === "error") {
+                settingsStatus.classList.add("border-red-200", "bg-red-50", "text-red-700");
+            } else if (tone === "success") {
+                settingsStatus.classList.add("border-emerald-200", "bg-emerald-50", "text-emerald-700");
+            } else {
+                settingsStatus.classList.add("border-amber-200", "bg-amber-50", "text-amber-800");
+            }
+            settingsStatus.textContent = message;
+            settingsStatus.classList.remove("hidden");
+        }
+
+        function readStoredSettings() {
+            try {
+                const rawValue = window.localStorage.getItem(SETTINGS_STORAGE_KEY);
+                if (!rawValue) {
+                    return { ...DEFAULT_SETTINGS };
+                }
+
+                const parsed = JSON.parse(rawValue);
+                if (!parsed || typeof parsed !== "object") {
+                    return { ...DEFAULT_SETTINGS };
+                }
+
+                return {
+                    detailedDiagnostics: parsed.detailedDiagnostics !== false,
+                    automaticFigureExtraction: parsed.automaticFigureExtraction === true,
+                };
+            } catch (error) {
+                console.error("Failed to load settings", error);
+                return { ...DEFAULT_SETTINGS };
+            }
+        }
+
+        function currentSettings() {
+            return {
+                detailedDiagnostics: detailedDiagnosticsInput.checked,
+                automaticFigureExtraction: automaticFigureExtractionInput.checked,
+            };
+        }
+
+        function settingsMatch(left, right) {
+            return left.detailedDiagnostics === right.detailedDiagnostics
+                && left.automaticFigureExtraction === right.automaticFigureExtraction;
+        }
+
+        function applySettings(settings) {
+            detailedDiagnosticsInput.checked = settings.detailedDiagnostics === true;
+            automaticFigureExtractionInput.checked = settings.automaticFigureExtraction === true;
+            updateActionState();
+        }
+
+        function updateActionState() {
+            saveButton.disabled = settingsMatch(currentSettings(), savedSettings);
+        }
+
+        function saveSettings() {
+            const nextSettings = currentSettings();
+            try {
+                window.localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(nextSettings));
+                savedSettings = { ...nextSettings };
+                updateActionState();
+                setStatus("Settings saved. New sessions will use these preferences.", "success");
+            } catch (error) {
+                console.error("Failed to save settings", error);
+                setStatus("Settings could not be saved in this browser.", "error");
+            }
+        }
+
+        function cancelSettings() {
+            const isDirty = !settingsMatch(currentSettings(), savedSettings);
+            if (isDirty) {
+                applySettings(savedSettings);
+                setStatus("Unsaved changes were discarded.", "info");
+                return;
+            }
+
+            const referrer = document.referrer;
+            if (referrer && referrer.startsWith(window.location.origin)) {
+                window.location.href = referrer;
+                return;
+            }
+            window.location.href = "/home.html";
+        }
+
+        detailedDiagnosticsInput.addEventListener("change", updateActionState);
+        automaticFigureExtractionInput.addEventListener("change", updateActionState);
+        saveButton.addEventListener("click", saveSettings);
+        cancelButton.addEventListener("click", cancelSettings);
+
+        savedSettings = readStoredSettings();
+        applySettings(savedSettings);
+    </script>
+</body>
+
+</html>

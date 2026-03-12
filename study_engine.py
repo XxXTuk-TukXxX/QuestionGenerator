@@ -638,36 +638,6 @@ def build_local_repair_plan(
     return planned
 
 
-def build_local_mini_retest(
-    questions: list[Any],
-    trigger_question: Any,
-    *,
-    selected_option: str,
-    exclude_question_ids: set[str] | None = None,
-    count: int = 2,
-) -> list[Any]:
-    if not questions or count <= 0:
-        return []
-    exclude_ids = set(exclude_question_ids or set())
-    trigger_meta = question_metadata(trigger_question)
-    trigger_concept = trigger_meta["concept_key"]
-    trigger_misconception = selected_misconception_id(trigger_question, selected_option)
-    ranked: list[tuple[float, Any]] = []
-    for question in questions:
-        question_id = question_identity(question)
-        if question_id in exclude_ids:
-            continue
-        if question_metadata(question)["concept_key"] != trigger_concept:
-            continue
-        if question_text_signature(question) == question_text_signature(trigger_question):
-            continue
-        misconception_bonus = 2.0 if _preferred_misconception_match(question, trigger_misconception) else 0.0
-        difficulty_bonus = 1.0 if _difficulty_label(question) == _difficulty_label(trigger_question) else 0.0
-        ranked.append((misconception_bonus + difficulty_bonus, question))
-    ranked.sort(key=lambda row: (-row[0], int(_question_attr(row[1], "number") or 0)))
-    return [question for _, question in ranked[:count]]
-
-
 def record_intervention_result(
     profile: StudentProfile,
     trigger_question: Any,
@@ -729,6 +699,8 @@ def schedule_questions(
     while remaining:
         best_question: Any | None = None
         best_score = float("-inf")
+        # Adaptive ordering prioritizes weak concepts while spacing repeats out
+        # enough to avoid immediate re-asking of the same idea.
         for question in remaining:
             metadata = question_metadata(question)
             state = profile.concepts.get(metadata["concept_key"])
@@ -749,59 +721,3 @@ def schedule_questions(
         remaining.remove(best_question)
 
     return ordered
-
-
-def build_repair_set(
-    questions: list[Any],
-    missed_questions: list[Any],
-    *,
-    size: int = 3,
-) -> list[Any]:
-    if not questions or not missed_questions or size <= 0:
-        return []
-
-    selected: list[Any] = []
-    seen_numbers: set[int] = set()
-
-    def add_question(question: Any) -> None:
-        number = int(_question_attr(question, "number") or 0)
-        if number in seen_numbers:
-            return
-        selected.append(question)
-        seen_numbers.add(number)
-
-    for missed in missed_questions:
-        add_question(missed)
-        if len(selected) >= size:
-            return selected[:size]
-
-    missed_meta = [question_metadata(question) for question in missed_questions]
-    missed_concepts = {row["concept_key"] for row in missed_meta}
-    missed_skills = {row["skill"] for row in missed_meta if row["skill"]}
-    missed_difficulties = {row["difficulty"] for row in missed_meta if row["difficulty"]}
-
-    def similarity_score(question: Any) -> float:
-        metadata = question_metadata(question)
-        score = 0.0
-        if metadata["concept_key"] in missed_concepts:
-            score += 6.0
-        if metadata["skill"] in missed_skills:
-            score += 2.0
-        if metadata["difficulty"] in missed_difficulties:
-            score += 1.0
-        objective = str(_question_attr(question, "objective_label") or _question_attr(question, "objective") or "").lower()
-        score += 0.1 * sum(1 for token in re.findall(r"[a-z]{4,}", objective) if token in " ".join(row["concept_label"].lower() for row in missed_meta))
-        return score
-
-    ranked = sorted(
-        questions,
-        key=lambda question: (
-            -similarity_score(question),
-            int(_question_attr(question, "number") or 0),
-        ),
-    )
-    for question in ranked:
-        add_question(question)
-        if len(selected) >= size:
-            break
-    return selected[:size]

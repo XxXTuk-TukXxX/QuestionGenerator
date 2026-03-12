@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AI Study Gen - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#136dec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+    <div class="flex h-screen overflow-hidden">
+        <!-- Sidebar: Generated Quizzes -->
+        <aside class="w-80 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col">
+            <div class="p-6 border-b border-slate-200 dark:border-slate-800 flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary text-3xl">auto_stories</span>
+                <h1 class="text-xl font-bold tracking-tight">AI Study Gen</h1>
+            </div>
+            <div class="flex-1 overflow-y-auto p-4">
+                <div class="mb-6">
+                    <div class="mb-4 px-2 flex items-center justify-between gap-3">
+                        <h2 class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Generated
+                            Quizzes</h2>
+                        <span class="px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 text-[11px] font-semibold uppercase tracking-wide"
+                            id="generated-quizzes-count">...</span>
+                    </div>
+                    <a class="mb-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-3 text-sm font-bold text-white shadow-md shadow-primary/20 transition-colors hover:bg-primary/90"
+                        href="/home.html">
+                        <span class="material-symbols-outlined text-lg">add_circle</span>
+                        Start New Quiz
+                    </a>
+                    <nav class="space-y-1" id="generated-quizzes-list">
+                        <div
+                            class="px-3 py-3 rounded-lg bg-slate-50 dark:bg-slate-800/60 text-sm text-slate-500 dark:text-slate-400">
+                            Loading markdown files from Cache...
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="p-4 border-t border-slate-200 dark:border-slate-800">
+                <a
+                    class="w-full flex items-center justify-center gap-2 px-4 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg text-sm font-medium transition-colors"
+                    href="/settings.html">
+                    <span class="material-symbols-outlined text-lg">settings</span>
+                    Settings
+                </a>
+            </div>
+        </aside>
+        <!-- Main Content Area -->
+        <main class="flex-1 flex flex-col overflow-hidden">
+            <!-- Header -->
+            <header
+                class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between px-8">
+                <div class="flex items-center gap-6">
+                    <div class="flex border-b border-transparent">
+                        <button class="px-4 py-5 text-sm font-bold border-b-2 border-primary text-primary transition-all">Test Maker</button>
+                        <!-- <button class="px-4 py-5 text-sm font-medium text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 transition-all border-b-2 border-transparent hover:border-slate-300">Local Folder</button> -->
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="relative">
+                        <!-- <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">search</span>
+                        <input
+                            class="pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm w-64 focus:ring-2 focus:ring-primary"
+                            placeholder="Search materials..." type="text" /> -->
+                    </div>
+                    <button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </button>
+                    <div
+                        class="h-8 w-8 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border border-primary/30">
+                        <img alt="User Profile" class="w-full h-full object-cover"
+                            data-alt="Avatar of a male student wearing glasses"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQU1-H5imxshnf17aAO7eEUZNVFXKp2h2JEjTZJs6usiUf_oP8mNxzL4pQiiggF7i5U_4J7EJJadbPtvIiD6T5lkfi_oiwytrm6m09xklSA9nboMdnr-B5tmBsOfXM7TGJoG4EJQGOUoknt4cOahWhSrKrXUyEYR2uOj9QT3zh04jDqfeusRhFUnXsR4XLhXXji9ESNb9sQLpdHQcEyX4dEoe6fsPYVRkI0l1BPspC3_NZHKQ-Ea4eW2it5MiPd-LtFgZzHniP3R8" />
+                    </div>
+                </div>
+            </header>
+            <!-- Dashboard Content -->
+            <div class="flex-1 overflow-y-auto p-8">
+                <div class="max-w-5xl mx-auto">
+                    <!-- Hero Section -->
+                    <div class="mb-10">
+                        <h1 class="text-4xl font-black text-slate-900 dark:text-white mb-3">Specialized Question Generator
+                        </h1>
+                        <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">Upload your lecture notes, PDFs, or connect to Canvas to generate high-quality AI-powered quizzes using AI.</p>
+                    </div>
+                    <!-- Staging Area (Cache) -->
+                    <div
+                        class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden mb-8 shadow-sm"
+                        id="staging-area-panel">
+                        <div class="hidden" id="staging-area-details">
+                        <div
+                            class="p-6 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary filled-icon">inventory_2</span>
+                                <h2 class="text-lg font-bold">Staging Area (Cache)</h2>
+                                <span
+                                    class="ml-2 px-2 py-0.5 bg-slate-100 dark:bg-slate-800 text-slate-500 text-xs font-semibold rounded-full uppercase"
+                                    id="staging-area-count">...</span>
+                            </div>
+                            <button class="text-sm font-medium text-primary hover:underline" id="staging-area-refresh"
+                                type="button">Refresh</button>
+                        </div>
+                        <div class="p-6">
+                            <p class="mb-4 text-sm text-slate-500 dark:text-slate-400" id="staging-area-context">
+                                Loading source documents for the selected quiz...
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="staging-area-files">
+                                <div
+                                    class="md:col-span-2 lg:col-span-3 px-4 py-6 rounded-lg border border-dashed border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/40 text-sm text-slate-500 dark:text-slate-400">
+                                    Loading source documents...
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <!-- Action Bar -->
+                        <div
+                            class="p-8 bg-slate-50 dark:bg-slate-800/40 border-t border-slate-200 dark:border-slate-800">
+                            <div class="flex flex-col items-center justify-center space-y-4">
+                                <button
+                                    class="w-full max-w-md bg-primary hover:bg-primary/90 text-white font-bold py-4 px-8 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-3 text-lg transition-transform active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70"
+                                    id="generate-quiz-button" type="button"><span
+                                        class="material-symbols-outlined filled-icon" id="generate-quiz-icon">bolt</span>
+                                    <span id="generate-quiz-label">Extract &amp; Generate with AI</span>
+                                </button>
+                                <p class="text-sm text-slate-500 flex items-center gap-2" id="generation-status">
+                                    <span class="material-symbols-outlined text-xs" id="generation-status-icon">info</span>
+                                    <span id="generation-status-text">Estimated time: ~15 seconds per file</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Canvas Integration Section -->
+                    <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div
+                            class="md:col-span-2 p-6 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div
+                                    class="size-10 rounded-lg bg-orange-100 text-orange-600 flex items-center justify-center">
+                                    <span class="material-symbols-outlined filled-icon">school</span>
+                                </div>
+                                <h3 class="font-bold text-lg">Active Courses</h3>
+                            </div>
+                            <ul class="space-y-3">
+                                <li
+                                    class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+                                    <span class="text-sm font-medium">BIOL 101: Intro to Biology</span>
+                                    <button
+                                        class="text-xs bg-primary text-white px-3 py-1 rounded-full font-bold">Sync</button>
+                                </li>
+                                <li
+                                    class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800 rounded-lg">
+                                    <span class="text-sm font-medium">MATH 240: Calculus II</span>
+                                    <button
+                                        class="text-xs bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 px-3 py-1 rounded-full font-bold">Synced</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="fixed inset-0 z-50 hidden" id="generation-modal">
+        <div class="absolute inset-0 bg-slate-950/55" id="generation-modal-backdrop"></div>
+        <div class="relative flex min-h-screen items-center justify-center p-4">
+            <div
+                class="w-full max-w-3xl overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl shadow-slate-900/20 dark:border-slate-800 dark:bg-slate-900">
+                <div class="flex items-center justify-between border-b border-slate-200 px-6 py-5 dark:border-slate-800">
+                    <div>
+                        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Create Quiz</p>
+                        <h2 class="mt-1 text-2xl font-black text-slate-900 dark:text-white">Choose Your Source</h2>
+                    </div>
+                    <button
+                        class="flex h-10 w-10 items-center justify-center rounded-lg text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-slate-800 dark:hover:text-slate-200"
+                        id="generation-modal-close" type="button">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+                <div class="space-y-6 p-6">
+                    <div class="grid gap-3 md:grid-cols-2">
+                        <button
+                            class="rounded-xl border border-primary bg-primary/5 px-4 py-4 text-left transition-colors"
+                            id="generation-mode-canvas" type="button">
+                            <span class="material-symbols-outlined text-primary">school</span>
+                            <p class="mt-3 text-sm font-bold text-slate-900 dark:text-white">Canvas</p>
+                            <p class="mt-1 text-xs text-slate-500 dark:text-slate-400">Pick a live Canvas course and module, extract files, then generate a quiz.</p>
+                        </button>
+                        <button
+                            class="rounded-xl border border-slate-200 px-4 py-4 text-left transition-colors hover:border-primary/40 hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-800/50"
+                            id="generation-mode-local" type="button">
+                            <span class="material-symbols-outlined text-primary">upload_file</span>
+                            <p class="mt-3 text-sm font-bold text-slate-900 dark:text-white">Import Files</p>
+                            <p class="mt-1 text-xs text-slate-500 dark:text-slate-400">Upload PDFs, notes, or slides from your machine and generate from those files.</p>
+                        </button>
+                    </div>
+
+                    <div class="rounded-xl border border-slate-200 bg-slate-50 px-4 py-4 dark:border-slate-800 dark:bg-slate-800/40">
+                        <label class="block text-xs font-semibold uppercase tracking-[0.18em] text-slate-500"
+                            for="generation-question-count">Question Count</label>
+                        <input
+                            class="mt-3 w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-900 focus:border-primary focus:ring-primary dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+                            id="generation-question-count" max="30" min="1" type="number" value="20" />
+                    </div>
+
+                    <div
+                        class="flex items-start gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-4 text-sm text-slate-600 dark:border-slate-800 dark:bg-slate-800/40 dark:text-slate-300"
+                        id="generation-modal-status">
+                        <span class="material-symbols-outlined mt-0.5 text-base text-slate-400"
+                            id="generation-modal-status-icon">info</span>
+                        <div class="min-w-0">
+                            <p class="font-medium" id="generation-modal-status-text">Choose `Canvas` or `Import Files` to start a new quiz.</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6" id="generation-canvas-panel">
+                        <div class="grid gap-4 md:grid-cols-2">
+                            <label class="block">
+                                <span class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Canvas Course</span>
+                                <select
+                                    class="mt-3 w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-900 focus:border-primary focus:ring-primary dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+                                    id="canvas-course-select">
+                                    <option value="">Loading Canvas courses...</option>
+                                </select>
+                            </label>
+                            <label class="block">
+                                <span class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Canvas Module</span>
+                                <select
+                                    class="mt-3 w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-900 focus:border-primary focus:ring-primary dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+                                    id="canvas-module-select" disabled>
+                                    <option value="">Select a course first</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                            <button
+                                class="inline-flex items-center justify-center gap-2 rounded-lg border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-700 transition-colors hover:bg-slate-50 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
+                                id="canvas-refresh-button" type="button">
+                                <span class="material-symbols-outlined text-lg">refresh</span>
+                                Refresh Canvas
+                            </button>
+                            <button
+                                class="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-bold text-white shadow-md shadow-primary/20 transition-colors hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-70"
+                                id="canvas-generate-button" type="button">
+                                <span class="material-symbols-outlined text-lg">bolt</span>
+                                Extract Canvas Module &amp; Generate
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="hidden space-y-6" id="generation-local-panel">
+                        <label class="block">
+                            <span class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Study Set Name</span>
+                            <input
+                                class="mt-3 w-full rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-slate-900 focus:border-primary focus:ring-primary dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+                                id="local-study-set-name" placeholder="Example: Unit 5 Review Pack" type="text" />
+                        </label>
+                        <label
+                            class="block rounded-xl border border-dashed border-slate-300 bg-slate-50 px-4 py-6 text-center transition-colors hover:border-primary/50 hover:bg-white dark:border-slate-700 dark:bg-slate-800/40 dark:hover:bg-slate-800"
+                            for="local-source-files">
+                            <span class="material-symbols-outlined text-3xl text-primary">upload_file</span>
+                            <p class="mt-3 text-sm font-bold text-slate-900 dark:text-white">Choose a folder or files</p>
+                            <p class="mt-1 text-xs text-slate-500 dark:text-slate-400">PDF, DOCX, images, markdown, and text files are supported.</p>
+                            <input class="sr-only" id="local-source-files" multiple type="file" webkitdirectory />
+                        </label>
+                        <div class="rounded-xl border border-slate-200 bg-slate-50 px-4 py-4 text-sm text-slate-600 dark:border-slate-800 dark:bg-slate-800/40 dark:text-slate-300"
+                            id="local-file-summary">
+                            No files selected yet.
+                        </div>
+                        <div class="flex justify-end">
+                            <button
+                                class="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-bold text-white shadow-md shadow-primary/20 transition-colors hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-70"
+                                id="local-generate-button" type="button">
+                                <span class="material-symbols-outlined text-lg">bolt</span>
+                                Import Files &amp; Generate
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const generatedQuizzesList = document.getElementById("generated-quizzes-list");
+        const generatedQuizzesCount = document.getElementById("generated-quizzes-count");
+        const stagingAreaPanel = document.getElementById("staging-area-panel");
+        const stagingAreaDetails = document.getElementById("staging-area-details");
+        const stagingAreaCount = document.getElementById("staging-area-count");
+        const stagingAreaContext = document.getElementById("staging-area-context");
+        const stagingAreaFiles = document.getElementById("staging-area-files");
+        const stagingAreaRefresh = document.getElementById("staging-area-refresh");
+        const generateQuizButton = document.getElementById("generate-quiz-button");
+        const generateQuizIcon = document.getElementById("generate-quiz-icon");
+        const generateQuizLabel = document.getElementById("generate-quiz-label");
+        const generationStatus = document.getElementById("generation-status");
+        const generationStatusIcon = document.getElementById("generation-status-icon");
+        const generationStatusText = document.getElementById("generation-status-text");
+        const generationModal = document.getElementById("generation-modal");
+        const generationModalBackdrop = document.getElementById("generation-modal-backdrop");
+        const generationModalClose = document.getElementById("generation-modal-close");
+        const generationModalStatus = document.getElementById("generation-modal-status");
+        const generationModalStatusIcon = document.getElementById("generation-modal-status-icon");
+        const generationModalStatusText = document.getElementById("generation-modal-status-text");
+        const generationQuestionCountInput = document.getElementById("generation-question-count");
+        const generationModeCanvasButton = document.getElementById("generation-mode-canvas");
+        const generationModeLocalButton = document.getElementById("generation-mode-local");
+        const generationCanvasPanel = document.getElementById("generation-canvas-panel");
+        const generationLocalPanel = document.getElementById("generation-local-panel");
+        const canvasCourseSelect = document.getElementById("canvas-course-select");
+        const canvasModuleSelect = document.getElementById("canvas-module-select");
+        const canvasRefreshButton = document.getElementById("canvas-refresh-button");
+        const canvasGenerateButton = document.getElementById("canvas-generate-button");
+        const localStudySetNameInput = document.getElementById("local-study-set-name");
+        const localSourceFilesInput = document.getElementById("local-source-files");
+        const localFileSummary = document.getElementById("local-file-summary");
+        const localGenerateButton = document.getElementById("local-generate-button");
+
+        const DEFAULT_GENERATION_STATUS_TEXT = "Estimated time: ~15 seconds per file";
+        const DEFAULT_GENERATE_LABEL = "Extract & Generate with AI";
+        const DEFAULT_GENERATE_ICON = "bolt";
+        const DEFAULT_GENERATION_QUESTION_COUNT = 20;
+        const SUPPORTED_LOCAL_FILE_HINT = "PDF, DOCX, images, markdown, and text files are supported.";
+
+        const state = {
+            quizFiles: [],
+            selectedQuizPath: "",
+            activeStagingRequest: 0,
+            generationMode: "canvas",
+            isGeneratingQuiz: false,
+            canvasCoursesLoaded: false,
+        };
+
+        function formatDirectoryLabel(relativePath) {
+            const parts = String(relativePath || "").split("/").filter(Boolean);
+            parts.pop();
+            return parts.length ? parts.join(" / ") : "Cache";
+        }
+
+        function formatModifiedAt(timestamp) {
+            if (typeof timestamp !== "number" || Number.isNaN(timestamp)) {
+                return "";
+            }
+
+            try {
+                return new Intl.DateTimeFormat(undefined, {
+                    month: "short",
+                    day: "numeric",
+                    hour: "numeric",
+                    minute: "2-digit",
+                }).format(new Date(timestamp * 1000));
+            } catch (error) {
+                console.error("Failed to format timestamp", error);
+                return "";
+            }
+        }
+
+        function formatFileSize(bytes) {
+            if (typeof bytes !== "number" || Number.isNaN(bytes) || bytes < 0) {
+                return "";
+            }
+
+            if (bytes < 1024) {
+                return `${bytes} B`;
+            }
+
+            const units = ["KB", "MB", "GB"];
+            let value = bytes / 1024;
+            let unitIndex = 0;
+            while (value >= 1024 && unitIndex < units.length - 1) {
+                value /= 1024;
+                unitIndex += 1;
+            }
+            return `${value.toFixed(value >= 10 ? 0 : 1)} ${units[unitIndex]}`;
+        }
+
+        function fileIcon(name) {
+            const lowerName = String(name || "").toLowerCase();
+            if (lowerName.endsWith(".pdf")) {
+                return "picture_as_pdf";
+            }
+            if (lowerName.endsWith(".png") || lowerName.endsWith(".jpg") || lowerName.endsWith(".jpeg") || lowerName.endsWith(".webp")) {
+                return "image";
+            }
+            if (lowerName.endsWith(".doc") || lowerName.endsWith(".docx")) {
+                return "description";
+            }
+            return "article";
+        }
+
+        function formatLoadedCount(count) {
+            const safeCount = typeof count === "number" && count >= 0 ? count : 0;
+            return `${safeCount} ${safeCount === 1 ? "File" : "Files"} Loaded`;
+        }
+
+        function renderMessage(container, message, detail = "") {
+            container.replaceChildren();
+
+            const item = document.createElement("div");
+            item.className =
+                "px-3 py-3 rounded-lg bg-slate-50 dark:bg-slate-800/60 text-sm text-slate-500 dark:text-slate-400";
+
+            const text = document.createElement("p");
+            text.textContent = message;
+            item.appendChild(text);
+
+            if (detail) {
+                const secondary = document.createElement("p");
+                secondary.className = "mt-2 text-xs text-slate-400 dark:text-slate-500";
+                secondary.textContent = detail;
+                item.appendChild(secondary);
+            }
+
+            container.appendChild(item);
+        }
+
+        function renderStagingMessage(message, detail = "") {
+            stagingAreaFiles.replaceChildren();
+
+            const item = document.createElement("div");
+            item.className =
+                "md:col-span-2 lg:col-span-3 px-4 py-6 rounded-lg border border-dashed border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/40 text-sm text-slate-500 dark:text-slate-400";
+
+            const text = document.createElement("p");
+            text.textContent = message;
+            item.appendChild(text);
+
+            if (detail) {
+                const secondary = document.createElement("p");
+                secondary.className = "mt-2 text-xs text-slate-400 dark:text-slate-500";
+                secondary.textContent = detail;
+                item.appendChild(secondary);
+            }
+
+            stagingAreaFiles.appendChild(item);
+        }
+
+        function setGenerationStatus(message, tone = "default") {
+            generationStatusText.textContent = message;
+            generationStatus.className = "text-sm flex items-center gap-2";
+
+            if (tone === "success") {
+                generationStatus.classList.add("text-emerald-600");
+                generationStatusIcon.textContent = "check_circle";
+                return;
+            }
+
+            if (tone === "error") {
+                generationStatus.classList.add("text-red-600");
+                generationStatusIcon.textContent = "error";
+                return;
+            }
+
+            generationStatus.classList.add("text-slate-500");
+            generationStatusIcon.textContent = "info";
+        }
+
+        function setGenerationModalStatus(message, tone = "default") {
+            generationModalStatusText.textContent = message;
+            generationModalStatus.className =
+                "flex items-start gap-3 rounded-xl border px-4 py-4 text-sm";
+
+            if (tone === "success") {
+                generationModalStatus.classList.add("border-emerald-200", "bg-emerald-50", "text-emerald-700");
+                generationModalStatusIcon.className = "material-symbols-outlined mt-0.5 text-base text-emerald-600";
+                generationModalStatusIcon.textContent = "check_circle";
+                return;
+            }
+
+            if (tone === "error") {
+                generationModalStatus.classList.add("border-red-200", "bg-red-50", "text-red-700");
+                generationModalStatusIcon.className = "material-symbols-outlined mt-0.5 text-base text-red-600";
+                generationModalStatusIcon.textContent = "error";
+                return;
+            }
+
+            generationModalStatus.classList.add("border-slate-200", "bg-slate-50", "text-slate-600");
+            generationModalStatusIcon.className = "material-symbols-outlined mt-0.5 text-base text-slate-400";
+            generationModalStatusIcon.textContent = "info";
+        }
+
+        function setGenerateButtonLoading(isLoading) {
+            generateQuizButton.disabled = isLoading;
+            generateQuizLabel.textContent = isLoading ? "Generating Quiz..." : DEFAULT_GENERATE_LABEL;
+            generateQuizIcon.textContent = isLoading ? "hourglass_top" : DEFAULT_GENERATE_ICON;
+            generateQuizIcon.classList.toggle("animate-pulse", isLoading);
+        }
+
+        function setGenerationMode(mode) {
+            state.generationMode = mode === "local" ? "local" : "canvas";
+            const canvasSelected = state.generationMode === "canvas";
+
+            generationCanvasPanel.classList.toggle("hidden", !canvasSelected);
+            generationLocalPanel.classList.toggle("hidden", canvasSelected);
+
+            generationModeCanvasButton.className = canvasSelected
+                ? "rounded-xl border border-primary bg-primary/5 px-4 py-4 text-left transition-colors"
+                : "rounded-xl border border-slate-200 px-4 py-4 text-left transition-colors hover:border-primary/40 hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-800/50";
+            generationModeLocalButton.className = !canvasSelected
+                ? "rounded-xl border border-primary bg-primary/5 px-4 py-4 text-left transition-colors"
+                : "rounded-xl border border-slate-200 px-4 py-4 text-left transition-colors hover:border-primary/40 hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-800/50";
+        }
+
+        function getRequestedQuestionCount() {
+            const parsed = Number.parseInt(generationQuestionCountInput.value, 10);
+            if (Number.isFinite(parsed) && parsed >= 1 && parsed <= 30) {
+                return parsed;
+            }
+            generationQuestionCountInput.focus();
+            throw new Error("Question count must be between 1 and 30.");
+        }
+
+        function setCanvasSelectState(select, placeholder, disabled = false) {
+            select.replaceChildren();
+            const option = document.createElement("option");
+            option.value = "";
+            option.textContent = placeholder;
+            select.appendChild(option);
+            select.disabled = disabled;
+        }
+
+        function openGenerationModal() {
+            generationModal.classList.remove("hidden");
+            if (state.generationMode === "canvas" && !state.canvasCoursesLoaded) {
+                loadCanvasCourses();
+            }
+        }
+
+        function closeGenerationModal() {
+            if (state.isGeneratingQuiz) {
+                return;
+            }
+            generationModal.classList.add("hidden");
+        }
+
+        function setGenerationBusy(isBusy, mode = "") {
+            state.isGeneratingQuiz = isBusy;
+            setGenerateButtonLoading(isBusy);
+            generationModalClose.disabled = isBusy;
+            generationQuestionCountInput.disabled = isBusy;
+            generationModeCanvasButton.disabled = isBusy;
+            generationModeLocalButton.disabled = isBusy;
+            canvasCourseSelect.disabled = isBusy || canvasCourseSelect.options.length <= 1;
+            canvasModuleSelect.disabled = isBusy || canvasModuleSelect.options.length <= 1;
+            canvasRefreshButton.disabled = isBusy;
+            canvasGenerateButton.disabled = isBusy;
+            localStudySetNameInput.disabled = isBusy;
+            localSourceFilesInput.disabled = isBusy;
+            localGenerateButton.disabled = isBusy;
+
+            if (isBusy) {
+                if (mode === "canvas") {
+                    canvasGenerateButton.innerHTML = '<span class="material-symbols-outlined text-lg animate-pulse">hourglass_top</span> Extracting Canvas &amp; Generating';
+                }
+                if (mode === "local") {
+                    localGenerateButton.innerHTML = '<span class="material-symbols-outlined text-lg animate-pulse">hourglass_top</span> Importing &amp; Generating';
+                }
+                return;
+            }
+
+            canvasGenerateButton.innerHTML = '<span class="material-symbols-outlined text-lg">bolt</span> Extract Canvas Module &amp; Generate';
+            localGenerateButton.innerHTML = '<span class="material-symbols-outlined text-lg">bolt</span> Import Files &amp; Generate';
+        }
+
+        function setStagingAreaVisible(visible) {
+            stagingAreaDetails.classList.toggle("hidden", !visible);
+            stagingAreaPanel.classList.toggle("hidden", false);
+        }
+
+        function reviewUrlForQuiz(relativePath) {
+            return `/review.html?quiz=${encodeURIComponent(relativePath)}`;
+        }
+
+        function questionsUrlForQuiz(relativePath) {
+            return `/questions.html?quiz=${encodeURIComponent(relativePath)}`;
+        }
+
+        function buildQuizItem(file) {
+            const button = document.createElement("a");
+            button.href = reviewUrlForQuiz(file.relative_path);
+            button.className =
+                "flex min-w-0 flex-1 items-start gap-3 rounded-lg px-3 py-3 text-left text-slate-600 dark:text-slate-400 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800";
+
+            const icon = document.createElement("span");
+            icon.className = "material-symbols-outlined mt-0.5 text-slate-400";
+            icon.textContent = "description";
+
+            const body = document.createElement("span");
+            body.className = "min-w-0 flex-1";
+
+            const name = document.createElement("span");
+            name.className = "block truncate text-sm font-semibold";
+            name.textContent = file.name;
+
+            const directory = document.createElement("span");
+            directory.className = "mt-0.5 block truncate text-xs text-slate-500 dark:text-slate-500";
+            directory.textContent = formatDirectoryLabel(file.relative_path);
+
+            const updated = document.createElement("span");
+            updated.className = "mt-1 block text-[11px] text-slate-400 dark:text-slate-500";
+            updated.textContent = formatModifiedAt(file.modified_at);
+
+            body.append(name, directory, updated);
+            button.append(icon, body);
+            return button;
+        }
+
+        function renderGeneratedQuizzes() {
+            generatedQuizzesList.replaceChildren();
+
+            if (!state.quizFiles.length) {
+                renderMessage(
+                    generatedQuizzesList,
+                    "No generated quiz markdown files were found in Cache.",
+                    "Generate a quiz first, then reload this page."
+                );
+                return;
+            }
+
+            state.quizFiles.forEach((file) => {
+                generatedQuizzesList.appendChild(buildQuizItem(file));
+            });
+        }
+
+        function buildStagingFileCard(file) {
+            const card = document.createElement("a");
+            card.href = file.url;
+            card.target = "_blank";
+            card.rel = "noopener noreferrer";
+            card.className =
+                "p-4 rounded-lg border border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 flex items-start gap-3 transition-colors hover:border-primary/30 hover:bg-white dark:hover:bg-slate-800";
+
+            const icon = document.createElement("span");
+            icon.className = "material-symbols-outlined text-primary mt-0.5";
+            icon.textContent = fileIcon(file.name);
+
+            const body = document.createElement("div");
+            body.className = "flex-1 min-w-0";
+
+            const topRow = document.createElement("div");
+            topRow.className = "flex items-center justify-between gap-3";
+
+            const name = document.createElement("p");
+            name.className = "text-sm font-semibold truncate";
+            name.textContent = file.name;
+
+            const bucket = document.createElement("span");
+            bucket.className =
+                file.bucket === "both"
+                    ? "shrink-0 rounded-full bg-amber-100 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-amber-700"
+                    : file.bucket === "submitted"
+                        ? "shrink-0 rounded-full bg-emerald-100 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-emerald-700"
+                        : "shrink-0 rounded-full bg-blue-100 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-blue-700";
+            bucket.textContent = file.bucket || "cache";
+
+            topRow.append(name, bucket);
+
+            const directory = document.createElement("p");
+            directory.className = "mt-1 text-xs text-slate-500 truncate";
+            directory.textContent = file.directory || "Cache";
+
+            const meta = document.createElement("p");
+            meta.className = "mt-2 text-xs text-slate-400";
+            meta.textContent = [
+                typeof file.copy_count === "number" && file.copy_count > 1 ? `${file.copy_count} cache copies` : "",
+                formatFileSize(file.size_bytes),
+                formatModifiedAt(file.modified_at),
+            ].filter(Boolean).join(" • ");
+
+            body.append(topRow, directory, meta);
+            card.append(icon, body);
+            return card;
+        }
+
+        async function loadStagingArea(relativePath) {
+            if (!relativePath) {
+                setStagingAreaVisible(false);
+                stagingAreaCount.textContent = formatLoadedCount(0);
+                stagingAreaContext.textContent = "Select a generated quiz to load its cached source documents.";
+                renderStagingMessage("No quiz is selected.");
+                return;
+            }
+
+            setStagingAreaVisible(true);
+            const requestId = state.activeStagingRequest + 1;
+            state.activeStagingRequest = requestId;
+            stagingAreaCount.textContent = "...";
+            stagingAreaContext.textContent = "Loading source documents for the selected quiz...";
+            renderStagingMessage("Loading source documents for the selected quiz...");
+
+            try {
+                const response = await fetch(`/api/cache/quiz-sources?path=${encodeURIComponent(relativePath)}`, {
+                    headers: { "Accept": "application/json" },
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Request failed with ${response.status}`);
+                }
+
+                const payload = await response.json();
+                if (requestId !== state.activeStagingRequest) {
+                    return;
+                }
+
+                const files = Array.isArray(payload.source_files) ? payload.source_files : [];
+                const quizName = payload.quiz && payload.quiz.name ? payload.quiz.name : relativePath.split("/").pop();
+
+                stagingAreaCount.textContent = formatLoadedCount(files.length);
+                stagingAreaContext.textContent =
+                    files.length
+                        ? `Showing source documents loaded from ${payload.module_directory || "this module"} for ${quizName}.`
+                        : `No staged source documents were found for ${quizName}.`;
+
+                stagingAreaFiles.replaceChildren();
+
+                if (!files.length) {
+                    renderStagingMessage("No source documents were found for the selected quiz.");
+                    return;
+                }
+
+                files.forEach((file) => {
+                    stagingAreaFiles.appendChild(buildStagingFileCard(file));
+                });
+            } catch (error) {
+                console.error("Failed to load staging area files", error);
+                if (requestId !== state.activeStagingRequest) {
+                    return;
+                }
+
+                stagingAreaCount.textContent = "!";
+                stagingAreaContext.textContent = "Couldn't load source documents for the selected quiz.";
+
+                const detail = window.location.protocol === "file:"
+                    ? "Open this page through the local server: python3 Frontend/server.py"
+                    : "Start the local frontend server so /api/cache/quiz-sources is available.";
+
+                renderStagingMessage("Couldn't load source documents from Cache.", detail);
+            }
+        }
+
+        async function loadGeneratedQuizzes() {
+            try {
+                const response = await fetch("/api/cache/markdown-files", {
+                    headers: { "Accept": "application/json" },
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Request failed with ${response.status}`);
+                }
+
+                const payload = await response.json();
+                const files = Array.isArray(payload.files) ? payload.files : [];
+
+                state.quizFiles = files;
+                generatedQuizzesCount.textContent = String(files.length);
+                state.selectedQuizPath = "";
+
+                if (!files.length) {
+                    setStagingAreaVisible(false);
+                    renderGeneratedQuizzes();
+                    stagingAreaCount.textContent = formatLoadedCount(0);
+                    stagingAreaContext.textContent = "Generate a quiz to populate the staging area.";
+                    renderStagingMessage("No generated quizzes are available yet.");
+                    return;
+                }
+
+                setStagingAreaVisible(false);
+                renderGeneratedQuizzes();
+            } catch (error) {
+                console.error("Failed to load cache markdown files", error);
+                setStagingAreaVisible(false);
+                generatedQuizzesCount.textContent = "!";
+                stagingAreaCount.textContent = "!";
+                stagingAreaContext.textContent = "Couldn't connect to the local cache service.";
+
+                const detail = window.location.protocol === "file:"
+                    ? "Open this page through the local server: python3 Frontend/server.py"
+                    : "Start the local frontend server so /api/cache/markdown-files is available.";
+
+                renderMessage(generatedQuizzesList, "Couldn't load markdown files from Cache.", detail);
+                renderStagingMessage("Couldn't load source documents from Cache.", detail);
+            }
+        }
+
+        function populateCanvasCourses(courses) {
+            canvasCourseSelect.replaceChildren();
+
+            const placeholder = document.createElement("option");
+            placeholder.value = "";
+            placeholder.textContent = courses.length ? "Select a Canvas course" : "No active Canvas courses found";
+            canvasCourseSelect.appendChild(placeholder);
+
+            courses.forEach((course) => {
+                const option = document.createElement("option");
+                option.value = String(course.id);
+                option.textContent = course.name;
+                canvasCourseSelect.appendChild(option);
+            });
+
+            canvasCourseSelect.disabled = !courses.length || state.isGeneratingQuiz;
+        }
+
+        function populateCanvasModules(modules) {
+            canvasModuleSelect.replaceChildren();
+
+            const placeholder = document.createElement("option");
+            placeholder.value = "";
+            placeholder.textContent = modules.length ? "Select a Canvas module" : "No modules found for this course";
+            canvasModuleSelect.appendChild(placeholder);
+
+            modules.forEach((module) => {
+                const option = document.createElement("option");
+                option.value = String(module.id);
+                option.textContent = module.name;
+                canvasModuleSelect.appendChild(option);
+            });
+
+            canvasModuleSelect.disabled = !modules.length || state.isGeneratingQuiz;
+        }
+
+        function summarizeSelectedFiles(files) {
+            if (!files.length) {
+                localFileSummary.textContent = "No files selected yet.";
+                return;
+            }
+
+            const sampleNames = Array.from(files)
+                .slice(0, 3)
+                .map((file) => file.webkitRelativePath || file.name);
+            const suffix = files.length > 3 ? `, and ${files.length - 3} more` : "";
+            localFileSummary.textContent = `${files.length} file${files.length === 1 ? "" : "s"} ready: ${sampleNames.join(", ")}${suffix}`;
+        }
+
+        async function loadCanvasCourses(force = false) {
+            if (state.canvasCoursesLoaded && !force) {
+                return;
+            }
+
+            setCanvasSelectState(canvasCourseSelect, "Loading Canvas courses...", true);
+            setCanvasSelectState(canvasModuleSelect, "Select a course first", true);
+            setGenerationModalStatus("Loading your active Canvas courses...", "default");
+
+            try {
+                const response = await fetch("/api/canvas/courses", {
+                    headers: { "Accept": "application/json" },
+                });
+
+                const payload = await response.json();
+                if (!response.ok) {
+                    throw new Error(payload && payload.error ? payload.error : `Request failed with ${response.status}`);
+                }
+
+                const courses = Array.isArray(payload.courses) ? payload.courses : [];
+                populateCanvasCourses(courses);
+                state.canvasCoursesLoaded = true;
+                setGenerationModalStatus(
+                    courses.length
+                        ? "Pick a Canvas course and module, then start extraction and generation."
+                        : "No active Canvas courses were returned for this account.",
+                    courses.length ? "default" : "error"
+                );
+            } catch (error) {
+                console.error("Failed to load Canvas courses", error);
+                setCanvasSelectState(canvasCourseSelect, "Couldn't load Canvas courses", true);
+                setCanvasSelectState(canvasModuleSelect, "Select a course first", true);
+                setGenerationModalStatus(
+                    error instanceof Error ? error.message : "Couldn't load Canvas courses.",
+                    "error"
+                );
+            }
+        }
+
+        async function loadCanvasModules(courseId) {
+            if (!courseId) {
+                setCanvasSelectState(canvasModuleSelect, "Select a course first", true);
+                return;
+            }
+
+            setCanvasSelectState(canvasModuleSelect, "Loading Canvas modules...", true);
+            setGenerationModalStatus("Loading Canvas modules for the selected course...", "default");
+
+            try {
+                const response = await fetch(`/api/canvas/modules?course_id=${encodeURIComponent(courseId)}`, {
+                    headers: { "Accept": "application/json" },
+                });
+
+                const payload = await response.json();
+                if (!response.ok) {
+                    throw new Error(payload && payload.error ? payload.error : `Request failed with ${response.status}`);
+                }
+
+                const modules = Array.isArray(payload.modules) ? payload.modules : [];
+                populateCanvasModules(modules);
+                setGenerationModalStatus(
+                    modules.length
+                        ? "Canvas module ready. Start extraction and generation when you are ready."
+                        : "No modules were returned for the selected Canvas course.",
+                    modules.length ? "default" : "error"
+                );
+            } catch (error) {
+                console.error("Failed to load Canvas modules", error);
+                setCanvasSelectState(canvasModuleSelect, "Couldn't load Canvas modules", true);
+                setGenerationModalStatus(
+                    error instanceof Error ? error.message : "Couldn't load Canvas modules.",
+                    "error"
+                );
+            }
+        }
+
+        async function handleGenerationResponse(response) {
+            let payload = {};
+            try {
+                payload = await response.json();
+            } catch (error) {
+                payload = {};
+            }
+
+            if (!response.ok || !payload.success) {
+                const errorMessage = payload && payload.error
+                    ? payload.error
+                    : `Request failed with ${response.status}`;
+                throw new Error(errorMessage);
+            }
+
+            return payload;
+        }
+
+        async function finishSuccessfulGeneration(payload) {
+            const moduleName = payload.module_name || "the selected module";
+            const questionCount = typeof payload.question_count === "number"
+                ? payload.question_count
+                : getRequestedQuestionCount();
+
+            setGenerationStatus(`Generated ${questionCount} questions for ${moduleName}.`, "success");
+            setGenerationModalStatus(`Generated ${questionCount} questions for ${moduleName}.`, "success");
+                await loadGeneratedQuizzes();
+
+                if (payload.relative_markdown_path) {
+                    window.location.href = questionsUrlForQuiz(payload.relative_markdown_path);
+                    return;
+                }
+
+            closeGenerationModal();
+        }
+
+        async function runCanvasGeneration() {
+            const courseSelection = canvasCourseSelect.value;
+            const moduleSelection = canvasModuleSelect.value;
+            if (!courseSelection || !moduleSelection) {
+                setGenerationModalStatus("Select both a Canvas course and module before generating.", "error");
+                return;
+            }
+
+            let questionCount;
+            try {
+                questionCount = getRequestedQuestionCount();
+            } catch (error) {
+                setGenerationModalStatus(error instanceof Error ? error.message : "Invalid question count.", "error");
+                return;
+            }
+
+            setGenerationBusy(true, "canvas");
+            setGenerationStatus("Connecting to Canvas, extracting module files, and generating questions...", "default");
+            setGenerationModalStatus("Connecting to Canvas, extracting module files, and generating questions...", "default");
+
+            try {
+                const response = await fetch("/api/generation/run", {
+                    method: "POST",
+                    headers: {
+                        "Accept": "application/json",
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        source_mode: "canvas",
+                        course_selection: courseSelection,
+                        module_selection: moduleSelection,
+                        question_count: questionCount,
+                    }),
+                });
+
+                const payload = await handleGenerationResponse(response);
+                await finishSuccessfulGeneration(payload);
+            } catch (error) {
+                console.error("Failed to generate Canvas quiz", error);
+                const message = error instanceof Error ? error.message : "Canvas generation failed.";
+                setGenerationStatus(message, "error");
+                setGenerationModalStatus(message, "error");
+            } finally {
+                setGenerationBusy(false);
+            }
+        }
+
+        async function runLocalGeneration() {
+            const studySetName = localStudySetNameInput.value.trim();
+            const files = Array.from(localSourceFilesInput.files || []);
+            if (!studySetName) {
+                setGenerationModalStatus("Enter a study-set name before importing files.", "error");
+                localStudySetNameInput.focus();
+                return;
+            }
+            if (!files.length) {
+                setGenerationModalStatus("Choose at least one file or folder before generating.", "error");
+                return;
+            }
+
+            let questionCount;
+            try {
+                questionCount = getRequestedQuestionCount();
+            } catch (error) {
+                setGenerationModalStatus(error instanceof Error ? error.message : "Invalid question count.", "error");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append("study_set_name", studySetName);
+            formData.append("question_count", String(questionCount));
+            files.forEach((file) => {
+                formData.append("files", file, file.webkitRelativePath || file.name);
+            });
+
+            setGenerationBusy(true, "local");
+            setGenerationStatus("Importing files into Cache and generating questions...", "default");
+            setGenerationModalStatus("Importing files into Cache and generating questions...", "default");
+
+            try {
+                const response = await fetch("/api/generation/local-upload", {
+                    method: "POST",
+                    body: formData,
+                });
+
+                const payload = await handleGenerationResponse(response);
+                await finishSuccessfulGeneration(payload);
+            } catch (error) {
+                console.error("Failed to generate local quiz", error);
+                const message = error instanceof Error ? error.message : "Local file generation failed.";
+                setGenerationStatus(message, "error");
+                setGenerationModalStatus(message, "error");
+            } finally {
+                setGenerationBusy(false);
+            }
+        }
+
+        stagingAreaRefresh.addEventListener("click", () => {
+            loadStagingArea(state.selectedQuizPath);
+        });
+
+        generateQuizButton.addEventListener("click", () => {
+            openGenerationModal();
+        });
+
+        generationModalBackdrop.addEventListener("click", closeGenerationModal);
+        generationModalClose.addEventListener("click", closeGenerationModal);
+        generationModeCanvasButton.addEventListener("click", () => {
+            setGenerationMode("canvas");
+            loadCanvasCourses();
+        });
+        generationModeLocalButton.addEventListener("click", () => {
+            setGenerationMode("local");
+            setGenerationModalStatus("Upload source files, then start generation.", "default");
+        });
+        canvasRefreshButton.addEventListener("click", () => {
+            state.canvasCoursesLoaded = false;
+            loadCanvasCourses(true);
+        });
+        canvasCourseSelect.addEventListener("change", (event) => {
+            loadCanvasModules(event.target.value);
+        });
+        canvasGenerateButton.addEventListener("click", () => {
+            runCanvasGeneration();
+        });
+        localSourceFilesInput.addEventListener("change", () => {
+            summarizeSelectedFiles(localSourceFilesInput.files || []);
+            if (state.generationMode === "local") {
+                setGenerationModalStatus(SUPPORTED_LOCAL_FILE_HINT, "default");
+            }
+        });
+        localGenerateButton.addEventListener("click", () => {
+            runLocalGeneration();
+        });
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                closeGenerationModal();
+            }
+        });
+
+        setGenerationStatus(DEFAULT_GENERATION_STATUS_TEXT, "default");
+        setGenerationModalStatus("Choose `Canvas` or `Import Files` to start a new quiz.", "default");
+        setGenerationMode("canvas");
+        loadGeneratedQuizzes();
+    </script>
+</body>
+
+</html>
